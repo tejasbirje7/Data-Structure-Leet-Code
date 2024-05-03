@@ -8,28 +8,44 @@ public class RainWater {
     public static int trap(int[] height) {
         int l = 0;
         int r = height.length - 1;
-        int maxLeft = height[l];
-        int maxRight = height[r];
+        int leftCounter = height[l];
+        int rightCounter = height[r];
         int water = 0;
 
         while (l < r) {
-            if(maxLeft < maxRight) {
+
+            // Move pointer which is less than the other
+            if(leftCounter < rightCounter) {
+                // Increment left pointer since it's minimum
                 l += 1;
-                if(height[l] > maxLeft) {
-                    maxLeft = height[l];
+
+                // Update left counter, if there's a block i.e.
+                // if height is more than left counter
+                if(height[l] > leftCounter) {
+                    leftCounter = height[l];
                 }
-                if((maxLeft - height[l]) > 0) {
-                    water += maxLeft - height[l];
+
+                // Update water, if left counter value is more than block height
+                if((leftCounter - height[l]) > 0) {
+                    water += leftCounter - height[l];
                 }
             } else {
+                // Decrement right pointer since it's minimum or equal
                 r -= 1;
-                if (height[r] > maxRight) {
-                    maxRight = height[r];
+
+                // Update right counter if there's a block i.e.
+                // if height is more than right counter
+                if (height[r] > rightCounter) {
+                    rightCounter = height[r];
                 }
-                if((maxRight - height[r]) > 0) {
-                    water += maxRight - height[r];
+
+                // Update water, if right counter value is more than block height
+                if((rightCounter - height[r]) > 0) {
+                    water += rightCounter - height[r];
                 }
             }
+
+
         }
         return water;
     }

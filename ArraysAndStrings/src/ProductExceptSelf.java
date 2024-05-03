@@ -7,7 +7,12 @@ public class ProductExceptSelf {
         System.out.println(Arrays.toString(productExceptSelf(nums)));
     }
 
+    /**
+     * Input: nums = [1,2,3,4]
+     * Output: [24,12,8,6]
+     */
     public static int[] productExceptSelf(int[] nums) {
+        System.out.println("Before Array : "+Arrays.toString(nums));
         int prefix = 1;
         int[] output = new int[nums.length];
         for (int i=0; i < nums.length; i++) {

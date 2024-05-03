@@ -8,6 +8,17 @@ public class Candy {
         System.out.println(candy(ratings));
     }
 
+    /**
+     * Input: ratings = [1,0,2]
+     * Output: 5
+     * Explanation: You can allocate to the first, second and third
+     * child with 2, 1, 2 candies respectively.
+     * Steps :
+     *   - Give 1 candy to all the children
+     *   - Iterate from left to right
+     *   - Iterate from right to left and check if already candies are more for current child
+     *   - Add all the candies
+     */
     public static int candy(int[] ratings) {
         int[] candies = new int[ratings.length];
 

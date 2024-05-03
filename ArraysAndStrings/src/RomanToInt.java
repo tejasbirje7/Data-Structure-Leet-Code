@@ -20,6 +20,14 @@ public class RomanToInt {
 
         int number = 0;
         for (int i=0; i < s.length(); i++) {
+
+            /*
+             *  If [ index (i) < index (i+1) ]
+             *     subtract the value from map to number
+             *  else
+             *     add the value from map to number
+             *  return number
+             */
             if(i+1 < s.length() && m.get(s.charAt(i)) < m.get(s.charAt(i+1))) {
                 number -= m.get(s.charAt(i));
             } else {

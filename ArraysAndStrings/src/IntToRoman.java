@@ -10,6 +10,9 @@ public class IntToRoman {
     }
 
     public static String intToRoman(int num) {
+        // NOTE : This must be LinkedHashMap as we need to
+        // iterate in order and place map elements
+        // in decreasing order
         Map<String, Integer> m = new LinkedHashMap<>();
         m.put("M", 1000);
         m.put("CM", 900);

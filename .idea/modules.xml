@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ArraysAndStrings/ArraysAndStrings.iml" filepath="$PROJECT_DIR$/ArraysAndStrings/ArraysAndStrings.iml" />
       <module fileurl="file://$PROJECT_DIR$/DataStructLeetCode.iml" filepath="$PROJECT_DIR$/DataStructLeetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TwoPointers/TwoPointers.iml" filepath="$PROJECT_DIR$/TwoPointers/TwoPointers.iml" />
     </modules>
   </component>
 </project>

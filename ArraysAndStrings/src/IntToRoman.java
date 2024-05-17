@@ -13,6 +13,23 @@ public class IntToRoman {
         // NOTE : This must be LinkedHashMap as we need to
         // iterate in order and place map elements
         // in decreasing order
+        Map<String, Integer> m = getStringIntegerMap();
+
+        StringBuilder roman = new StringBuilder();
+        for (Map.Entry<String,Integer> e : m.entrySet()) {
+            if(num / e.getValue() > 0) {
+                int count = num / e.getValue();
+                while (count > 0) {
+                    roman.append(e.getKey());
+                    count--;
+                }
+                num = num % e.getValue();
+            }
+        }
+        return roman.toString();
+    }
+
+    private static Map<String, Integer> getStringIntegerMap() {
         Map<String, Integer> m = new LinkedHashMap<>();
         m.put("M", 1000);
         m.put("CM", 900);
@@ -27,19 +44,7 @@ public class IntToRoman {
         m.put("V", 5);
         m.put("IV",4);
         m.put("I", 1);
-
-        StringBuilder roman = new StringBuilder();
-        for (Map.Entry<String,Integer> e : m.entrySet()) {
-            if(num / e.getValue() > 0) {
-                int count = num / e.getValue();
-                while (count > 0) {
-                    roman.append(e.getKey());
-                    count--;
-                }
-                num = num % e.getValue();
-            }
-        }
-        return roman.toString();
+        return m;
     }
 
 

@@ -14,7 +14,6 @@ public class HIndex {
      * Since the researcher has 3 papers with at least 3 citations each and
      * the remaining two with no more than 3 citations each, their h-index is 3.
      */
-
     public static int hIndex(int[] citations) {
         int n = citations.length;
         int[] trackArr = new int[n + 1];

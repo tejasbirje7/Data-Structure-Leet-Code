@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 /**
  * Moore's Voting Algorithm
- *
+ * <p>
  * ALGORITHM:
  * Begin by initializing two variables, num and a counter count, both of which are set to 0.
  * Now we’ll begin iterating over the number and for each element x.
@@ -11,11 +11,11 @@ import java.util.Arrays;
  * Reset the counter to zero.
  * Find the frequency of the num variable by looping through the nums array.
  * Now, if the count is larger than N/2, we return num; otherwise we return -1.
- *
+ * <p>
  *
  * ILLUSTRATION:
  * Input: { 1,7,2,7,8,7,7}
- *
+ * <p>
  * Index 0: num = 1, count =1
  * Index 1: num = 1, count =0 ( 7 not equal to 1)
  * Index 2: num = 2 (as the count is 0 we initalise num to current), count =1
@@ -23,7 +23,7 @@ import java.util.Arrays;
  * Index 4: num = 8 (as the count is 0 we initalise num to current), count =1
  * Index 5: num = 8, count =0 ( 7 not equal to 8)
  * Index 6: num = 7 (as the count is 0 we initalise num to current), count =1
- *
+ * <p>
  * Now we can check for the frequency of 7, i.e, 4 which is > 7/2.
  */
 public class MajorityElement {

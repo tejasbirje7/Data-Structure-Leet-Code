@@ -5,6 +5,18 @@ public class ReverseWordsInString {
         System.out.println(reverseWords(s));
     }
 
+    /**
+     * Input: s = "the sky is blue"
+     * Output: "blue is sky the"
+     * <p>
+     * Input: s = "  hello world  "
+     * Output: "world hello"
+     * Explanation: Your reversed string should not contain leading or trailing spaces.
+     * <p>
+     * Input: s = "a good   example"
+     * Output: "example good a"
+     * Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
+     */
     public static String reverseWords(String s) {
         StringBuilder sb = new StringBuilder();
         StringBuilder temp = new StringBuilder(" ");

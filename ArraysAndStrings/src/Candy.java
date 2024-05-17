@@ -35,7 +35,8 @@ public class Candy {
         // candies then index+1 if rating is higher for ith index candidate
         for (int i = ratings.length - 2; i >= 0; i--) {
             if(ratings[i] > ratings[i+1]) {
-                /**
+
+                /*
                  * Check if current index already has candies
                  * maximum then i+1 index if not then add 1 candy to i+1 index candies
                  * and assign it to current index which will ensure the highest rating

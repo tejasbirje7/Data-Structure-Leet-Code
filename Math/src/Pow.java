@@ -1,6 +1,11 @@
 public class Pow {
 
     /**
+     * Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
+     *
+     * Input: x = 2.00000, n = 10
+     * Output: 1024.00000
+     *
      * Input: x = 2.10000, n = 3
      * Output: 9.26100
      *
@@ -25,11 +30,7 @@ public class Pow {
 
             x *= x;
             n >>>= 1; // equivalent to n = n / 2; i.e. keep dividing the number by 2
-            System.out.println(x);
-            System.out.println(n);
-            System.out.println(" ");
         }
-        System.out.println(pow);
 
 
         // Normal approach without bitwise

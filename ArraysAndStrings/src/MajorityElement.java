@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Moore's Voting Algorithm
  * <p>
@@ -18,25 +16,31 @@ import java.util.Arrays;
  * <p>
  * Index 0: num = 1, count =1
  * Index 1: num = 1, count =0 ( 7 not equal to 1)
- * Index 2: num = 2 (as the count is 0 we initalise num to current), count =1
+ * Index 2: num = 2 (as the count is 0 we initialize num to current), count =1
  * Index 3: num = 2, count =0 ( 7 not equal to 2)
- * Index 4: num = 8 (as the count is 0 we initalise num to current), count =1
+ * Index 4: num = 8 (as the count is 0 we initialize num to current), count =1
  * Index 5: num = 8, count =0 ( 7 not equal to 8)
- * Index 6: num = 7 (as the count is 0 we initalise num to current), count =1
+ * Index 6: num = 7 (as the count is 0 we initialize num to current), count =1
  * <p>
  * Now we can check for the frequency of 7, i.e, 4 which is > 7/2.
  */
 public class MajorityElement {
 
     public static void main(String[] args) {
-        int[] nums = {2,2,1,1,1,2,2};
+        int[] nums = {1,7,2,7,8,7,7};
         System.out.println(majorityElement(nums));
     }
 
     /**
-     * The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+     * The majority element is the element that appears more
+     * than ⌊n / 2⌋ times.
+     * You may assume that the majority element always exists in the array.
+     *
      * Input: nums = [3,2,3]
      * Output: 3
+     *
+     * Input: nums = [2,2,1,1,1,2,2]
+     * Output: 2
      */
     public static int majorityElement(int[] nums) {
         int count = 0;

@@ -1,14 +1,36 @@
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class IntToRoman {
 
     public static void main(String[] args) {
-        System.out.println(intToRoman(1994));
+        System.out.println(intToRoman(3749));
     }
 
+    /**
+     * Input: num = 3749
+     * Output: "MMMDCCXLIX"
+     * Explanation:
+     * 3000 = MMM as 1000 (M) + 1000 (M) + 1000 (M)
+     *  700 = DCC as 500 (D) + 100 (C) + 100 (C)
+     *   40 = XL as 10 (X) less of 50 (L)
+     *    9 = IX as 1 (I) less of 10 (X)
+     * Note: 49 is not 1 (I) less of 50 (L) because the conversion is based on decimal places
+     *
+     * Input: num = 58
+     * Output: "LVIII"
+     * Explanation:
+     * 50 = L
+     *  8 = VIII
+     *
+     * Input: num = 1994
+     * Output: "MCMXCIV"
+     * Explanation:
+     * 1000 = M
+     *  900 = CM
+     *   90 = XC
+     *    4 = IV
+     */
     public static String intToRoman(int num) {
         // NOTE : This must be LinkedHashMap as we need to
         // iterate in order and place map elements
@@ -18,11 +40,17 @@ public class IntToRoman {
         StringBuilder roman = new StringBuilder();
         for (Map.Entry<String,Integer> e : m.entrySet()) {
             if(num / e.getValue() > 0) {
+                // Check how many roman characters needs to be inserted
+                // by dividing the given num with roman value
                 int count = num / e.getValue();
+
+                // Append number of roman characters found in above step
                 while (count > 0) {
                     roman.append(e.getKey());
                     count--;
                 }
+
+                // Remove first digit from the given number
                 num = num % e.getValue();
             }
         }

@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class Merge {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         int[] m = {1,2,3,0,0,0};
         int[] n = {2,5,6};
         merge(m,3,n,3);

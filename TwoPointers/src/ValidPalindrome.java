@@ -21,12 +21,12 @@ public class ValidPalindrome {
         String s = "A man, a plan, a canal: Panama";
         Pattern p = Pattern.compile("[^A-Za-z0-9]");
 
-        int start = 0;
-        int last = s.length() - 1;
-
         Matcher m = p.matcher(s);
         s = s.replaceAll("\\s+","");
         s = s.replaceAll("[^A-Za-z0-9]","");
+
+        int start = 0;
+        int last = s.length() - 1;
 
         while (last > start) {
             if(Character.toLowerCase(s.charAt(last)) == Character.toLowerCase(s.charAt(start))) {
@@ -36,5 +36,6 @@ public class ValidPalindrome {
                 System.out.println("Not a palindrome");
             }
         }
+        System.out.println("palindrome");
     }
 }

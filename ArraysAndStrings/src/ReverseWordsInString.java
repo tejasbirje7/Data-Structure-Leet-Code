@@ -1,7 +1,7 @@
 public class ReverseWordsInString {
 
     public static void main(String[] args) {
-        String s = "  the sky is blue ";
+        String s = "  the sky is blue  ";
         System.out.println(reverseWords(s));
     }
 
@@ -20,21 +20,23 @@ public class ReverseWordsInString {
     public static String reverseWords(String s) {
         StringBuilder sb = new StringBuilder();
         StringBuilder temp = new StringBuilder(" ");
-        int i = 0,f = 0;
-        for(; i < s.length(); i++){
-            if(s.charAt(i) != ' '){
+        boolean wordAppended = false;
+
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) != ' ') {
                 temp.append(s.charAt(i));
-                f = 1;
+                wordAppended = true;
             }
             else {
-                if(f == 0) continue;
+                if(!wordAppended) continue;
                 sb.insert(0, temp);
                 temp.setLength(0);
                 temp.insert(0, " ");
-                f = 0;
+                wordAppended = false;
             }
         }
-        if(f == 1) sb.insert(0, temp);
+
+        if(wordAppended) sb.insert(0, temp);
         sb.delete(0, 1);
         return String.valueOf(sb);
     }

@@ -26,6 +26,7 @@ public class GroupAnagrams {
             for (Character c : str.toCharArray()) {
                 keyMap.put(c, keyMap.getOrDefault(c, 0) + 1);
             }
+            keyMap.forEach((key, value) -> System.out.println(key + ": " + value));
             result.computeIfAbsent(keyMap, k -> new ArrayList<>()).add(str);
         }
 

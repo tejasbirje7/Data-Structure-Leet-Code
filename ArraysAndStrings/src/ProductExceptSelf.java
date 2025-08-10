@@ -12,13 +12,14 @@ public class ProductExceptSelf {
      * Output: [24,12,8,6]
      */
     public static int[] productExceptSelf(int[] nums) {
-        System.out.println("Before Array : "+Arrays.toString(nums));
         int prefix = 1;
         int[] output = new int[nums.length];
+        System.out.println(Arrays.toString(nums));
         for (int i=0; i < nums.length; i++) {
             output[i] = prefix;
             prefix = prefix * nums[i];
         }
+        System.out.println(Arrays.toString(output));
         int postFix = 1;
         for (int i=nums.length-1; i >= 0; i--) {
             output[i] = postFix * output[i];

@@ -17,7 +17,7 @@ public class SummaryRanges {
      */
     public static List<String> summaryRanges(int[] nums) {
         List<String> res = new ArrayList<>();
-        if(nums.length==1){
+        if(nums.length==1) {
             res.add(nums[0]+"");
             return res;
         }

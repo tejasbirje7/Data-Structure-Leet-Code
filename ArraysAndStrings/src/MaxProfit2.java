@@ -7,7 +7,7 @@ public class MaxProfit2 {
      * Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
      * Total profit is 4 + 3 = 7.
      *
-     * Graph method - Buy stock if [i] is greater than [i-1] and increase profit
+     * Graph Algo - Buy stock if [i] is greater than [i-1] and increase profit
      */
     public static void main(String[] args) {
         int[] prices = {7,1,5,3,6,4};
@@ -15,7 +15,7 @@ public class MaxProfit2 {
     }
     public static int maxProfit(int[] prices) {
         int profit = 0;
-        for(int i=1; i<prices.length; i++) {
+        for(int i=1; i < prices.length; i++) {
             if(prices[i] > prices[i-1]) {
                 profit += prices[i] - prices[i-1];
             }

@@ -1,7 +1,7 @@
 public class LongestPrefixString {
 
     public static void main(String[] args) {
-        String[] strs = {"flower","flow","flight"};
+        String[] strs = {"flower","flow","flight","flew"};
         System.out.println(longestCommonPrefix(strs));
     }
 
@@ -30,12 +30,14 @@ public class LongestPrefixString {
             Since flo as a whole is not in flight, it return -1 and  prefix=prefix.substring(0,prefix.length()-1) reduces prefix to "fl"
             Again while(strs[index].indexOf(prefix) != 0) means while("flight".indexOf("fl")!=0)
             Since fl as a whole is in flight, it returns 0 so now prefix=fl
-        index=3, for loop terminates and we return prefix which is equal to fl
+        index=3,
+            for loop terminates and we return prefix which is equal to fl
 */
     public static String longestCommonPrefix(String[] strs) {
         String prefix = strs[0];
         for (int i=1; i < strs.length; i++) {
             while (strs[i].indexOf(prefix) != 0) {
+                // Delete character one by one from end until we get valid index of prefix.
                 prefix = prefix.substring(0,prefix.length()-1);
             }
         }

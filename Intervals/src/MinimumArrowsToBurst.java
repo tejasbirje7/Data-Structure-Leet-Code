@@ -5,8 +5,8 @@ import java.util.List;
 
 public class MinimumArrowsToBurst {
     public static void main(String[] args) {
-        int[][] points = {{1,2},{3,4},{5,6},{7,8}};
-//        int[][] points = {{10,16},{2,8},{1,6},{7,12}};
+//        int[][] points = {{1,2},{3,4},{5,6},{7,8}};
+        int[][] points = {{10,16},{2,8},{1,6},{7,12}};
         System.out.println(findMinArrowShots(points));
     }
 

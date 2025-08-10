@@ -38,6 +38,8 @@ public class ThreeSum {
         Arrays.sort(nums);
         Set<List<Integer>> set = new HashSet<>();
 
+        // Use 3 pointers i, left & right where index i will be
+        // a fix pointer for each loop and left pointer will start from i+1
         for (int i=0; i < nums.length; i++) {
             // Two Sum approach for remaining elements
             int left = i + 1;

@@ -6,7 +6,7 @@ public class ValidAnagram {
 
     public static void main(String[] args) {
         String s = "aacc";
-        String t = "ccac";
+        String t = "ccaa";
 
         System.out.println(isAnagram(s,t));
     }

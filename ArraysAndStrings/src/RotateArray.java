@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class RotateArray {
 
@@ -5,6 +6,7 @@ public class RotateArray {
         int[] nums = {1,2,3,4,5,6,7};
         int val = 3;
         rotate(nums, val);
+        System.out.println(Arrays.toString(nums));
     }
 
     /**
@@ -23,7 +25,7 @@ public class RotateArray {
     }
 
     public static void reverse(int[] nums , int from, int to) {
-        while (to > from) {
+        while (from < to) {
             int temp = nums[to];
             nums[to] = nums[from];
             nums[from] = temp;

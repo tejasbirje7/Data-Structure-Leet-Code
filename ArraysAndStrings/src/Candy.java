@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Candy {
 
     public static void main(String[] args) {
@@ -9,6 +7,16 @@ public class Candy {
     }
 
     /**
+     * There are n children standing in a line.
+     * Each child is assigned a rating value given in the integer array ratings.
+     *
+     * You are giving candies to these children subjected to the following requirements:
+     *
+     * Each child must have at least one candy.
+     * Children with a higher rating get more candies than their neighbors.
+     * Return the minimum number of candies you need to have to distribute the candies to the children.
+     *
+     *
      * Input: ratings = [1,0,2]
      * Output: 5
      * Explanation: You can allocate to the first, second and third
@@ -25,7 +33,7 @@ public class Candy {
 
         // Iterate from left to right to check if current index has more
         // candies then index-1 if rating is higher for ith index candidate
-        for (int i=1 ; i<ratings.length; i++) {
+        for (int i=1 ; i < ratings.length; i++) {
             if(ratings[i] > ratings[i-1]) {
                 candies[i] = candies[i-1] + 1;
             }
@@ -55,7 +63,7 @@ public class Candy {
             sum += i;
         }
 
-        // return all the candies + all initial candies assigned to each student
+        // return all the candies + all initial single candy assigned to each student
         return sum + ratings.length;
     }
 }

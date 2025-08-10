@@ -14,16 +14,14 @@ public class MaxProfit {
      * Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
      */
     public static int maxProfit(int[] prices) {
-        int maxRight = prices[prices.length-1];
+        int maxRight = prices[prices.length - 1];
         int maxProfit = 0;
-        for (int i = prices.length-2; i >= 0; i--) {
+        for (int i = prices.length - 2; i >= 0; i--) {
             if(prices[i] > maxRight) {
                 maxRight = prices[i];
             }
             int profit = maxRight - prices[i];
-            if(profit > maxProfit) {
-                maxProfit = profit;
-            }
+            maxProfit = Math.max(profit,maxProfit);
         }
         return maxProfit;
     }

@@ -34,8 +34,6 @@ public class RansomNote {
                 if (countMap.get(c) == 0)
                     return false;
                 countMap.put(c,countMap.get(c) - 1);
-
-
             } else {
                 return false;
             }

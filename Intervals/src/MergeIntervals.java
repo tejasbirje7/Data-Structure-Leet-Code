@@ -19,12 +19,14 @@ public class MergeIntervals {
 
         Arrays.sort(intervals, Comparator.comparing(i -> i[0]));
 
+        System.out.println(Arrays.deepToString(intervals));
+        // [[1, 3], [2, 6], [8, 10], [9, 13], [15, 18]]
+
         int[] previousInterval = intervals[0];
         List<int[]> results = new ArrayList<>();
         results.add(previousInterval);
 
         for (int[] interval : intervals) {
-
             if (interval[0] <= previousInterval[1]) {
                 previousInterval[1] = Math.max(interval[1], previousInterval[1]);
             } else {
@@ -35,7 +37,6 @@ public class MergeIntervals {
         }
 
         return results.toArray(new int[results.size()][]);
-
 
     }
 }

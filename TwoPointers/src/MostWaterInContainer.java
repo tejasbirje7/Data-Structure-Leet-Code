@@ -31,15 +31,12 @@ public class MostWaterInContainer {
         int maxContainer = 0;
 
         while (l < r) {
+            // ( r - l ) since right index will always be greater than left index
+            // So no of blocks * minimum height from l & r
             int container = (r - l) * Math.min(height[l],height[r]);
-            if ( container > maxContainer) {
-                maxContainer = container;
-            }
-            if(height[l] < height[r]) {
-                l++;
-            } else {
-                r--;
-            }
+            container = Math.max(container,maxContainer);
+            if(height[l] < height[r]) l++;
+             else r--;
         }
         return maxContainer;
     }

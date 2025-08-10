@@ -1,19 +1,4 @@
-import java.util.Arrays;
-
 public class AddTwoNumbers {
-
-    public static void main(String[] args) {
-        int[] d1 = {9,9,9,9,9,9,9};
-        int[] d2 = {9,9,9,9};
-
-        CustomLinkedList l1 = new CustomLinkedList();
-        Arrays.stream(d1).forEach(l1::add);
-
-        CustomLinkedList l2 = new CustomLinkedList();
-        Arrays.stream(d2).forEach(l2::add);
-
-//        System.out.println(addTwoNumbers(l1,l2));
-    }
 
     /**
      * Input: l1 = [2,4,3], l2 = [5,6,4]
@@ -26,6 +11,29 @@ public class AddTwoNumbers {
      * Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
      * Output: [8,9,9,9,0,0,0,1]
      */
+
+    public static void main(String[] args) {
+        int[] d1 = {9,9,9,9,9,9,9};
+        int[] d2 = {9,9,9,9};
+
+        // Creating Linked List 1: 9 -> 9 -> 9 -> 9 -> 9 -> 9 -> 9
+        ListNode d1n7 = new ListNode(9);
+        ListNode d1n6 = new ListNode(9, d1n7);
+        ListNode d1n5 = new ListNode(9, d1n6);
+        ListNode d1n4 = new ListNode(9, d1n5);
+        ListNode d1n3 = new ListNode(9, d1n4);
+        ListNode d1n2 = new ListNode(9, d1n3);
+        ListNode d1n1 = new ListNode(9, d1n2); // Head of list 1
+
+        // Creating Linked List 2: 9 -> 9 -> 9 -> 9
+        ListNode d2n4 = new ListNode(9);
+        ListNode d2n3 = new ListNode(9, d2n4);
+        ListNode d2n2 = new ListNode(9, d2n3);
+        ListNode d2n1 = new ListNode(9, d2n2); // Head of list 2
+
+        System.out.println(addTwoNumbers(d1n1,d2n1));
+    }
+
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         ListNode dummyHead = new ListNode(0);
@@ -49,31 +57,9 @@ public class AddTwoNumbers {
 
         ListNode result = dummyHead.next;
         dummyHead.next = null;
+        printList(result);
         return result;
     }
-
-    private static class CustomLinkedList {
-        ListNode head;
-        public void add(int data) {
-            ListNode newNode = new ListNode(data);
-            if(head == null) {
-                head = newNode;
-            } else {
-                ListNode curr = head;
-                while (curr.next != null) {
-                    curr = curr.next;
-                }
-                curr.next = newNode;
-            }
-        }
-        public void print() {
-            while (head != null) {
-                System.out.println(head.val);
-                head = head.next;
-            }
-        }
-    }
-
 
     private static class ListNode {
         int val;
@@ -81,6 +67,17 @@ public class AddTwoNumbers {
         ListNode() {}
         ListNode(int val) { this.val = val; }
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
+
+    // Method to print the linked list
+    public static void printList(ListNode head) {
+        ListNode current = head;
+        while (current != null) {
+            System.out.print(current.val);
+            if (current.next != null) System.out.print(" -> ");
+            current = current.next;
+        }
+        System.out.println(); // For new line at the end
     }
 
 

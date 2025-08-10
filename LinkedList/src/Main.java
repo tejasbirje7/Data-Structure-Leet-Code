@@ -16,14 +16,15 @@ public class Main {
                 curr.next = newNode;
             }
         }
-        public void print() {
-            while (head != null) {
-                System.out.println(head.val);
-                head = head.next;
-            }
-        }
     }
 
+    public static void print(ListNode head) {
+        ListNode current = head;
+        while (current != null) {
+            System.out.println(current.val);
+            current = current.next;
+        }
+    }
 
     public static class ListNode {
         int val;

@@ -1,12 +1,17 @@
 public class FirstOccurrenceOfString {
 
     public static void main(String[] args) {
-        String haystack = "abc";
-        String needle = "c";
+        String haystack = "sadbutsad";
+        String needle = "sad";
         System.out.println(strStr(haystack,needle));
     }
 
     /**
+     * Given two strings needle and haystack, return the
+     * index of the first occurrence of needle in haystack,
+     * or -1 if needle is not part of haystack.
+     *
+     *
      * Input: haystack = "sadbutsad", needle = "sad"
      * Output: 0
      * Explanation: "sad" occurs at index 0 and 6.

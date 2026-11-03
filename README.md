@@ -69,6 +69,7 @@ Each solution carries its explanation in **one block comment directly above the 
 
 ### 4.1 Rules
 
+- **Easy and point-wise.** Write every section as short bullet points, one idea per point, in simple words. Avoid paragraphs: points are faster to scan during revision and easier to remember.
 - **One place only.** All the explanation goes in the class header. Don't add comments above methods or scatter them through the code. The code stays clean, and the header reads like a single page of notes.
 - **Code stays unchanged.** Writing or updating the notes never changes the solution's logic.
 - **Same order every time.** Use the sections below in this exact order, so every file reads the same way during revision.
@@ -91,7 +92,13 @@ This first line is what makes the number search in section 2 work, so keep the f
 
 #### PROBLEM
 
-The problem in your own words, in two to four lines: the input, what to return, and any constraint that shapes the solution (sorted input, in place, O(1) extra space, values in a known range, and so on). Skip the story and keep only what you need to solve it.
+The problem in your own words, as two to four short points:
+
+- the input,
+- what to return,
+- any constraint that shapes the solution (sorted input, in place, O(1) extra space, values in a known range, and so on).
+
+Skip the story and keep only what you need to solve it.
 
 #### EXAMPLE
 
@@ -99,7 +106,7 @@ The official example from LeetCode, copied as is: `Input`, `Output` and `Explana
 
 #### HOW TO THINK
 
-**The most important section.** One paragraph that explains how to reach the solution, not just what it is:
+**The most important section.** Explains how to reach the solution, not just what it is. Write it as one short, simple point for each of these, not as a paragraph:
 
 - **The clue:** which words in the problem point to the technique (e.g. "sorted", "in place", "contiguous subarray", "all combinations").
 - **The technique:** which pattern applies (two pointers, sliding window, hash map, stack, backtracking, and so on) and why it fits.
@@ -162,7 +169,9 @@ Copy this above the class and fill it in:
  * https://leetcode.com/problems/<problem-slug>/
  *
  * PROBLEM
- *   <Input, what to return, and the constraints that shape the solution.>
+ *   - Input: <...>
+ *   - Return: <...>
+ *   - Constraints: <the ones that shape the solution>
  *
  * EXAMPLE
  *   Input: <...>
@@ -170,8 +179,11 @@ Copy this above the class and fill it in:
  *   Explanation: <...>
  *
  * HOW TO THINK
- *   <One paragraph: the clue in the problem, the technique it points to, the rule
- *   that stays true every step, the decision made each step, and what to return.>
+ *   - Clue: <the words in the problem that point to the technique>
+ *   - Technique: <the pattern, and why it fits>
+ *   - Rule that stays true: <what the variables mean at every step>
+ *   - Decision: <what the loop checks each step, and what each case does>
+ *   - Return: <what to return, and any off-by-one detail>
  *
  * STEPS
  *   1. <Setup>
@@ -207,6 +219,7 @@ public class <ProblemName> {
 - [ ] File named after the problem, in the right topic folder.
 - [ ] `main` runs the dry-run input.
 - [ ] Header sits directly above the class, with every section in order.
+- [ ] Every section is short, simple bullet points, with no paragraphs.
 - [ ] Title line follows `LeetCode <number>. <Title>` exactly.
 - [ ] Dry-run result matches what `main` prints.
 - [ ] No explanation comments anywhere else in the file.

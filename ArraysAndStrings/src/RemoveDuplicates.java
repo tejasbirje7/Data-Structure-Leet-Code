@@ -5,9 +5,10 @@ import java.util.Arrays;
  * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  *
  * PROBLEM
- *   The array is sorted in non-decreasing order. Remove the duplicates in place so each value
- *   appears once, in the original order, and return k = the number of unique values.
- *   Only the first k slots are checked; whatever is left after them doesn't matter.
+ *   - Input: an integer array sorted in non-decreasing order.
+ *   - Task: remove the duplicates in place, so each value appears once, in the original order.
+ *   - Return: k = the number of unique values.
+ *   - Only the first k slots are checked; whatever is left after them doesn't matter.
  *
  * EXAMPLE
  *   Input: nums = [1,1,2]
@@ -16,12 +17,14 @@ import java.util.Arrays;
  *   It does not matter what you leave beyond the returned k (hence they are underscores).
  *
  * HOW TO THINK
- *   Sorted means every copy of a value sits right next to the others, so you never need to look
- *   further back than the last unique value you kept. "In place" plus "return a length" is the cue
- *   for two pointers on the same array: i reads every element, and k marks the slot holding the last
- *   unique value written so far. One rule stays true the whole time: nums[0..k] are unique and in
- *   order. If nums[i] differs from nums[k], it's a new value, so move k forward and copy it there.
- *   If it's equal, it's a duplicate, so skip it. At the end k is an index, so the count is k + 1.
+ *   - Clue: "sorted" means every copy of a value sits right next to the others.
+ *     So you only ever compare with the last unique value you kept.
+ *   - Technique: "in place" + "return a length" = two pointers on the same array.
+ *     i reads every element; k marks the slot of the last unique value written.
+ *   - Rule that stays true: nums[0..k] are unique and in order.
+ *   - Decision: nums[i] != nums[k] -> new value: move k forward, copy it to nums[k].
+ *               nums[i] == nums[k] -> duplicate: skip it.
+ *   - Return: k is an index, so the count is k + 1.
  *
  * STEPS
  *   1. Start with k = 0 (nums[0] is always unique).

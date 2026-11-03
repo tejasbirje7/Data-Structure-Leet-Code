@@ -14,46 +14,48 @@
  *   Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
  *
  * HOW TO THINK
- *   - Clue: "buy before you sell" means the sell day must come after the buy day.
- *     So for each day, the best sell price is the highest price from that day onward.
- *   - Technique: one pass from right to left, keeping a running maximum (maxRight).
+ *   - Clue: "buy before you sell" means the buy day must come before the sell day.
+ *     So if you sell today, the best buy price is the lowest price seen so far.
+ *   - Technique: one pass from left to right, keeping a running minimum (minPrice).
  *     No need to check every pair of days.
- *   - Rule that stays true: maxRight = the highest price from day i to the last day.
- *   - Decision: prices[i] > maxRight -> new highest, update maxRight (profit today is 0).
- *               otherwise           -> profit = maxRight - prices[i]; keep it if it's the best.
+ *   - Rule that stays true: minPrice = the lowest price from day 0 up to today.
+ *   - Decision: price < minPrice -> new lowest, update minPrice (profit today is 0).
+ *               every day        -> profit = price - minPrice (sell today); keep it if it's the best.
  *   - Return: the best profit seen; it starts at 0, so "no profit" returns 0.
- *   - Same idea left to right: keep the lowest price so far and sell today.
+ *   - Same idea right to left: keep the highest price still ahead and buy today.
  *
  * STEPS
- *   1. maxRight = last price, maxProfit = 0.
- *   2. Loop i from the second-last day down to day 0.
- *   3. If prices[i] > maxRight, set maxRight = prices[i].
- *   4. profit = maxRight - prices[i]; maxProfit = max(maxProfit, profit).
+ *   1. minPrice = Integer.MAX_VALUE (so the first price becomes the minimum), maxProfit = 0.
+ *   2. Loop over each price from the first day to the last.
+ *   3. If price < minPrice, set minPrice = price.
+ *   4. If price - minPrice > maxProfit, set maxProfit = price - minPrice.
  *   5. Return maxProfit.
  *
- * DRY RUN   prices = [7,1,5,3,6,4]   (maxRight and maxProfit are values after the step)
+ * DRY RUN   prices = [7,1,5,3,6,4]   (minPrice and maxProfit are values after the step)
  *
- *     i  | prices[i] | action           | maxRight | profit | maxProfit
- *   -----+-----------+------------------+----------+--------+-----------
- *   start|     4     | set from last    |    4     |   -    |     0
- *     4  |     6     | new highest      |    6     |   0    |     0
- *     3  |     3     | sell at 6        |    6     |   3    |     3
- *     2  |     5     | sell at 6        |    6     |   1    |     3
- *     1  |     1     | sell at 6        |    6     |   5    |     5
- *     0  |     7     | new highest      |    7     |   0    |     5
+ *    day | price | action          | minPrice | price - minPrice | maxProfit
+ *   -----+-------+-----------------+----------+------------------+-----------
+ *     0  |   7   | new lowest      |    7     |        0         |     0
+ *     1  |   1   | new lowest      |    1     |        0         |     0
+ *     2  |   5   | sell, new best  |    1     |        4         |     4
+ *     3  |   3   | sell, not best  |    1     |        2         |     4
+ *     4  |   6   | sell, new best  |    1     |        5         |     5
+ *     5  |   4   | sell, not best  |    1     |        3         |     5
  *
  *   Returns 5: buy at 1 (day 2), sell at 6 (day 5).
  *
  * EDGE CASES
- *   [5]            -> 0   one day, the loop never runs
- *   [7,6,4,3,1]    -> 0   prices only fall; every day is a new highest, profit is always 0
+ *   [5]            -> 0   one day: it becomes minPrice, profit 0
+ *   [7,6,4,3,1]    -> 0   prices only fall; every day is a new lowest, profit is always 0
  *   [1,2,4]        -> 3   buy on the first day, sell on the last
  *   [3,3,3]        -> 0   no price ever goes up
- *   []             -> crashes on prices[-1]; LeetCode guarantees at least one price
+ *   []             -> 0   the loop never runs (LeetCode guarantees at least one price anyway)
  *
  * COMMON MISTAKES
  *   - Returning max(prices) - min(prices): the lowest price may come after the highest.
  *     [7,6,4,3,1] would give 6 instead of 0.
+ *   - Starting minPrice at 0: no price is ever lower, so you'd return the highest price as profit.
+ *     Start at Integer.MAX_VALUE (or prices[0]).
  *   - Starting maxProfit below 0: the answer must be 0 when no profit is possible.
  *   - Checking every pair of days: O(n^2), too slow for 10^5 prices.
  *
@@ -74,14 +76,17 @@ public class MaxProfit {
     }
 
     public static int maxProfit(int[] prices) {
-        int maxRight = prices[prices.length - 1];
+        int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
-        for (int i = prices.length - 2; i >= 0; i--) {
-            if(prices[i] > maxRight) {
-                maxRight = prices[i];
+
+        for (int price : prices) {
+            if(price < minPrice) {
+                minPrice = price;
             }
-            int profit = maxRight - prices[i];
-            maxProfit = Math.max(profit,maxProfit);
+
+            if (price - minPrice > maxProfit) {
+                maxProfit = price - minPrice;
+            }
         }
         return maxProfit;
     }

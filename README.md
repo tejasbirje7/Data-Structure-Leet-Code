@@ -26,6 +26,7 @@ Conventions:
 - One problem per file, one public class per file.
 - Files are named after the problem, in PascalCase, not after its number (e.g. a problem called "Valid Parentheses" lives in `ValidParentheses.java`).
 - A follow-up or harder variant of a problem gets a numeric suffix (`ProblemName2.java`).
+- A second approach to the same problem gets the approach name as a suffix (`ProblemNameCyclic.java`, `ProblemNameStack.java`). Each approach file has its own full header, and the files list each other under RELATED.
 - Every class has a `main` method with a sample input, so it can be run on its own.
 
 ---

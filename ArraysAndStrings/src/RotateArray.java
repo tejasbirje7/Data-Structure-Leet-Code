@@ -64,6 +64,8 @@ import java.util.Arrays;
  *   O(n) time (each element is swapped about twice), O(1) extra space.
  *
  * RELATED
+ *   LeetCode 189 (RotateArrayCyclic, ArraysAndStrings/): the same problem with cyclic replacements.
+ *     Moves each element straight to (i + k) % n, cycle by cycle.
  *   LeetCode 61 (RotateList, LinkedList/): the same rotation on a linked list.
  *     Also uses k % length, then reconnects the list at the new head instead of reversing.
  */

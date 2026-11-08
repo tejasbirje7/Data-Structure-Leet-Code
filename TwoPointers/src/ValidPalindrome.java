@@ -1,6 +1,3 @@
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * LeetCode 125. Valid Palindrome
  * https://leetcode.com/problems/valid-palindrome/
@@ -9,7 +6,7 @@ import java.util.regex.Pattern;
  *   - Input: a string s (letters, digits, spaces, punctuation).
  *   - Lower-case all letters and remove everything that isn't a letter or digit.
  *   - Return: true if what is left reads the same forwards and backwards, else false.
- *   - Here the whole solution sits in main and prints "palindrome" / "Not a palindrome".
+ *   - Here isPalindrome(s) does the work; main runs the example and prints the result.
  *
  * EXAMPLE
  *   Input: s = "A man, a plan, a canal: Panama"
@@ -22,17 +19,16 @@ import java.util.regex.Pattern;
  *   - Technique: clean the string, then two pointers from both ends moving inwards.
  *   - Rule that stays true: every pair outside [start, last] has already matched.
  *   - Decision: lower-case chars equal -> start++, last--.
- *               not equal              -> not a palindrome; should stop at once.
- *               (this code only prints and never moves the pointers, so it loops forever)
- *   - Return: when the pointers meet or cross, every pair matched -> palindrome.
+ *               not equal              -> return false at once.
+ *   - Return: when the pointers meet or cross, every pair matched -> true.
  *     The middle char of an odd-length string needs no check.
  *
  * STEPS
  *   1. Remove whitespace, then every char that isn't A-Z, a-z or 0-9.
  *   2. start = 0, last = length - 1.
  *   3. While last > start: compare lower-case s[start] and s[last].
- *   4.   Equal -> start++, last--.  Not equal -> print "Not a palindrome" (should return false).
- *   5. After the loop, print "palindrome".
+ *   4.   Equal -> start++, last--.  Not equal -> return false.
+ *   5. After the loop, return true.
  *
  * DRY RUN   s = "A man, a plan, a canal: Panama"  ->  cleaned "AmanaplanacanalPanama" (21 chars)
  *           (start, last are values before the move)
@@ -50,19 +46,20 @@ import java.util.regex.Pattern;
  *      8   |  12  |    n     |    n    |        yes          | start++, last--
  *      9   |  11  |    a     |    a    |        yes          | start++, last--
  *
- *   Loop stops at start = last = 10 (the middle 'c'). Prints "palindrome".
- *   (The mismatch branch isn't traced: with this code it never ends, see EDGE CASES.)
+ *   Loop stops at start = last = 10 (the middle 'c'). Returns true; main prints "true".
+ *   Mismatch branch, s = "race a car" -> cleaned "raceacar": pairs (0,7) r/r, (1,6) a/a,
+ *   (2,5) c/c match, then (3,4) e vs a differ -> returns false.
  *
  * EDGE CASES
- *   " "            -> palindrome   cleaned string is "", the loop never runs
- *   "a"            -> palindrome   one char, the loop never runs
- *   "ab_a"         -> palindrome   '_' is removed, "aba" is left
- *   "race a car"   -> BUG: hangs, printing "Not a palindrome" forever (should be false).
- *                     The else branch doesn't move the pointers or stop the loop.
- *   "0P"           -> BUG: hangs the same way ('0' vs 'p'; should be false)
+ *   " "            -> true    cleaned string is "", the loop never runs
+ *   "a"            -> true    one char, the loop never runs
+ *   "ab_a"         -> true    '_' is removed, "aba" is left
+ *   "race a car"   -> false   cleaned "raceacar": 'e' vs 'a' differ
+ *   "0P"           -> false   '0' vs 'p' differ; digits are kept
  *
  * COMMON MISTAKES
- *   - Not stopping on a mismatch (the bug above): return false (or break) right away.
+ *   - Forgetting to stop on a mismatch: if the else branch only prints, the pointers never
+ *     move and the loop runs forever. Return false right away.
  *   - Forgetting case: 'P' and 'p' must match, so compare Character.toLowerCase of both.
  *   - Removing only spaces: punctuation such as ',' and ':' must go too.
  *   - Removing digits: only non-alphanumeric chars go; "0P" keeps both chars.
@@ -80,9 +77,10 @@ public class ValidPalindrome {
 
     public static void main(String[] args) {
         String s = "A man, a plan, a canal: Panama";
-        Pattern p = Pattern.compile("[^A-Za-z0-9]");
+        System.out.println(isPalindrome(s));
+    }
 
-        Matcher m = p.matcher(s);
+    public static boolean isPalindrome(String s) {
         s = s.replaceAll("\\s+","");
         s = s.replaceAll("[^A-Za-z0-9]","");
 
@@ -94,9 +92,9 @@ public class ValidPalindrome {
                 last--;
                 start++;
             } else {
-                System.out.println("Not a palindrome");
+                return false;
             }
         }
-        System.out.println("palindrome");
+        return true;
     }
 }

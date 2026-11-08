@@ -26,43 +26,41 @@
  *               height[l] < height[r] -> l++ (left is shorter).
  *               otherwise             -> r-- (right is shorter, or both equal).
  *   - Width is r - l (the distance between the lines), not r - l + 1.
- *   - Return: the best area seen. In this code the max goes into the wrong variable, so it
- *     returns 0 (see EDGE CASES).
+ *   - Return: maxContainer, the best area seen over all steps.
  *
  * STEPS
  *   1. l = 0, r = n - 1, maxContainer = 0.
  *   2. Loop while l < r.
- *   3. container = (r - l) * min(height[l], height[r]); the best should be kept in maxContainer.
+ *   3. container = (r - l) * min(height[l], height[r]); maxContainer = max(container, maxContainer).
  *   4. If height[l] < height[r], l++; else r--.
  *   5. Return maxContainer.
  *
  * DRY RUN   height = [1,8,6,2,5,4,8,3,7]   (l, r are values before the move)
  *
- *    l | r | h[l] | h[r] | width | area | best area (intended) | maxContainer (as coded) | move
- *   ---+---+------+------+-------+------+----------------------+-------------------------+------
- *    0 | 8 |  1   |  7   |   8   |   8  |          8           |            0            | l++
- *    1 | 8 |  8   |  7   |   7   |  49  |         49           |            0            | r--
- *    1 | 7 |  8   |  3   |   6   |  18  |         49           |            0            | r--
- *    1 | 6 |  8   |  8   |   5   |  40  |         49           |            0            | r-- (equal)
- *    1 | 5 |  8   |  4   |   4   |  16  |         49           |            0            | r--
- *    1 | 4 |  8   |  5   |   3   |  15  |         49           |            0            | r--
- *    1 | 3 |  8   |  2   |   2   |   4  |         49           |            0            | r--
- *    1 | 2 |  8   |  6   |   1   |   6  |         49           |            0            | r--
+ *    l | r | h[l] | h[r] | width | area | maxContainer (after) | move
+ *   ---+---+------+------+-------+------+----------------------+------
+ *    0 | 8 |  1   |  7   |   8   |   8  |          8           | l++
+ *    1 | 8 |  8   |  7   |   7   |  49  |         49           | r--
+ *    1 | 7 |  8   |  3   |   6   |  18  |         49           | r--
+ *    1 | 6 |  8   |  8   |   5   |  40  |         49           | r-- (equal)
+ *    1 | 5 |  8   |  4   |   4   |  16  |         49           | r--
+ *    1 | 4 |  8   |  5   |   3   |  15  |         49           | r--
+ *    1 | 3 |  8   |  2   |   2   |   4  |         49           | r--
+ *    1 | 2 |  8   |  6   |   1   |   6  |         49           | r--
  *
- *   Loop ends at l = r = 1. Returns 0 (bug); the right answer is 49 (lines at 1 and 8, row 2).
+ *   Loop ends at l = r = 1. Returns 49 (lines at 1 and 8, row 2).
  *
  * EDGE CASES
- *   any input                   -> 0   BUG: "container = Math.max(container,maxContainer)" writes the max
- *                                      into container, so maxContainer stays 0. It should be
- *                                      maxContainer = Math.max(container, maxContainer).
- *   [1,8,6,2,5,4,8,3,7]         -> 0   (should be 49)
- *   [1,1]                       -> 0   (should be 1)
- *   [0,0]                       -> 0   correct only because every area is 0
+ *   [1,8,6,2,5,4,8,3,7]         -> 49  the dry run above
+ *   [1,1]                       -> 1   smallest valid input: one pair, width 1
+ *   [0,0]                       -> 0   every area is 0
+ *   [4,4,4,4]                   -> 12  all equal: the widest pair wins, 3 * 4
  *   [5]                         -> 0   loop never runs (LeetCode guarantees n >= 2)
  *   []                          -> 0   r = -1, loop never runs
  *
  * COMMON MISTAKES
- *   - Keeping the max in the wrong variable (the bug above): assign Math.max(...) to maxContainer.
+ *   - Updating the wrong variable in max(...): "container = max(container, best)" never
+ *     changes best, so it stays 0. Assign the result to the best: maxContainer = max(...).
  *   - Moving the taller line: the area can only shrink. Always move the shorter one.
  *   - Width r - l + 1: that counts lines; the width is the distance r - l.
  *   - Checking every pair: O(n^2), too slow for 10^5 lines.
@@ -89,7 +87,7 @@ public class MostWaterInContainer {
 
         while (l < r) {
             int container = (r - l) * Math.min(height[l],height[r]);
-            container = Math.max(container,maxContainer);
+            maxContainer = Math.max(container,maxContainer);
             if(height[l] < height[r]) l++;
              else r--;
         }

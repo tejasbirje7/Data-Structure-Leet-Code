@@ -67,7 +67,8 @@ import java.util.Arrays;
  * RELATED
  *   LeetCode 80 (RemoveDuplicates2): each value may appear at most twice. Same idea, but compare
  *     with the value two slots behind the next write position (nums[e - 2]).
- *   LeetCode 83 (LinkedList/RemoveDuplicatesfromSortedList): the same problem on a linked list.
+ *   LeetCode 82 (RemoveDuplicatesfromSortedList, LinkedList/): a sorted linked list, but every copy
+ *     of a repeated value is removed, so only values that appear once are kept.
  */
 public class RemoveDuplicates {
 

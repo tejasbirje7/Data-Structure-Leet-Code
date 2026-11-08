@@ -23,14 +23,13 @@ import java.util.List;
  *               else -> for each num: if temp already contains it, skip (already used);
  *                       otherwise add it, recurse, remove it.
  *   - Return: result.
- *   - Special case in the code: nums.length == 1 is handled separately (and has a bug, see EDGE CASES).
+ *   - One number needs no special case: the first pick fills temp, so [x] gives [[x]].
  *
  * STEPS
- *   1. If nums has one element, add new ArrayList<>(nums[0]) and return.
- *   2. Otherwise call permute(result, [], nums).
- *   3. If temp is full, add a copy of temp to result.
- *   4. Else, for each num not already in temp: add it, recurse, remove the last element.
- *   5. Return result.
+ *   1. Call permute(result, [], nums).
+ *   2. If temp is full, add a copy of temp to result.
+ *   3. Else, for each num not already in temp: add it, recurse, remove the last element.
+ *   4. Return result.
  *
  * DRY RUN   nums = [1,2,3]   (path is temp right after the pick; each pick is undone after its call)
  *
@@ -57,18 +56,16 @@ import java.util.List;
  *
  * EDGE CASES
  *   [0,1]    -> [[0,1],[1,0]]   two numbers, two orders
- *   [1]      -> [[]]            BUG, should be [[1]]: new ArrayList<>(nums[0]) makes an EMPTY list
- *                               with capacity nums[0]; it does not add nums[0]
- *   [0]      -> [[]]            same bug, should be [[0]]
- *   [-1]     -> crashes         IllegalArgumentException (Illegal Capacity: -1); LeetCode allows
- *                               -10..10, so a single negative number fails on LeetCode
+ *   [1]      -> [[1]]           smallest input: pick 1, temp is full, add [1]
+ *   [0]      -> [[0]]           zero is a normal value
+ *   [-1]     -> [[-1]]          negative values work too (LeetCode allows -10..10)
  *   [1,1]    -> []              contains() treats the second 1 as used, nothing is ever full
  *                               (LeetCode says nums are distinct)
  *   []       -> [[]]            temp is full at once (LeetCode has at least one number)
  *
  * COMMON MISTAKES
- *   - new ArrayList<>(x) with an int: that sets the capacity, it doesn't add x.
- *     Use new ArrayList<>(List.of(x)), or just drop the special case: the general code handles one element.
+ *   - Special-casing one number with new ArrayList<>(n): that sets the capacity, it doesn't add n
+ *     ([1] gives [[]], [-1] throws). Use new ArrayList<>(List.of(n)), or skip the special case.
  *   - Using a start index like Combinations: you'd only get [1,2,3]. Permutations loop over all numbers.
  *   - Adding temp itself instead of a copy: every entry is the same list, empty at the end.
  *   - temp.contains is O(n) and breaks on duplicates; a boolean[] used array is O(1) and works with
@@ -79,8 +76,7 @@ import java.util.List;
  *   O(n) extra space for the recursion and temp, not counting the output.
  *
  * RELATED
- *   LeetCode 46 (PossiblePermutations, FAQ/): the same problem and the same contains() approach,
- *     without the single-element special case.
+ *   LeetCode 46 (PossiblePermutations, FAQ/): the same problem and the same contains() approach.
  *   LeetCode 47 (UniquePermutations, FAQ/): nums may have duplicates; uses a used[] array and
  *     a per-level seen set to skip repeats.
  *   LeetCode 77 (Combinations, Backtracking/): order doesn't matter, so each call starts after the last pick.
@@ -94,10 +90,6 @@ public class Permutations {
 
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        if (nums.length == 1) {
-            result.add(new ArrayList<>(nums[0]));
-            return result;
-        }
         permute(result,new ArrayList<>(),nums);
         return result;
 

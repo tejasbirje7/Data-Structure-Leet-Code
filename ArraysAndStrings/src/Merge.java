@@ -35,7 +35,7 @@ import java.util.Arrays;
  *   1. last = m + n - 1.
  *   2. While m > 0 and n > 0: put the bigger of nums1[m-1] and nums2[n-1] at nums1[last].
  *   3. Move back the pointer you took from (m-- or n--), then last--.
- *   4. While n > 0: copy the rest of nums2 into nums1, moving last back.
+ *   4. While n > 0: nums1[last] = nums2[n-1], then n-- and last-- (copies the rest of nums2, biggest first).
  *
  * DRY RUN   nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3   (m, n, nums1 are after the step)
  *
@@ -52,14 +52,13 @@ import java.util.Arrays;
  *   [1], m = 1, [], n = 0                 -> [1]             nothing to merge, both loops skip
  *   [1,2,3,0,0,0], m = 3, [4,5,6], n = 3  -> [1,2,3,4,5,6]   every step takes from nums2; tail loop not needed
  *   [2,2,0,0], m = 2, [2,2], n = 2        -> [2,2,2,2]       ties take nums2 first; order of equal values doesn't matter
- *   [0], m = 0, [1], n = 1                -> crashes (ArrayIndexOutOfBounds): the tail loop reads nums2[n]
- *                                            instead of nums2[n-1]. This is LeetCode example 3, so it is a real bug.
- *   [4,5,6,0,0,0], m = 3, [1,2,3], n = 3  -> crashes the same way: nums1 runs out first, so the tail loop runs
+ *   [0], m = 0, [1], n = 1                -> [1]             no real nums1 values; main loop skips, tail loop copies 1
+ *   [4,5,6,0,0,0], m = 3, [1,2,3], n = 3  -> [1,2,3,4,5,6]   nums1 runs out first; tail loop copies 3,2,1 into slots 2,1,0
  *
  * COMMON MISTAKES
  *   - Merging from the front: overwrites nums1 values before they are read. Fill from the back.
  *   - Off-by-one in the tail loop: m and n are counts, so the last unread value is nums2[n-1], not nums2[n].
- *     This code has exactly that bug (see EDGE CASES).
+ *     Reading nums2[n] crashes (ArrayIndexOutOfBounds) whenever nums1 runs out first.
  *   - Copying leftover nums1 values after the main loop: not needed, they are already in their final slots.
  *   - Sorting nums1 after copying nums2 in: works, but O((m + n) log(m + n)) instead of O(m + n).
  *
@@ -93,7 +92,7 @@ public class Merge {
         }
 
         while (n > 0) {
-            nums1[last] = nums2[n];
+            nums1[last] = nums2[n-1];
             n--;
             last--;
         }

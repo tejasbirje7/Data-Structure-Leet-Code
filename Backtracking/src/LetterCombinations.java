@@ -21,12 +21,12 @@ import java.util.*;
  *   - Decision: currentIndex == digits.length() -> one full string: add it, return.
  *               else -> for each letter of digits[currentIndex]: append it, recurse with
  *                       currentIndex + 1, then delete the last char (backtrack).
- *   - Return: resultList, which is a static field shared by every call (see EDGE CASES).
+ *   - Return: resultList, a new list made in each call and passed down, so calls never share answers.
  *
  * STEPS
- *   1. If digits is null or empty, return resultList.
+ *   1. Make a new empty resultList. If digits is null or empty, return it.
  *   2. Fill digitToLetter with the keypad map.
- *   3. generateCombinations(digits, 0, empty StringBuilder).
+ *   3. generateCombinations(digits, 0, empty StringBuilder, resultList).
  *   4. If currentIndex == digits.length(): add the string and return.
  *   5. Else, for each letter of the current digit: append, recurse with currentIndex + 1, delete last char.
  *   6. Return resultList.
@@ -51,17 +51,17 @@ import java.util.*;
  *   Returns [ad, ae, af, bd, be, bf, cd, ce, cf].
  *
  * EDGE CASES
- *   ""       -> []            early return (also for null)
- *   "2"      -> [a, b, c]     one level, three strings (on a fresh run)
+ *   ""       -> []            early return of the new empty list (also for null)
+ *   "2"      -> [a, b, c]     one level, three strings
  *   "79"     -> 16 strings    4 letters x 4 letters
  *   "2345"   -> 81 strings    longest input, 3 x 3 x 3 x 3
  *   "21"     -> []            '1' has no letters, so no string is ever finished (LeetCode digits are 2-9)
- *   Calling it twice: "23" then "2" returns [ad, ..., cf, a, b, c].
- *     resultList is static and never cleared, so old answers stay. Fine for one LeetCode call,
- *     wrong if the same JVM calls it again.
+ *   "23","2" -> 9, then 3     two calls in a row stay independent: "2" gives just [a, b, c],
+ *                             because each call makes its own resultList
  *
  * COMMON MISTAKES
- *   - Keeping the result in a static field: it leaks between calls. Make a new list in letterCombinations.
+ *   - A static result list keeps old answers between calls (LeetCode runs many tests in one JVM).
+ *     Make a new list in letterCombinations and pass it down.
  *   - Forgetting deleteCharAt after the recursive call: letters pile up ("ad", then "ade").
  *   - Returning [""] for empty input: LeetCode wants [], so check for empty first.
  *
@@ -76,7 +76,6 @@ import java.util.*;
 public class LetterCombinations {
 
     public static Map<Character,String> digitToLetter = new HashMap<>();
-    public static List<String> resultList = new ArrayList<>();
 
     public static void main(String[] args) {
         String digits = "23";
@@ -84,6 +83,7 @@ public class LetterCombinations {
     }
 
     public static List<String> letterCombinations(String digits) {
+        List<String> resultList = new ArrayList<>();
         if(digits == null || digits.isEmpty()){
             return resultList;
         }
@@ -97,12 +97,12 @@ public class LetterCombinations {
         digitToLetter.put('8',"tuv");
         digitToLetter.put('9',"wxyz");
 
-        generateCombinations(digits,0,new StringBuilder());
+        generateCombinations(digits,0,new StringBuilder(),resultList);
 
         return resultList;
     }
 
-    public static void generateCombinations(String digits, int currentIndex, StringBuilder currentCombination){
+    public static void generateCombinations(String digits, int currentIndex, StringBuilder currentCombination, List<String> resultList){
         if(currentIndex == digits.length()){
             resultList.add(currentCombination.toString());
             return;
@@ -114,7 +114,7 @@ public class LetterCombinations {
             for(int i=0;i<letterOption.length();i++){
                 char letter = letterOption.charAt(i);
                 currentCombination.append(letter);
-                generateCombinations(digits,currentIndex+1,currentCombination);
+                generateCombinations(digits,currentIndex+1,currentCombination,resultList);
                 currentCombination.deleteCharAt(currentCombination.length()-1);
             }
         }

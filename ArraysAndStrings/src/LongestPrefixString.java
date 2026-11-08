@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/longest-common-prefix/
  *
  * PROBLEM
- *   - Input: an array of strings (at least one).
+ *   - Input: an array of strings (LeetCode guarantees at least one; this version returns "" for none).
  *   - Return: the longest prefix shared by all of them, or "" if there is none.
  *
  * EXAMPLE
@@ -22,10 +22,11 @@
  *   - Return: prefix after the last string.
  *
  * STEPS
- *   1. prefix = strs[0].
- *   2. Loop i from 1 to the last string.
- *   3. While strs[i].indexOf(prefix) != 0: prefix = prefix.substring(0, prefix.length() - 1).
- *   4. Return prefix.
+ *   1. If strs is null or empty, return "".
+ *   2. prefix = strs[0].
+ *   3. Loop i from 1 to the last string.
+ *   4. While strs[i].indexOf(prefix) != 0: prefix = prefix.substring(0, prefix.length() - 1).
+ *   5. Return prefix.
  *
  * DRY RUN   strs = ["flower","flow","flight","flew"]   (prefix is the value after the step)
  *
@@ -48,15 +49,16 @@
  *   ["abc","ab"]             -> "ab"      the first string is longer and gets chopped
  *   ["","b"]                 -> ""        "" fits every string
  *   ["c","acc"]              -> ""        "c" is inside "acc" but not at index 0
- *   []                       -> crashes on strs[0] (ArrayIndexOutOfBoundsException);
- *                               LeetCode guarantees at least one string
+ *   []                       -> ""        no strings, returned by the guard before strs[0]
+ *                                         (LeetCode guarantees at least one string anyway)
  *
  * COMMON MISTAKES
  *   - Checking indexOf(prefix) != -1 ("contains") instead of == 0 ("starts with"):
  *     ["c","acc"] would return "c".
  *   - Comparing character by character without checking lengths: index out of bounds when a later
  *     string is shorter than the prefix. indexOf / startsWith handle that for you.
- *   - No guard for an empty array: strs[0] crashes. Add a length check if the input isn't guaranteed.
+ *   - No guard for an empty array: strs[0] crashes with ArrayIndexOutOfBoundsException.
+ *     Check the length first and return "".
  *
  * COMPLEXITY
  *   At most n + m checks (n strings, m = length of strs[0]; each chop removes one character for good).
@@ -75,6 +77,9 @@ public class LongestPrefixString {
     }
 
     public static String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
         String prefix = strs[0];
         for (int i=1; i < strs.length; i++) {
             while (strs[i].indexOf(prefix) != 0) {

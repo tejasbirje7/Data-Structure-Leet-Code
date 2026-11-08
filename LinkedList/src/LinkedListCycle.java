@@ -20,16 +20,18 @@
  *   - Why it works: once both are in the cycle, the gap between them shrinks by 1 every step,
  *     so runner can't jump over walker; they must meet.
  *   - Rule that stays true: after k steps, walker is k nodes from head and runner is 2k.
+ *   - Guard: 0 or 1 node with no next -> no cycle, return false before touching runner.next.
  *   - Decision: runner can take 2 more steps -> move both, then same node? -> return true.
  *               runner.next or runner.next.next is null -> end of list, no cycle.
  *   - Return: true on the first meeting, false when the loop ends.
  *
  * STEPS
- *   1. walker = head, runner = head.
- *   2. Loop while runner.next != null && runner.next.next != null.
- *   3. walker = walker.next, runner = runner.next.next.
- *   4. If runner == walker (same node, not same value), return true.
- *   5. After the loop, return false.
+ *   1. If head == null or head.next == null, return false.
+ *   2. walker = head, runner = head.
+ *   3. Loop while runner.next != null && runner.next.next != null.
+ *   4. walker = walker.next, runner = runner.next.next.
+ *   5. If runner == walker (same node, not same value), return true.
+ *   6. After the loop, return false.
  *
  * DRY RUN   main's list 2: 4 -> 5 -> 6 -> back to 5   (walker / runner after the step)
  *
@@ -39,19 +41,21 @@
  *      1  |  5 / 6, both non-null          |   5    |   6    |  no
  *      2  |  5 / 6 (6 -> 5 -> 6)           |   6    |   6    |  yes, return true
  *
+ *   Guard first: head = 4 and head.next = 5 are both non-null, so the loop runs.
  *   Returns true. (main's list 1, 1 -> 2 -> 3: after step 1 runner = 3, runner.next is null, returns false.)
  *
  * EDGE CASES
  *   1 -> 2 -> 3              -> false   runner reaches the last node; the loop stops
- *   [1], no cycle            -> false   runner.next is null, the loop never runs
- *   [1], pos = 0 (self loop) -> true    walker = 1, runner = 1.next.next = 1, they meet at once
+ *   [1], no cycle            -> false   head.next is null, the guard returns false
+ *   [1], pos = 0 (self loop) -> true    head.next is head, so the guard passes;
+ *                                       walker = 1, runner = 1.next.next = 1, they meet at once
  *   [1,2], pos = 0           -> true    they meet on node 1 after 2 steps
- *   [] (head = null)         -> crashes with NullPointerException on runner.next;
- *                               LeetCode allows 0 nodes, so this input fails there
+ *   [] (head = null)         -> false   the guard returns before runner.next is read
  *
  * COMMON MISTAKES
- *   - Testing runner.next without first checking runner (or head) for null: an empty list crashes,
- *     as this code does. Use while (runner != null && runner.next != null).
+ *   - Checking fast.next (runner.next) before checking that fast or head is null: an empty list
+ *     crashes with NullPointerException. Guard head == null first (as here),
+ *     or loop while (runner != null && runner.next != null).
  *   - Comparing values instead of nodes: different nodes can hold the same value. Compare with ==.
  *   - Checking runner == walker before the first move: both start at head, so it says true at once.
  *   - Using a HashSet of visited nodes: works, but O(n) space; the follow-up asks for O(1).
@@ -95,6 +99,7 @@ public class LinkedListCycle {
     }
 
     public static boolean hasCycle(ListNode head) {
+        if (head == null || head.next == null) return false;
         ListNode walker = head;
         ListNode runner = head;
         while (runner.next != null && runner.next.next != null) {

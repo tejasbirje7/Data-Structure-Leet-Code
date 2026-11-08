@@ -1,107 +1,143 @@
 import java.util.*;
 
-/*
-Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every
-character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
-
-Example 1
-Input: s = "ADOBECODEBANC", t = "ABC"
-Output: "BANC"
-Explanation: The smallest substring containing 'A', 'B', and 'C' is "BANC".
-
-Example 2
-Input: s = "a", t = "a"
-Output: "a"
-Explanation: The entire string s is the valid window.
-
-Example 3
-Input: s = "a", t = "aa"
-Output: ""
-Explanation: There aren’t enough 'a' characters in s to match t.
-
-2️⃣ KEY POINTS EXPLAINED
-Goal → Find the smallest substring of s containing all characters in t (including duplicates).
-
-Data structures used:
-need → Frequency map of required characters in t.
-window → Frequency map of characters in current sliding window.
-
-Two pointers (Sliding Window):
-right expands the window to include characters.
-left shrinks the window when all requirements are met to find the smallest possible.
-
-Condition to shrink → When have == need.size() (all required chars met with correct counts).
-
-Result → Keep track of smallest valid window using minLen and start.
+/**
+ * LeetCode 76. Minimum Window Substring
+ * https://leetcode.com/problems/minimum-window-substring/
+ *
+ * PROBLEM
+ *   - Input: two strings s (length m) and t (length n).
+ *   - Return: the shortest substring of s that contains every character of t, duplicates included.
+ *   - Return "" if there is no such substring. The answer is unique.
+ *   - Follow-up: O(m + n) time.
+ *
+ * EXAMPLE
+ *   Input: s = "ADOBECODEBANC", t = "ABC"
+ *   Output: "BANC"
+ *   Explanation: The smallest substring containing 'A', 'B', and 'C' is "BANC".
+ *
+ * HOW TO THINK
+ *   - Clue: "smallest substring that contains ..." = shortest contiguous window that meets a condition.
+ *   - Technique: sliding window with two pointers and two count maps.
+ *     need = counts of each char in t. window = counts of each char in s[left..right].
+ *     right grows the window until it is valid; left then shrinks it while it stays valid.
+ *   - Rule that stays true: have = how many distinct chars of t have window count >= need count.
+ *     The window is valid exactly when have == need.size().
+ *   - Decision: add s[right]; if its count just reached the needed count, have++.
+ *               while valid: record the window if it is the shortest yet; drop s[left];
+ *               if that count fell below the need, have--; left++.
+ *   - Return: s.substring(start, start + minLen), or "" if minLen was never set.
+ *
+ * STEPS
+ *   1. If s is shorter than t, return "".
+ *   2. Build need from t. have = 0, left = 0, minLen = MAX, start = 0.
+ *   3. For each right: window[s[right]]++; if the char is in need and its count == need count, have++.
+ *   4.   While have == need.size(): if right - left + 1 < minLen, save minLen and start;
+ *        window[s[left]]--; if the char is in need and its count < need count, have--; left++.
+ *   5. Return "" if minLen is still MAX, else s.substring(start, start + minLen).
+ *
+ * DRY RUN   s = "ADOBECODEBANC", t = "ABC"   (need = {A:1, B:1, C:1}, need.size() = 3)
+ *           (have is after adding s[right]; left and best are after the shrink loop)
+ *
+ *    right | c | have | shrink loop (windows checked, then chars dropped)    | left | best (minLen, start)
+ *   -------+---+------+------------------------------------------------------+------+---------------------
+ *      0   | A |  1   | -                                                    |  0   | none
+ *      1   | D |  1   | -                                                    |  0   | none
+ *      2   | O |  1   | -                                                    |  0   | none
+ *      3   | B |  2   | -                                                    |  0   | none
+ *      4   | E |  2   | -                                                    |  0   | none
+ *      5   | C |  3   | ADOBEC (6) new best; drop A -> have 2                |  1   | 6, 0  "ADOBEC"
+ *      6   | O |  2   | -                                                    |  1   | 6, 0
+ *      7   | D |  2   | -                                                    |  1   | 6, 0
+ *      8   | E |  2   | -                                                    |  1   | 6, 0
+ *      9   | B |  2   | - (B count is now 2, more than needed)               |  1   | 6, 0
+ *     10   | A |  3   | DOBECODEBA (10) .. CODEBA (6), none < 6;             |  6   | 6, 0
+ *          |   |      |   drop D, O, B (B still 1), E, then C -> have 2      |      |
+ *     11   | N |  2   | -                                                    |  6   | 6, 0
+ *     12   | C |  3   | ODEBANC (7), DEBANC (6), EBANC (5) new best,         | 10   | 4, 9  "BANC"
+ *          |   |      |   BANC (4) new best; drop O, D, E, then B -> have 2  |      |
+ *
+ *   Returns s.substring(9, 13) = "BANC".
+ *
+ * EDGE CASES
+ *   s = "a", t = "a"       -> "a"     the whole string
+ *   s = "a", t = "aa"      -> ""      s is shorter than t
+ *   s = "aa", t = "aa"     -> "aa"    duplicates in t must all be matched
+ *   s = "bba", t = "ab"    -> "ba"    shrinking drops the extra b
+ *   s = "abc", t = "d"     -> ""      never valid, minLen stays MAX
+ *   s = "a", t = ""        -> crashes with StringIndexOutOfBoundsException: need.size() = 0,
+ *                             so have == 0 always holds and left runs past the end;
+ *                             LeetCode guarantees t has at least 1 character
+ *
+ * COMMON MISTAKES
+ *   - have++ on every needed char added: have must go up only when a count reaches the need exactly,
+ *     or extra copies (like the second B) count twice.
+ *   - Checking only presence, not counts: t = "aa" needs two a's.
+ *   - Recording the window after dropping s[left]: record first, then shrink.
+ *   - Comparing two Integer values with ==: it fails above 127. The code uses intValue().
+ *
+ * COMPLEXITY
+ *   O(m + n) time: building need is O(n); left and right each move at most m times.
+ *   O(k) extra space for the maps (k = distinct characters).
+ *
+ * RELATED
+ *   LeetCode 76 (MinimumWindowSubstring, SlidingWindow/): same problem, also in SlidingWindow/.
+ *   LeetCode 209 (MinimumSizeSubArray, SlidingWindow/): shortest window again, but the condition is a sum >= target.
+ *   LeetCode 3 (LongestSubstring, SlidingWindow/): longest window instead; shrink when it becomes invalid.
+ *   LeetCode 30 (SubstringWithConcatenation, SlidingWindow/): windows of whole words with count maps.
  */
 public class MinimumWindowSubstring {
 
     public String minWindow(String s, String t) {
-        // Edge case: If t is longer than s, it's impossible to find a valid window
         if (s.length() < t.length()) return "";
 
-        // Step 1: Build frequency map for all required characters in t
         Map<Character, Integer> need = new HashMap<>();
         for (char c : t.toCharArray()) {
             need.put(c, need.getOrDefault(c, 0) + 1);
         }
 
-        // Step 2: Initialize the sliding window variables
-        Map<Character, Integer> window = new HashMap<>(); // Tracks character counts in current window
-        int have = 0;                                     // How many unique characters currently meet the need count
-        int needSize = need.size();                       // Total unique characters we must match
-        int left = 0;                                     // Left boundary of the sliding window
-        int minLen = Integer.MAX_VALUE;                   // Tracks smallest valid window length
-        int start = 0;                                    // Tracks start index of the smallest window
+        Map<Character, Integer> window = new HashMap<>();
+        int have = 0;
+        int needSize = need.size();
+        int left = 0;
+        int minLen = Integer.MAX_VALUE;
+        int start = 0;
 
-        // Step 3: Expand the window by moving `right`
         for (int right = 0; right < s.length(); right++) {
             char c = s.charAt(right);
 
-            // Add current char to the window count
             window.put(c, window.getOrDefault(c, 0) + 1);
 
-            // If current char is in `need` and count matches exactly, we "have" one more requirement fulfilled
             if (need.containsKey(c) && window.get(c).intValue() == need.get(c).intValue()) {
                 have++;
             }
 
-            // Step 4: Try shrinking the window from the left while it still satisfies all requirements
             while (have == needSize) {
-                // Update smallest window if found smaller
                 if (right - left + 1 < minLen) {
                     minLen = right - left + 1;
                     start = left;
                 }
 
-                // Prepare to remove the leftmost char from window
                 char remove = s.charAt(left);
                 window.put(remove, window.get(remove) - 1);
 
-                // If removing breaks the requirement for a needed char, reduce `have`
                 if (need.containsKey(remove) && window.get(remove) < need.get(remove)) {
                     have--;
                 }
 
-                // Move left pointer forward to shrink window
                 left++;
             }
         }
 
-        // Step 5: Return the smallest window found, or empty string if none found
         return minLen == Integer.MAX_VALUE ? "" : s.substring(start, start + minLen);
     }
 
     public static void main(String[] args) {
         MinimumWindowSubstring solution = new MinimumWindowSubstring();
 
-        // Example 1
-        System.out.println(solution.minWindow("ADOBECODEBANC", "ABC")); // Expected: BANC
+        System.out.println(solution.minWindow("ADOBECODEBANC", "ABC"));
 
-        // Example 2
-        System.out.println(solution.minWindow("a", "a")); // Expected: a
+        System.out.println(solution.minWindow("a", "a"));
 
-        // Example 3
-        System.out.println(solution.minWindow("a", "aa")); // Expected: ""
+        System.out.println(solution.minWindow("a", "aa"));
     }
 }

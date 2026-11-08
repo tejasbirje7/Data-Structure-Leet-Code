@@ -3,11 +3,10 @@
  * https://leetcode.com/problems/powx-n/
  *
  * PROBLEM
- *   - Input: a double x and an int n (n can be negative, down to -2^31).
- *   - Return: x raised to the power n.
+ *   - Input: a double x (-100 < x < 100) and an int n (n can be negative, down to -2^31).
+ *   - Return: x raised to the power n, as a double.
  *   - n is up to 2^31, so multiplying x by itself n times is too slow.
- *   - This file has no method: both versions run inside main with int x = 7, n = 5,
- *     and main prints nothing (pow holds 16807.0 at the end of each loop).
+ *   - LeetCode promises x != 0 when n <= 0, and the answer stays within -10^4 to 10^4.
  *
  * EXAMPLE
  *   Input: x = 2.00000, n = 10
@@ -21,47 +20,54 @@
  *   - Rule that stays true: pow * x^n = the original answer, at every step of the loop.
  *   - Decision: lowest bit of n is 1 (n is odd) -> pow *= x.
  *               every step -> x *= x and n = n / 2 (drop the lowest bit).
- *   - Negative n: x^-n = (1 / x)^n, so flip both first.
+ *   - Negative n: x^-n = (1 / x)^n, so flip both first. x is a double, so 1 / 2.0 = 0.5.
+ *   - Integer.MIN_VALUE: -n overflows and stays MIN_VALUE (bits 1000...0).
+ *     myPow keeps the int: n & 1 and n >>>= 1 read the bits as unsigned, so n acts as 2^31
+ *     and the loop ends after 32 steps with the right answer.
  *   - Return: pow once n reaches 0.
- *   - Two loops in main: (n & 1) and n >>>= 1 are the bitwise forms of n % 2 and n / 2.
- *     The second loop is the same algorithm with % and /, and no negative handling.
+ *   - Two methods: myPow uses (n & 1) and n >>>= 1, the bitwise forms of n % 2 and n / 2.
+ *     myPowNormal is the same algorithm with % and /, on a long copy m of n,
+ *     so -m = 2^31 fits and no unsigned trick is needed.
  *
  * STEPS
  *   1. If n < 0: n = -n, x = 1 / x.
  *   2. pow = 1.
- *   3. While n != 0: if n is odd, pow *= x.
- *   4.   x *= x; n >>>= 1 (n = n / 2).
- *   5. pow is the answer.
+ *   3. While n != 0: if the lowest bit of n is 1, pow *= x.
+ *   4.   x *= x; n >>>= 1 (drop the lowest bit, unsigned).
+ *   5. Return pow.
  *
- * DRY RUN   x = 7, n = 5   (5 = 101 in binary; values after the step)
+ * DRY RUN   x = 2.0, n = -5   (values after the step)
  *
- *    step | n before | n odd? | pow            | x after squaring | n after
- *   ------+----------+--------+----------------+------------------+---------
- *      1  |  5 (101) |  yes   | 1 * 7 = 7      |        49        | 2 (10)
- *      2  |  2 (10)  |  no    | 7              |       2401       | 1 (1)
- *      3  |  1 (1)   |  yes   | 7 * 2401=16807 |      5764801     | 0
+ *   n < 0, so flip first: n = 5 (101 in binary), x = 1 / 2.0 = 0.5, pow = 1.
  *
- *   n = 0, loop stops. pow = 16807.0 = 7^5. The second loop gives the same rows.
+ *    step | n before | bit = 1? | pow                    | x after squaring | n after
+ *   ------+----------+----------+------------------------+------------------+---------
+ *      1  |  5 (101) |   yes    | 1 * 0.5 = 0.5          |    0.25          | 2 (10)
+ *      2  |  2 (10)  |   no     | 0.5                    |    0.0625        | 1 (1)
+ *      3  |  1 (1)   |   yes    | 0.5 * 0.0625 = 0.03125 |    0.00390625    | 0
  *
- * EDGE CASES   (x is an int in this code, not a double)
- *   x = 2, n = 10   -> 1024.0   the LeetCode example
- *   x = 2, n = 0    -> 1.0      loop never runs
- *   x = -2, n = 3   -> -8.0     sign handled by the multiplications
- *   x = 2, n = -2   -> 0.0 (should be 0.25)   BUG: x is an int, so 1 / x is integer division = 0.
- *                      The second loop has no negative handling and gives 4.0.
- *   x = 0, n = -1   -> crashes: ArithmeticException (/ by zero) in 1 / x; LeetCode guarantees
- *                      x != 0 when n < 0, and uses a double x, where 1 / 0.0 is Infinity
- *   x = 7, n = 16   -> -1.526366847E9 (should be 3.3e13)   BUG: x *= x overflows int
- *                      (5764801 * 5764801 doesn't fit) before it is multiplied into pow
- *   x = 2, n = 32   -> 0.0 (should be 4.29e9)   x reaches 2^32, which wraps to 0 in an int
- *   x = 2, n = 31   -> 2.147483648E9   correct: x wraps to 0 only after its last use
- *   x = 1, n = Integer.MIN_VALUE -> 1.0   -n overflows back to MIN_VALUE, but n >>>= 1 treats it as 2^31,
- *                      so the bitwise loop still ends after 32 steps
+ *   n = 0, loop stops. Returns 0.03125 = 2^-5. myPowNormal gives the same rows.
+ *
+ * EDGE CASES
+ *   x = 2, n = 10      -> 1024.0               the LeetCode example
+ *   x = 2.1, n = 3     -> 9.261000000000001    double rounding; LeetCode shows 9.26100
+ *   x = 2, n = 0       -> 1.0                  loop never runs
+ *   x = -2, n = 3      -> -8.0                 odd n keeps the minus sign
+ *   x = -2, n = 4      -> 16.0                 even n cancels it
+ *   x = 2, n = -2      -> 0.25                 x becomes 1 / 2.0 = 0.5, then 0.5 * 0.5
+ *   x = 7, n = 16      -> 3.3232930569601E13   x is a double, so squaring does not overflow
+ *   x = 2, n = 32      -> 4.294967296E9        same: 2^32 fits easily in a double
+ *   x = 1, n = Integer.MIN_VALUE  -> 1.0       -n stays MIN_VALUE, n >>>= 1 treats it as 2^31
+ *   x = -1, n = Integer.MIN_VALUE -> 1.0       2^31 is even
+ *   x = -1, n = Integer.MAX_VALUE -> -1.0      2^31 - 1 is odd
+ *   x = 0, n = -1      -> Infinity             1 / 0.0 is Infinity in Java (no crash);
+ *                                              LeetCode says this input won't occur
  *
  * COMMON MISTAKES
  *   - Looping n times: O(n), too slow for n near 2^31.
- *   - Using int for x: 1 / x becomes 0 and x *= x overflows. LeetCode's x is a double.
- *   - n = -n when n = Integer.MIN_VALUE: it stays negative. Use n >>>= 1 (as here) or store n in a long.
+ *   - Using int for x: 1 / x with int x is integer division (1 / 2 = 0), and squaring an int
+ *     overflows (2^32 wraps to 0). Use double for x and pow.
+ *   - -n overflows for Integer.MIN_VALUE: it stays negative. Use n >>>= 1 (myPow) or a long (myPowNormal).
  *   - n >>= 1 instead of n >>>= 1 on a negative n: the sign bit is copied in and the loop never ends.
  *
  * COMPLEXITY
@@ -74,9 +80,14 @@
 public class Pow {
 
     public static void main(String[] args) {
-        int x = 7 ,n = 5;
+        double x = 2;
+        int n = -5;
 
+        System.out.println("myPow(" + x + ", " + n + ") = " + myPow(x, n));
+        System.out.println("myPowNormal(" + x + ", " + n + ") = " + myPowNormal(x, n));
+    }
 
+    public static double myPow(double x, int n) {
         if (n < 0) {
             n = -n;
             x = 1 / x;
@@ -90,16 +101,24 @@ public class Pow {
             x *= x;
             n >>>= 1;
         }
+        return pow;
+    }
 
+    public static double myPowNormal(double x, int n) {
+        long m = n;
+        if (m < 0) {
+            m = -m;
+            x = 1 / x;
+        }
 
-        x = 7 ;n = 5;
-        pow = 1;
-        while(n != 0){
-            if((n % 2) != 0)
+        double pow = 1;
+        while(m != 0){
+            if((m % 2) != 0)
                 pow *= x;
 
             x *= x;
-            n = n / 2;
+            m = m / 2;
         }
+        return pow;
     }
 }

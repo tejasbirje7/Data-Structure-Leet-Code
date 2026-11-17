@@ -57,7 +57,7 @@
  *   O(n) time, O(1) extra space.
  *
  * RELATED
- *   LeetCode 136 Single Number (not in this repo): XOR every value; pairs cancel and the odd one is left.
+ *   LeetCode 136 (SingleNumber, Math/): XOR every value; pairs cancel and the odd one is left.
  *     The same XOR trick also solves this problem (XOR all indexes, values and n).
  *   LeetCode 41 First Missing Positive (not in this repo): values are not limited to [0, n],
  *     so it needs in-place swapping instead of a sum.

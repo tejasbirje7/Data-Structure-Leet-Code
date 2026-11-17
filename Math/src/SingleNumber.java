@@ -69,9 +69,9 @@
  * RELATED
  *   LeetCode 268 (MissingNumberFinder, FAQ/): XOR all indexes 0..n with all values;
  *     every number present cancels and the missing one is left.
- *   LeetCode 137 Single Number II (not in this repo): every other value appears three times;
+ *   LeetCode 137 (SingleNumber2, Math/): every other value appears three times;
  *     count each bit position modulo 3 instead of XOR.
- *   LeetCode 260 Single Number III (not in this repo): two values appear once; XOR everything,
+ *   LeetCode 260 (SingleNumber3, Math/): two values appear once; XOR everything,
  *     then split the values into two groups by one bit where the two singles differ.
  */
 public class SingleNumber {

@@ -74,6 +74,8 @@ import java.util.Set;
  *   O(n) time, O(min(n, k)) extra space (the set holds at most k + 1 values).
  *
  * RELATED
+ *   LeetCode 217 (ContainsDuplicate, HashMap/): any two equal values count, no distance limit,
+ *     so one set holds every value seen.
  *   LeetCode 3 (LongestSubstring, SlidingWindow/): same HashSet window, but it shrinks
  *     when a repeat shows up instead of at a fixed size.
  *   LeetCode 209 (MinimumSizeSubArray, SlidingWindow/): a variable window over a running sum.

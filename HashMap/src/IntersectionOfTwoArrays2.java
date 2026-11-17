@@ -32,7 +32,7 @@ import java.util.Map;
  *               otherwise      -> none left (or never in nums1): skip.
  *   - Return: the answer list as an int[].
  *   - Follow-up, both arrays sorted: two pointers, no map. Equal -> add, move both;
- *     otherwise move the pointer at the smaller value. O(1) extra space.
+ *     otherwise move the pointer at the smaller value. O(1) extra space (see IntersectionOfTwoArrays2Sorting).
  *   - Follow-up, nums1 much smaller: build the map from the smaller array, so it stays small.
  *   - Follow-up, nums2 too big for memory: keep the map of nums1 and read nums2 in chunks.
  *
@@ -73,6 +73,8 @@ import java.util.Map;
  *   O(n + m) time, O(n) extra space (the map of nums1).
  *
  * RELATED
+ *   LeetCode 350 (IntersectionOfTwoArrays2Sorting, HashMap/): the same problem by sorting both arrays
+ *     and walking them with two pointers. No map, but O(n log n) and it changes the input.
  *   LeetCode 349 (IntersectionOfTwoArrays, HashMap/): each common value only once; a set is enough.
  *   LeetCode 383 (RansomNote, HashMap/): the same "count the supply, then spend it" map.
  */

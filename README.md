@@ -19,6 +19,7 @@ LeetCode solutions in Java, grouped by topic. Each solution is written to double
 | `Math/` | Math and number problems |
 | `SlidingWindow/` | Sliding window problems |
 | `Stack/` | Stack problems |
+| `Trees/` | Binary tree and binary search tree problems |
 | `TwoPointers/` | Two pointer problems |
 | `out/` | IntelliJ build output. Not source, so ignore it. |
 

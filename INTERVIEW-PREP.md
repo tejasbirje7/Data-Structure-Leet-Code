@@ -4,9 +4,10 @@ Research notes on which data structures and algorithms problems companies ask mo
 
 - Data snapshot: LeetCode company tags as of **20 Oct 2025** (dataset repo last pushed 20 Oct 2026).
 - Research done: **21 Nov 2026**.
-- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **56** are in the repo.
+- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **57** are in the repo.
 - **Top 100 from one dataset (section 4):** **33 of 100** are in the repo.
 - ✅ = already solved in this repo (matched by the LeetCode link in each file's header).
+- **Working list:** [PROBLEM-TRACKER.md](PROBLEM-TRACKER.md) splits the missing problems from section 3 into batches.
 
 ## Contents
 
@@ -93,9 +94,9 @@ Notes:
 | Tier | Problems | In repo | Missing |
 |---|---|---|---|
 | Tier 1: 8–11 sources (must do) | 56 | 25 | 31 |
-| Tier 2: 6–7 sources | 39 | 14 | 25 |
-| Tier 3: 4–5 sources | 66 | 17 | 49 |
-| **Total** | **161** | **56** | **105** |
+| Tier 2: 6–7 sources | 40 | 15 | 25 |
+| Tier 3: 4–5 sources | 65 | 17 | 48 |
+| **Total** | **161** | **57** | **104** |
 
 ### 3.3 Tier 1: 8–11 sources (must do)
 
@@ -176,31 +177,32 @@ Notes:
 | 12 | 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | Medium | 7/11 | C5 D1 D2 D3 D4 D5 D6 |  |
 | 13 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium | 7/11 | C1 C2 C4 C5 D1 D4 D6 |  |
 | 14 | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | Medium | 7/11 | C1 C2 C5 D2 D3 D5 D6 |  |
-| 15 | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | 7/11 | C1 C2 C4 C5 D1 D2 D3 |  |
-| 16 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy | 7/11 | C3 C5 D1 D2 D3 D4 D6 | ✅ `ArraysAndStrings/src/MajorityElement.java` |
-| 17 | 253 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Medium | 7/11 | C1 C5 D1 D2 D3 D4 D5 |  |
-| 18 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | 7/11 | C4 C5 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/Merge.java` |
-| 19 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | 7/11 | C1 C2 C3 C5 D1 D2 D3 |  |
-| 20 | 31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Medium | 7/11 | C1 C5 D1 D2 D3 D4 D5 |  |
-| 21 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy | 7/11 | C2 C5 D1 D3 D4 D5 D6 |  |
-| 22 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | 7/11 | C2 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RemoveDuplicates.java` |
-| 23 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | 7/11 | C1 D1 D2 D3 D4 D5 D6 |  |
-| 24 | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | 7/11 | C1 C2 C5 D1 D2 D3 D6 |  |
-| 25 | 162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Medium | 6/11 | C4 C5 D1 D2 D3 D6 |  |
-| 26 | 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RandomizedSet.java` |
-| 27 | 739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | 6/11 | C1 C2 C5 D1 D3 D5 |  |
-| 28 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 6/11 | C1 C5 D1 D4 D5 D6 |  |
-| 29 | 32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | 6/11 | C4 D1 D2 D3 D4 D5 |  |
-| 30 | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | 6/11 | C3 D1 D2 D3 D5 D6 |  |
-| 31 | 10 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | Hard | 6/11 | C1 C2 D2 D3 D4 D5 |  |
-| 32 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | Medium | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/ReverseWordsInString.java` |
-| 33 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RomanToInt.java` |
-| 34 | 136 | [Single Number](https://leetcode.com/problems/single-number/) | Easy | 6/11 | C2 D1 D2 D3 D4 D5 | ✅ `Math/src/SingleNumber.java` |
-| 35 | 138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Medium | 6/11 | C2 C4 D2 D3 D4 D5 | ✅ `LinkedList/src/CopyListWithRandomPointer.java` |
-| 36 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | 6/11 | C1 C2 C3 C4 D5 D6 |  |
-| 37 | 268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Easy | 6/11 | C1 C4 C5 D2 D5 D6 | ✅ `FAQ/src/MissingNumberFinder.java` |
-| 38 | 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | 6/11 | C1 D2 D3 D4 D5 D6 |  |
-| 39 | 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Medium | 6/11 | C1 C4 D2 D4 D5 D6 |  |
+| 15 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | 7/11 | C3 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/FirstOccurrenceOfString.java` |
+| 16 | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | 7/11 | C1 C2 C4 C5 D1 D2 D3 |  |
+| 17 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy | 7/11 | C3 C5 D1 D2 D3 D4 D6 | ✅ `ArraysAndStrings/src/MajorityElement.java` |
+| 18 | 253 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Medium | 7/11 | C1 C5 D1 D2 D3 D4 D5 |  |
+| 19 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | 7/11 | C4 C5 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/Merge.java` |
+| 20 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | 7/11 | C1 C2 C3 C5 D1 D2 D3 |  |
+| 21 | 31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Medium | 7/11 | C1 C5 D1 D2 D3 D4 D5 |  |
+| 22 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy | 7/11 | C2 C5 D1 D3 D4 D5 D6 |  |
+| 23 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | 7/11 | C2 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RemoveDuplicates.java` |
+| 24 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | 7/11 | C1 D1 D2 D3 D4 D5 D6 |  |
+| 25 | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | 7/11 | C1 C2 C5 D1 D2 D3 D6 |  |
+| 26 | 162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Medium | 6/11 | C4 C5 D1 D2 D3 D6 |  |
+| 27 | 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RandomizedSet.java` |
+| 28 | 739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | 6/11 | C1 C2 C5 D1 D3 D5 |  |
+| 29 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 6/11 | C1 C5 D1 D4 D5 D6 |  |
+| 30 | 32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | 6/11 | C4 D1 D2 D3 D4 D5 |  |
+| 31 | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | 6/11 | C3 D1 D2 D3 D5 D6 |  |
+| 32 | 10 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | Hard | 6/11 | C1 C2 D2 D3 D4 D5 |  |
+| 33 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | Medium | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/ReverseWordsInString.java` |
+| 34 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RomanToInt.java` |
+| 35 | 136 | [Single Number](https://leetcode.com/problems/single-number/) | Easy | 6/11 | C2 D1 D2 D3 D4 D5 | ✅ `Math/src/SingleNumber.java` |
+| 36 | 138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Medium | 6/11 | C2 C4 D2 D3 D4 D5 | ✅ `LinkedList/src/CopyListWithRandomPointer.java` |
+| 37 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | 6/11 | C1 C2 C3 C4 D5 D6 |  |
+| 38 | 268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Easy | 6/11 | C1 C4 C5 D2 D5 D6 | ✅ `FAQ/src/MissingNumberFinder.java` |
+| 39 | 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | 6/11 | C1 D2 D3 D4 D5 D6 |  |
+| 40 | 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Medium | 6/11 | C1 C4 D2 D4 D5 D6 |  |
 
 ### 3.5 Tier 3: 4–5 sources
 
@@ -271,10 +273,9 @@ Notes:
 | 63 | 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium | 4/11 | C1 C4 D5 D6 | ✅ `FAQ/src/InsertIntervals.java`, `Intervals/src/InsertInterval.java` |
 | 64 | 417 | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | Medium | 4/11 | C1 C2 C3 C4 |  |
 | 65 | 173 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium | 4/11 | C2 D4 D5 D6 |  |
-| 66 | 28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | Easy | 4/11 | C3 D4 D5 D6 |  |
 
 <details>
-<summary>Also seen in exactly 3 sources (29 problems, 5 in repo)</summary>
+<summary>Also seen in exactly 3 sources (28 problems, 4 in repo)</summary>
 
 | # | LeetCode | Problem | Difficulty | Sources | Found in | Repo |
 |---|---|---|---|---|---|---|
@@ -283,30 +284,29 @@ Notes:
 | 3 | 16 | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | Medium | 3/11 | D1 D2 D5 | ✅ `FAQ/src/ThreeSumClosest.java` |
 | 4 | 67 | [Add Binary](https://leetcode.com/problems/add-binary/) | Easy | 3/11 | D1 D3 D6 |  |
 | 5 | 224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | Hard | 3/11 | D2 D5 D6 | ✅ `Stack/src/BasicCalculator.java` |
-| 6 |  | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | 3/11 | D1 D2 D3 | ✅ `ArraysAndStrings/src/FirstOccurrenceOfString.java` |
-| 7 | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium | 3/11 | C1 C2 D3 |  |
-| 8 | 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | 3/11 | D1 D2 D3 | ✅ `ArraysAndStrings/src/RemoveElement.java` |
-| 9 | 344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy | 3/11 | D1 D5 D6 |  |
-| 10 | 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | 3/11 | D1 D2 D3 |  |
-| 11 | 540 | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | Medium | 3/11 | D1 D3 D4 |  |
-| 12 | 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | 3/11 | C4 D1 D3 |  |
-| 13 | 713 | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | Medium | 3/11 | D1 D2 D3 | ✅ `FAQ/src/SubarrayProductLessThanK.java` |
-| 14 | 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Hard | 3/11 | D2 D4 D5 |  |
-| 15 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | 3/11 | C2 C5 D6 |  |
-| 16 | 528 | [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/) | Medium | 3/11 | D4 D5 D6 |  |
-| 17 | 759 | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | Hard | 3/11 | D4 D5 D6 |  |
-| 18 | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | Easy | 3/11 | D3 D5 D6 |  |
-| 19 | 114 | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | Medium | 3/11 | C5 D4 D5 |  |
-| 20 | 572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Easy | 3/11 | C1 C4 D6 |  |
-| 21 | 338 | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy | 3/11 | C1 C2 C4 |  |
-| 22 | 450 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Medium | 3/11 | C2 D5 D6 |  |
-| 23 | 191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy | 3/11 | C1 C2 D6 |  |
-| 24 | 332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Hard | 3/11 | D2 D4 D6 |  |
-| 25 | 692 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | Medium | 3/11 | C2 D4 D5 |  |
-| 26 | 116 | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) | Medium | 3/11 | D4 D5 D6 |  |
-| 27 | 218 | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | Hard | 3/11 | D4 D5 D6 |  |
-| 28 | 348 | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/) | Medium | 3/11 | D4 D5 D6 |  |
-| 29 | 323 | [Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | Medium | 3/11 | C1 C2 C5 |  |
+| 6 | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium | 3/11 | C1 C2 D3 |  |
+| 7 | 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | 3/11 | D1 D2 D3 | ✅ `ArraysAndStrings/src/RemoveElement.java` |
+| 8 | 344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy | 3/11 | D1 D5 D6 |  |
+| 9 | 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | 3/11 | D1 D2 D3 |  |
+| 10 | 540 | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | Medium | 3/11 | D1 D3 D4 |  |
+| 11 | 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | 3/11 | C4 D1 D3 |  |
+| 12 | 713 | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | Medium | 3/11 | D1 D2 D3 | ✅ `FAQ/src/SubarrayProductLessThanK.java` |
+| 13 | 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Hard | 3/11 | D2 D4 D5 |  |
+| 14 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | 3/11 | C2 C5 D6 |  |
+| 15 | 528 | [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/) | Medium | 3/11 | D4 D5 D6 |  |
+| 16 | 759 | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | Hard | 3/11 | D4 D5 D6 |  |
+| 17 | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | Easy | 3/11 | D3 D5 D6 |  |
+| 18 | 114 | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | Medium | 3/11 | C5 D4 D5 |  |
+| 19 | 572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Easy | 3/11 | C1 C4 D6 |  |
+| 20 | 338 | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy | 3/11 | C1 C2 C4 |  |
+| 21 | 450 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Medium | 3/11 | C2 D5 D6 |  |
+| 22 | 191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy | 3/11 | C1 C2 D6 |  |
+| 23 | 332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Hard | 3/11 | D2 D4 D6 |  |
+| 24 | 692 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | Medium | 3/11 | C2 D4 D5 |  |
+| 25 | 116 | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) | Medium | 3/11 | D4 D5 D6 |  |
+| 26 | 218 | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | Hard | 3/11 | D4 D5 D6 |  |
+| 27 | 348 | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/) | Medium | 3/11 | D4 D5 D6 |  |
+| 28 | 323 | [Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | Medium | 3/11 | C1 C2 C5 |  |
 
 </details>
 

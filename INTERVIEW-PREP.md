@@ -4,7 +4,7 @@ Research notes on which data structures and algorithms problems companies ask mo
 
 - Data snapshot: LeetCode company tags as of **20 Oct 2025** (dataset repo last pushed 20 Oct 2026).
 - Research done: **21 Nov 2026**.
-- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **153** are in the repo.
+- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **161** are in the repo.
 - **Top 100 from one dataset (section 4):** **88 of 100** are in the repo.
 - ✅ = already solved in this repo (matched by the LeetCode link in each file's header).
 - **Working list:** [PROBLEM-TRACKER.md](PROBLEM-TRACKER.md) splits the missing problems from section 3 into batches.
@@ -95,8 +95,8 @@ Notes:
 |---|---|---|---|
 | Tier 1: 8–11 sources (must do) | 56 | 56 | 0 |
 | Tier 2: 6–7 sources | 40 | 40 | 0 |
-| Tier 3: 4–5 sources | 65 | 57 | 8 |
-| **Total** | **161** | **153** | **8** |
+| Tier 3: 4–5 sources | 65 | 65 | 0 |
+| **Total** | **161** | **161** | **0** |
 
 ### 3.3 Tier 1: 8–11 sources (must do)
 
@@ -229,7 +229,7 @@ Notes:
 | 19 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | 5/11 | D1 D2 D3 D4 D5 | ✅ `Backtracking/src/GenerateParentheses.java` |
 | 20 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | 5/11 | D1 D2 D4 D5 D6 | ✅ `ArraysAndStrings/src/IntToRoman.java` |
 | 21 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | Easy | 5/11 | C5 D1 D3 D5 D6 | ✅ `HashMap/src/IntersectionOfTwoArrays.java` |
-| 22 | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | 5/11 | C1 C2 C4 D5 D6 |  |
+| 22 | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | 5/11 | C1 C2 C4 D5 D6 | ✅ `Trees/src/KthSmallestInBST.java` |
 | 23 | 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium | 5/11 | C2 D1 D3 D4 D6 | ✅ `SlidingWindow/src/MinimumSizeSubArray.java` |
 | 24 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | 5/11 | D1 D2 D3 D5 D6 | ✅ `Math/src/Pallindrome.java` |
 | 25 | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Easy | 5/11 | D1 D2 D3 D5 D6 | ✅ `ArraysAndStrings/src/PascalsTriangle.java` |
@@ -239,8 +239,8 @@ Notes:
 | 29 | 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy | 5/11 | C2 D3 D4 D5 D6 | ✅ `Trees/src/SymmetricTree.java` |
 | 30 | 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | Hard | 5/11 | D1 D2 D3 D5 D6 | ✅ `ArraysAndStrings/src/TextJustification.java` |
 | 31 | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/) | Medium | 5/11 | D2 D3 D4 D5 D6 | ✅ `HashMap/src/DesignHitCounter.java` |
-| 32 | 208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | 5/11 | C1 C2 C4 D5 D6 |  |
-| 33 | 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Medium | 5/11 | C2 C5 D2 D4 D5 |  |
+| 32 | 208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | 5/11 | C1 C2 C4 D5 D6 | ✅ `Trees/src/Trie.java` |
+| 33 | 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Medium | 5/11 | C2 C5 D2 D4 D5 | ✅ `Trees/src/LowestCommonAncestor.java` |
 | 34 | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | Medium | 5/11 | C4 D2 D4 D5 D6 | ✅ `Graphs/src/MaxAreaOfIsland.java` |
 | 35 | 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | 5/11 | C2 C5 D4 D5 D6 | ✅ `Backtracking/src/SudokuSolver.java` |
 | 36 | 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Medium | 5/11 | C5 D2 D4 D5 D6 | ✅ `FAQ/src/SwapPairs.java` |
@@ -250,8 +250,8 @@ Notes:
 | 40 | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Medium | 4/11 | C2 D1 D2 D3 | ✅ `TwoPointers/src/FourSum.java` |
 | 41 | 131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | 4/11 | C1 C5 D1 D3 | ✅ `Backtracking/src/PalindromePartitioning.java` |
 | 42 | 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 4/11 | C1 C4 D1 D3 | ✅ `LinkedList/src/ReorderList.java` |
-| 43 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy | 4/11 | C5 D1 D3 D4 |  |
-| 44 | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | Medium | 4/11 | C2 D2 D4 D5 |  |
+| 43 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy | 4/11 | C5 D1 D3 D4 | ✅ `Trees/src/BalancedBinaryTree.java` |
+| 44 | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | Medium | 4/11 | C2 D2 D4 D5 | ✅ `Trees/src/ZigzagLevelOrderTraversal.java` |
 | 45 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | 4/11 | C1 D1 D2 D3 | ✅ `HashMap/src/ContainsDuplicate.java` |
 | 46 | 509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy | 4/11 | C2 C5 D1 D3 | ✅ `DynamicProgramming/src/FibonacciNumber.java` |
 | 47 | 202 | [Happy Number](https://leetcode.com/problems/happy-number/) | Easy | 4/11 | D1 D2 D5 D6 | ✅ `TwoPointers/src/IsHappy.java` |
@@ -265,14 +265,14 @@ Notes:
 | 55 | 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium | 4/11 | D2 D3 D4 D6 | ✅ `Graphs/src/EvaluateDivision.java` |
 | 56 | 150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Medium | 4/11 | C1 C5 D4 D5 | ✅ `Stack/src/ReversePolishNotation.java` |
 | 57 | 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy | 4/11 | C2 C5 D5 D6 | ✅ `LinkedList/src/IntersectionOfTwoLinkedLists.java` |
-| 58 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | 4/11 | C1 C3 C4 D6 |  |
+| 58 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | 4/11 | C1 C3 C4 D6 | ✅ `Trees/src/InvertBinaryTree.java` |
 | 59 | 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | Medium | 4/11 | C1 C2 C3 C5 | ✅ `DynamicProgramming/src/PartitionEqualSubsetSum.java` |
-| 60 | 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | 4/11 | C1 C3 D3 D6 |  |
+| 60 | 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | 4/11 | C1 C3 D3 D6 | ✅ `Trees/src/SameTree.java` |
 | 61 | 341 | [Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/) | Medium | 4/11 | D2 D4 D5 D6 | ✅ `Stack/src/FlattenNestedListIterator.java` |
 | 62 | 140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | Hard | 4/11 | D2 D4 D5 D6 | ✅ `DynamicProgramming/src/WordBreak2.java` |
 | 63 | 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium | 4/11 | C1 C4 D5 D6 | ✅ `FAQ/src/InsertIntervals.java`, `Intervals/src/InsertInterval.java` |
 | 64 | 417 | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | Medium | 4/11 | C1 C2 C3 C4 | ✅ `Graphs/src/PacificAtlanticWaterFlow.java` |
-| 65 | 173 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium | 4/11 | C2 D4 D5 D6 |  |
+| 65 | 173 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium | 4/11 | C2 D4 D5 D6 | ✅ `Trees/src/BSTIterator.java` |
 
 <details>
 <summary>Also seen in exactly 3 sources (28 problems, 4 in repo)</summary>
@@ -619,7 +619,7 @@ Weighted by how many target companies asked each problem (top 300 problems).
 
 - Playlist: [DSA In 90 Days For Placements! Beginner, Medium & Advanced Level Playlist](https://www.youtube.com/playlist?list=PLVItHqpXY_DArKRcfmGWykqV3u4hDaJLo)
 - 337 videos, about 87.5 hours, 170 distinct LeetCode problems. About 60 videos are intros, theory, templates or channel updates.
-- 86 of the 170 problems are in this repo.
+- 89 of the 170 problems are in this repo.
 
 | Videos | Section | ✅ In repo | Missing |
 |---|---|---|---|
@@ -639,8 +639,8 @@ Weighted by how many target companies asked each problem (top 300 problems).
 | 225–230 | Queue | 200 | 622, 346 |
 | 232–251 | Heap | 215, 347, 295 | 703, 1046, 1337, 378, 973, 1642 |
 | 253–267 | Binary Tree | 102, 104, 101 | 144, 94, 145, 112 |
-| 268–282 | Binary Search Tree | 98, 235 | 700, 701, 450, 285, 173, 703, 110, 108, 220 |
-| 285–322 | Recursion | 24, 50, 21, 77, 17, 46, 70, 98, 206, 51, 37, 22, 240, 509 | 344, 700, 119, 779, 52, 100 |
+| 268–282 | Binary Search Tree | 98, 235, 173, 110 | 700, 701, 450, 285, 703, 108, 220 |
+| 285–322 | Recursion | 24, 50, 21, 77, 17, 46, 70, 98, 206, 51, 37, 22, 240, 509, 100 | 344, 700, 119, 779, 52 |
 | 325–335 | DP | 198 | 1137, 746, 740, 1770 |
 
 Some problems appear in more than one section, so the Missing column has repeats.
@@ -924,12 +924,12 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 272 | 98 | [Binary Search Tree - 5 / 98. Validate Binary Search Tree / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=145Teiix5Ug) | 31:57 | ✅ Trees/src/ValidateBinarySearchTree.java |
 | 273 | 285 | [Binary Search Tree - 6 / 285. Inorder Successor in BST (Recursive)](https://www.youtube.com/watch?v=mpqHAtFe4dQ) | 27:06 |  |
 | 274 | 285 | [Binary Search Tree - 7 / 285. Inorder Successor in BST (Iterative)](https://www.youtube.com/watch?v=Y0eXQH77Tfw) | 17:17 |  |
-| 275 | 173 | [Binary Search Tree - 8 / 173. Binary Search Tree Iterator (Recursive)](https://www.youtube.com/watch?v=wcBLMpzLH0A) | 16:04 |  |
-| 276 | 173 | [Binary Search Tree - 9 / 173. Binary Search Tree Iterator (Iterative)](https://www.youtube.com/watch?v=0OBo07wkCNg) | 22:46 |  |
+| 275 | 173 | [Binary Search Tree - 8 / 173. Binary Search Tree Iterator (Recursive)](https://www.youtube.com/watch?v=wcBLMpzLH0A) | 16:04 | ✅ Trees/src/BSTIterator.java |
+| 276 | 173 | [Binary Search Tree - 9 / 173. Binary Search Tree Iterator (Iterative)](https://www.youtube.com/watch?v=0OBo07wkCNg) | 22:46 | ✅ Trees/src/BSTIterator.java |
 | 277 | 703 | [Binary Search Tree - 10 / 703. Kth Largest Element in a Stream (BST Approach)](https://www.youtube.com/watch?v=94DbUctQqJY) | 33:12 |  |
 | 278 | 235 | [Binary Search Tree - 11 / 235. Lowest Common Ancestor of a Binary Search Tree](https://www.youtube.com/watch?v=cfbtJ_0HN7k) | 10:27 | ✅ Trees/src/LowestCommonAncestorBST.java |
 | 279 |  | [Binary Search Tree - 12 / Height-Balanced BST (Theory)](https://www.youtube.com/watch?v=5ZHHKVgBN3Q) | 13:43 |  |
-| 280 | 110 | [Binary Search Tree - 13 / 110. Balanced Binary Tree](https://www.youtube.com/watch?v=rhcR-iKJ0QA) | 17:18 |  |
+| 280 | 110 | [Binary Search Tree - 13 / 110. Balanced Binary Tree](https://www.youtube.com/watch?v=rhcR-iKJ0QA) | 17:18 | ✅ Trees/src/BalancedBinaryTree.java |
 | 281 | 108 | [Binary Search Tree - 14 / 108. Convert Sorted Array to Binary Search Tree](https://www.youtube.com/watch?v=DS5GQQzxwJY) | 17:58 |  |
 | 282 | 220 | [[MUST WATCH] Binary Search Tree - 15 / 220. Contains Duplicate III](https://www.youtube.com/watch?v=1uaCklu54NQ) | 25:44 |  |
 | 283 |  | [🚀 Complete Binary Search Tree Playlist / Master All BST Problems for Interviews (Java + LeetCode)](https://www.youtube.com/watch?v=CjPGto3XAJk) | 4:56 |  |
@@ -968,7 +968,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 316 | 77 | [Recursion-31 / 77. Combinations](https://www.youtube.com/watch?v=MgACwMqHMHU) | 25:51 | ✅ Backtracking/src/Combinations.java |
 | 317 | 37 | [Recursion-32 / 37. Sudoku Solver](https://www.youtube.com/watch?v=SU-NcEECu5w) | 47:20 | ✅ Backtracking/src/SudokuSolver.java |
 | 318 |  | [Recursion-33 / Recursive to Iterative Code (Template + Tips & Tricks)](https://www.youtube.com/watch?v=ogkjUU-ltcc) | 12:21 |  |
-| 319 | 100 | [Recursion-34 / 100. Same Tree](https://www.youtube.com/watch?v=eanCpzNHxRk) | 15:43 |  |
+| 319 | 100 | [Recursion-34 / 100. Same Tree](https://www.youtube.com/watch?v=eanCpzNHxRk) | 15:43 | ✅ Trees/src/SameTree.java |
 | 320 | 22 | [Recursion-35 / 22. Generate Parentheses](https://www.youtube.com/watch?v=blre_iVh3VU) | 27:25 | ✅ Backtracking/src/GenerateParentheses.java |
 | 321 | 17 | [Recursion-36 / 17. Letter Combinations of a Phone Number](https://www.youtube.com/watch?v=r_iKOkl4fuM) | 20:21 | ✅ Backtracking/src/LetterCombinations.java |
 | 322 | 46 | [Recursion-37 / 46. Permutations](https://www.youtube.com/watch?v=6UmAY-rXVBc) | 13:42 | ✅ FAQ/src/PossiblePermutations.java, Backtracking/src/Permutations.java |

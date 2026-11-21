@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 153 / 161 done, 8 to do.**
+**Progress: 161 / 161 done, 0 to do.**
 
 ## How to work a batch
 
@@ -35,7 +35,7 @@ Legend:
 | [11](#batch-11) | BinarySearch (new) | 8 | 0 | ✅ 8/8 |
 | [12](#batch-12) | Stack | 9 | 0 | ✅ 9/9 |
 | [13](#batch-13) | DynamicProgramming | 8 | 0 | ✅ 8/8 |
-| [14](#batch-14) | Trees | 8 | 0 | ⬜ 0/8 |
+| [14](#batch-14) | Trees | 8 | 0 | ✅ 8/8 |
 
 ### Batch 1
 
@@ -230,14 +230,14 @@ Folder: `Trees/`
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | 3 | 5/11 | `Trees/src/Trie.java` |
-| ⬜ | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | 3 | 5/11 | `Trees/src/KthSmallestInBST.java` |
-| ⬜ | 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Medium | 3 | 5/11 | `Trees/src/LowestCommonAncestor.java` |
-| ⬜ | 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | 3 | 4/11 | `Trees/src/SameTree.java` |
-| ⬜ | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | Medium | 3 | 4/11 | `Trees/src/ZigzagLevelOrderTraversal.java` |
-| ⬜ | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy | 3 | 4/11 | `Trees/src/BalancedBinaryTree.java` |
-| ⬜ | 173 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium | 3 | 4/11 | `Trees/src/BSTIterator.java` |
-| ⬜ | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | 3 | 4/11 | `Trees/src/InvertBinaryTree.java` |
+| ✅ | 208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | 3 | 5/11 | `Trees/src/Trie.java` |
+| ✅ | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | 3 | 5/11 | `Trees/src/KthSmallestInBST.java` |
+| ✅ | 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Medium | 3 | 5/11 | `Trees/src/LowestCommonAncestor.java` |
+| ✅ | 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | 3 | 4/11 | `Trees/src/SameTree.java` |
+| ✅ | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | Medium | 3 | 4/11 | `Trees/src/ZigzagLevelOrderTraversal.java` |
+| ✅ | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy | 3 | 4/11 | `Trees/src/BalancedBinaryTree.java` |
+| ✅ | 173 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium | 3 | 4/11 | `Trees/src/BSTIterator.java` |
+| ✅ | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | 3 | 4/11 | `Trees/src/InvertBinaryTree.java` |
 
 ## Already done (57)
 

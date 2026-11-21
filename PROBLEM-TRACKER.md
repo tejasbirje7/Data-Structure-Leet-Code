@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 107 / 161 done, 54 to do.**
+**Progress: 128 / 161 done, 33 to do.**
 
 ## How to work a batch
 
@@ -29,9 +29,9 @@ Legend:
 | [5](#batch-5) | LinkedList | 5 | 2 | ✅ 5/5 |
 | [6](#batch-6) | Graphs (new) | 10 | 4 | ✅ 10/10 |
 | [7](#batch-7) | SlidingWindow, Math, Intervals | 5 | 1 | ✅ 5/5 |
-| [8](#batch-8) | Backtracking | 8 | 2 | ⬜ 0/8 |
-| [9](#batch-9) | TwoPointers | 6 | 2 | ⬜ 0/6 |
-| [10](#batch-10) | HashMap | 7 | 1 | ⬜ 0/7 |
+| [8](#batch-8) | Backtracking | 8 | 2 | ✅ 8/8 |
+| [9](#batch-9) | TwoPointers | 6 | 2 | ✅ 6/6 |
+| [10](#batch-10) | HashMap | 7 | 1 | ✅ 7/7 |
 | [11](#batch-11) | BinarySearch (new) | 8 | 0 | ⬜ 0/8 |
 | [12](#batch-12) | Stack | 9 | 0 | ⬜ 0/9 |
 | [13](#batch-13) | DynamicProgramming | 8 | 0 | ⬜ 0/8 |
@@ -142,14 +142,14 @@ Folder: `Backtracking/`
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 78 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | 1 | 10/11 | `Backtracking/src/Subsets.java` |
-| ⬜ | 79 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | 1 | 10/11 | `Backtracking/src/WordSearch.java` |
-| ⬜ | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | 2 | 7/11 | `Backtracking/src/NQueens.java` |
-| ⬜ | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | 3 | 5/11 | `Backtracking/src/GenerateParentheses.java` |
-| ⬜ | 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | 3 | 5/11 | `Backtracking/src/SudokuSolver.java` |
-| ⬜ | 212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Hard | 3 | 5/11 | `Backtracking/src/WordSearch2.java` |
-| ⬜ | 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Medium | 3 | 4/11 | `Backtracking/src/CombinationSum2.java` |
-| ⬜ | 131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | 3 | 4/11 | `Backtracking/src/PalindromePartitioning.java` |
+| ✅ | 78 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | 1 | 10/11 | `Backtracking/src/Subsets.java` |
+| ✅ | 79 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | 1 | 10/11 | `Backtracking/src/WordSearch.java` |
+| ✅ | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | 2 | 7/11 | `Backtracking/src/NQueens.java` |
+| ✅ | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | 3 | 5/11 | `Backtracking/src/GenerateParentheses.java` |
+| ✅ | 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | 3 | 5/11 | `Backtracking/src/SudokuSolver.java` |
+| ✅ | 212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Hard | 3 | 5/11 | `Backtracking/src/WordSearch2.java` |
+| ✅ | 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Medium | 3 | 4/11 | `Backtracking/src/CombinationSum2.java` |
+| ✅ | 131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | 3 | 4/11 | `Backtracking/src/PalindromePartitioning.java` |
 
 ### Batch 9
 
@@ -157,12 +157,12 @@ Folder: `TwoPointers/`
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | 1 | 8/11 | `TwoPointers/src/SortColors.java` |
-| ⬜ | 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | 1 | 8/11 | `TwoPointers/src/MoveZeroes.java` |
-| ⬜ | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 2 | 6/11 | `TwoPointers/src/FindDuplicateNumber.java` |
-| ⬜ | 443 | [String Compression](https://leetcode.com/problems/string-compression/) | Medium | 3 | 5/11 | `TwoPointers/src/StringCompression.java` |
-| ⬜ | 977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | 3 | 5/11 | `TwoPointers/src/SquaresOfSortedArray.java` |
-| ⬜ | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Medium | 3 | 4/11 | `TwoPointers/src/FourSum.java` |
+| ✅ | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | 1 | 8/11 | `TwoPointers/src/SortColors.java` |
+| ✅ | 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | 1 | 8/11 | `TwoPointers/src/MoveZeroes.java` |
+| ✅ | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 2 | 6/11 | `TwoPointers/src/FindDuplicateNumber.java` |
+| ✅ | 443 | [String Compression](https://leetcode.com/problems/string-compression/) | Medium | 3 | 5/11 | `TwoPointers/src/StringCompression.java` |
+| ✅ | 977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | 3 | 5/11 | `TwoPointers/src/SquaresOfSortedArray.java` |
+| ✅ | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Medium | 3 | 4/11 | `TwoPointers/src/FourSum.java` |
 
 ### Batch 10
 
@@ -170,13 +170,13 @@ Folder: `HashMap/`
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | 1 | 8/11 | `HashMap/src/LRUCache.java` |
-| ⬜ | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | 2 | 7/11 | `HashMap/src/FirstUniqueCharacter.java` |
-| ⬜ | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | 2 | 7/11 | `HashMap/src/SubarraySumEqualsK.java` |
-| ⬜ | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | 2 | 6/11 | `HashMap/src/LFUCache.java` |
-| ⬜ | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/) 🔒 | Medium | 3 | 5/11 | `HashMap/src/DesignHitCounter.java` |
-| ⬜ | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Medium | 3 | 5/11 | `HashMap/src/TimeBasedKeyValueStore.java` |
-| ⬜ | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | 3 | 4/11 | `HashMap/src/DesignHashMap.java` |
+| ✅ | 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | 1 | 8/11 | `HashMap/src/LRUCache.java` |
+| ✅ | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | 2 | 7/11 | `HashMap/src/FirstUniqueCharacter.java` |
+| ✅ | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | 2 | 7/11 | `HashMap/src/SubarraySumEqualsK.java` |
+| ✅ | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | 2 | 6/11 | `HashMap/src/LFUCache.java` |
+| ✅ | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/) 🔒 | Medium | 3 | 5/11 | `HashMap/src/DesignHitCounter.java` |
+| ✅ | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Medium | 3 | 5/11 | `HashMap/src/TimeBasedKeyValueStore.java` |
+| ✅ | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | 3 | 4/11 | `HashMap/src/DesignHashMap.java` |
 
 ### Batch 11
 

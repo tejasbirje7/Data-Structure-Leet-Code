@@ -4,8 +4,8 @@ Research notes on which data structures and algorithms problems companies ask mo
 
 - Data snapshot: LeetCode company tags as of **20 Oct 2025** (dataset repo last pushed 20 Oct 2026).
 - Research done: **21 Nov 2026**.
-- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **107** are in the repo.
-- **Top 100 from one dataset (section 4):** **63 of 100** are in the repo.
+- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **128** are in the repo.
+- **Top 100 from one dataset (section 4):** **77 of 100** are in the repo.
 - ✅ = already solved in this repo (matched by the LeetCode link in each file's header).
 - **Working list:** [PROBLEM-TRACKER.md](PROBLEM-TRACKER.md) splits the missing problems from section 3 into batches.
 
@@ -42,7 +42,7 @@ This describes the single-dataset ranking used in sections 4–6. Section 3 expl
 
 ## 2. Key findings
 
-- **Cross-check:** 161 problems are in 4+ of 11 sources. The 56 in 8+ sources are the safest bets; 5 of those are still missing here.
+- **Cross-check:** 161 problems are in 4+ of 11 sources. The 56 in 8+ sources are the safest bets; all 56 are now in the repo.
 - **In all 11 sources:** Group Anagrams, Maximum Subarray, Longest Increasing Subsequence, Merge Two Sorted Lists, Reverse Linked List.
 - **Top 100 vs cross-check:** 86 of the single-dataset top 100 are also in 4+ sources; the rest (for example Fruit Into Baskets, Predict the Winner, Concatenation of Array) are only popular in recent tags.
 - **Asked almost everywhere:** Merge Intervals (16 of 51 companies), Longest Substring Without Repeating Characters, Number of Islands, LRU Cache, Best Time to Buy and Sell Stock, Group Anagrams.
@@ -50,7 +50,7 @@ This describes the single-dataset ranking used in sections 4–6. Section 3 expl
 - **Mostly Medium:** see section 6 for the split.
 - **Top topics:** Array, String, Hash Table, Dynamic Programming, Sorting, Two Pointers, then Binary Search, Stack, DFS/BFS.
 - **Data-structure design problems show up often:** LRU Cache, Insert Delete GetRandom O(1), Time Based Key-Value Store, Find Median from Data Stream, Serialize and Deserialize Binary Tree.
-- **Biggest gaps in this repo:** Stack (1/7), Binary Search (1/8), Backtracking (1/5).
+- **Biggest gaps in this repo:** Stack (1/7), Binary Search (1/8), Graphs (4/7).
 
 ## 3. Cross-checked list
 
@@ -93,10 +93,10 @@ Notes:
 
 | Tier | Problems | In repo | Missing |
 |---|---|---|---|
-| Tier 1: 8–11 sources (must do) | 56 | 51 | 5 |
-| Tier 2: 6–7 sources | 40 | 25 | 15 |
-| Tier 3: 4–5 sources | 65 | 31 | 34 |
-| **Total** | **161** | **107** | **54** |
+| Tier 1: 8–11 sources (must do) | 56 | 56 | 0 |
+| Tier 2: 6–7 sources | 40 | 30 | 10 |
+| Tier 3: 4–5 sources | 65 | 42 | 23 |
+| **Total** | **161** | **128** | **33** |
 
 ### 3.3 Tier 1: 8–11 sources (must do)
 
@@ -115,8 +115,8 @@ Notes:
 | 11 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 | ✅ `DynamicProgramming/src/ClimbingStairs.java` |
 | 12 | 198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D5 D6 | ✅ `DynamicProgramming/src/HouseRobber.java` |
 | 13 | 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `FAQ/src/SearchInRotatedDistinctArray.java` |
-| 14 | 79 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 |  |
-| 15 | 78 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | 10/11 | C1 C2 C3 C5 D1 D2 D3 D4 D5 D6 |  |
+| 14 | 79 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `Backtracking/src/WordSearch.java` |
+| 15 | 78 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | 10/11 | C1 C2 C3 C5 D1 D2 D3 D4 D5 D6 | ✅ `Backtracking/src/Subsets.java` |
 | 16 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 | ✅ `FAQ/src/MergeIntervals.java`, `Intervals/src/MergeIntervals.java` |
 | 17 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/MaxProfit.java` |
 | 18 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | 9/11 | C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `SlidingWindow/src/SlidingWindowMaximum.java` |
@@ -141,14 +141,14 @@ Notes:
 | 37 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | 9/11 | C1 C3 C5 D1 D2 D3 D4 D5 D6 | ✅ `HashMap/src/ValidAnagram.java` |
 | 38 | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard | 9/11 | C1 C2 C3 D1 D2 D3 D4 D5 D6 | ✅ `Graphs/src/WordLadder.java` |
 | 39 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | 9/11 | C1 C2 C3 C4 C5 D2 D4 D5 D6 | ✅ `FAQ/src/LinkedListCycleDetector.java`, `LinkedList/src/LinkedListCycle.java` |
-| 40 | 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | 8/11 | C2 C3 C5 D1 D2 D3 D4 D5 |  |
+| 40 | 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | 8/11 | C2 C3 C5 D1 D2 D3 D4 D5 | ✅ `HashMap/src/LRUCache.java` |
 | 41 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `LinkedList/src/MergeKSortedLists.java` |
 | 42 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | 8/11 | C1 C2 C3 D1 D2 D3 D4 D5 | ✅ `Stack/src/ValidParentheses.java` |
 | 43 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `Trees/src/TreeMaxPathSum.java` |
 | 44 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/JumpGame.java` |
 | 45 | 215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | 8/11 | C1 C2 C3 D1 D2 D3 D4 D5 | ✅ `Heap/src/KthLargestElement.java` |
-| 46 | 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | 8/11 | C2 C5 D1 D2 D3 D4 D5 D6 |  |
-| 47 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | 8/11 | C1 C4 D1 D2 D3 D4 D5 D6 |  |
+| 46 | 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | 8/11 | C2 C5 D1 D2 D3 D4 D5 D6 | ✅ `TwoPointers/src/MoveZeroes.java` |
+| 47 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | 8/11 | C1 C4 D1 D2 D3 D4 D5 D6 | ✅ `TwoPointers/src/SortColors.java` |
 | 48 | 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | 8/11 | C2 C3 C5 D1 D2 D3 D4 D5 | ✅ `LinkedList/src/AddTwoNumbers.java` |
 | 49 | 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Medium | 8/11 | C1 C5 D1 D2 D3 D4 D5 D6 | ✅ `DynamicProgramming/src/MaximumProductSubarray.java` |
 | 50 | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `FAQ/src/MinimumWindowSubstring.java`, `SlidingWindow/src/MinimumWindowSubstring.java` |
@@ -164,12 +164,12 @@ Notes:
 | # | LeetCode | Problem | Difficulty | Sources | Found in | Repo |
 |---|---|---|---|---|---|---|
 | 1 | 210 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | Medium | 7/11 | C1 C2 D1 D2 D3 D4 D5 | ✅ `Graphs/src/CourseSchedule2.java` |
-| 2 | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | 7/11 | C2 C5 D1 D2 D3 D4 D5 |  |
+| 2 | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | 7/11 | C2 C5 D1 D2 D3 D4 D5 | ✅ `HashMap/src/SubarraySumEqualsK.java` |
 | 3 | 15 | [3Sum](https://leetcode.com/problems/3sum/) | Medium | 7/11 | C1 C2 D1 D2 D3 D4 D5 | ✅ `TwoPointers/src/ThreeSum.java`, `FAQ/src/ThreeSum.java` |
 | 4 | 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Medium | 7/11 | C1 C2 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/JumpGame2.java` |
 | 5 | 17 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | 7/11 | C1 C2 D1 D2 D3 D4 D5 | ✅ `Backtracking/src/LetterCombinations.java` |
 | 6 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | 7/11 | C5 D1 D2 D3 D4 D5 D6 |  |
-| 7 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | 7/11 | C5 D1 D2 D3 D4 D5 D6 |  |
+| 7 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | 7/11 | C5 D1 D2 D3 D4 D5 D6 | ✅ `HashMap/src/FirstUniqueCharacter.java` |
 | 8 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | 7/11 | C5 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/LongestPrefixString.java` |
 | 9 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | 7/11 | C2 C4 D1 D2 D3 D4 D5 | ✅ `HashMap/src/LongestConsecutive.java` |
 | 10 | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | 7/11 | C1 C2 D1 D2 D3 D4 D5 |  |
@@ -182,7 +182,7 @@ Notes:
 | 17 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy | 7/11 | C3 C5 D1 D2 D3 D4 D6 | ✅ `ArraysAndStrings/src/MajorityElement.java` |
 | 18 | 253 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Medium | 7/11 | C1 C5 D1 D2 D3 D4 D5 | ✅ `Intervals/src/MeetingRoomsII.java` |
 | 19 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | 7/11 | C4 C5 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/Merge.java` |
-| 20 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | 7/11 | C1 C2 C3 C5 D1 D2 D3 |  |
+| 20 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | 7/11 | C1 C2 C3 C5 D1 D2 D3 | ✅ `Backtracking/src/NQueens.java` |
 | 21 | 31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Medium | 7/11 | C1 C5 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/NextPermutation.java` |
 | 22 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy | 7/11 | C2 C5 D1 D3 D4 D5 D6 | ✅ `LinkedList/src/PalindromeLinkedList.java` |
 | 23 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | 7/11 | C2 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RemoveDuplicates.java` |
@@ -191,9 +191,9 @@ Notes:
 | 26 | 162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Medium | 6/11 | C4 C5 D1 D2 D3 D6 |  |
 | 27 | 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RandomizedSet.java` |
 | 28 | 739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | 6/11 | C1 C2 C5 D1 D3 D5 |  |
-| 29 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 6/11 | C1 C5 D1 D4 D5 D6 |  |
+| 29 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 6/11 | C1 C5 D1 D4 D5 D6 | ✅ `TwoPointers/src/FindDuplicateNumber.java` |
 | 30 | 32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | 6/11 | C4 D1 D2 D3 D4 D5 |  |
-| 31 | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | 6/11 | C3 D1 D2 D3 D5 D6 |  |
+| 31 | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | 6/11 | C3 D1 D2 D3 D5 D6 | ✅ `HashMap/src/LFUCache.java` |
 | 32 | 10 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | Hard | 6/11 | C1 C2 D2 D3 D4 D5 |  |
 | 33 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | Medium | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/ReverseWordsInString.java` |
 | 34 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RomanToInt.java` |
@@ -212,13 +212,13 @@ Notes:
 | 2 | 134 | [Gas Station](https://leetcode.com/problems/gas-station/) | Medium | 5/11 | C1 C2 D1 D2 D3 | ✅ `ArraysAndStrings/src/GasStation.java` |
 | 3 | 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | Medium | 5/11 | C1 C2 C4 C5 D1 |  |
 | 4 | 424 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Medium | 5/11 | C1 C2 C4 D1 D3 | ✅ `SlidingWindow/src/LongestRepeatingCharReplacement.java` |
-| 5 | 443 | [String Compression](https://leetcode.com/problems/string-compression/) | Medium | 5/11 | D1 D2 D3 D4 D6 |  |
+| 5 | 443 | [String Compression](https://leetcode.com/problems/string-compression/) | Medium | 5/11 | D1 D2 D3 D4 D6 | ✅ `TwoPointers/src/StringCompression.java` |
 | 6 | 496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | 5/11 | C2 C4 C5 D1 D3 |  |
 | 7 | 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium | 5/11 | C5 D1 D2 D3 D6 | ✅ `ArraysAndStrings/src/RotateArray.java`, `ArraysAndStrings/src/RotateArrayCyclic.java` |
 | 8 | 240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium | 5/11 | D1 D3 D4 D5 D6 |  |
-| 9 | 977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | 5/11 | D1 D3 D4 D5 D6 |  |
+| 9 | 977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | 5/11 | D1 D3 D4 D5 D6 | ✅ `TwoPointers/src/SquaresOfSortedArray.java` |
 | 10 | 621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | 5/11 | C1 D1 D2 D3 D5 | ✅ `Heap/src/TaskScheduler.java` |
-| 11 | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Medium | 5/11 | C1 D1 D3 D4 D5 |  |
+| 11 | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Medium | 5/11 | C1 D1 D3 D4 D5 | ✅ `HashMap/src/TimeBasedKeyValueStore.java` |
 | 12 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | 5/11 | D1 D2 D3 D5 D6 | ✅ `ArraysAndStrings/src/ValidSudoku.java` |
 | 13 | 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | 5/11 | D1 D2 D3 D5 D6 | ✅ `ArraysAndStrings/src/ZigzagConversion.java` |
 | 14 | 269 | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | Hard | 5/11 | C1 D1 D4 D5 D6 | ✅ `Graphs/src/AlienDictionary.java` |
@@ -226,7 +226,7 @@ Notes:
 | 16 | 704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | 5/11 | C1 C2 C3 C5 D1 |  |
 | 17 | 394 | [Decode String](https://leetcode.com/problems/decode-string/) | Medium | 5/11 | D1 D2 D3 D4 D5 |  |
 | 18 | 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium | 5/11 | C1 C5 D4 D5 D6 |  |
-| 19 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | 5/11 | D1 D2 D3 D4 D5 |  |
+| 19 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | 5/11 | D1 D2 D3 D4 D5 | ✅ `Backtracking/src/GenerateParentheses.java` |
 | 20 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | 5/11 | D1 D2 D4 D5 D6 | ✅ `ArraysAndStrings/src/IntToRoman.java` |
 | 21 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | Easy | 5/11 | C5 D1 D3 D5 D6 | ✅ `HashMap/src/IntersectionOfTwoArrays.java` |
 | 22 | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | 5/11 | C1 C2 C4 D5 D6 |  |
@@ -238,17 +238,17 @@ Notes:
 | 28 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Easy | 5/11 | C5 D1 D2 D3 D6 | ✅ `Math/src/SqrRtx.java` |
 | 29 | 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy | 5/11 | C2 D3 D4 D5 D6 | ✅ `Trees/src/SymmetricTree.java` |
 | 30 | 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | Hard | 5/11 | D1 D2 D3 D5 D6 | ✅ `ArraysAndStrings/src/TextJustification.java` |
-| 31 | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/) | Medium | 5/11 | D2 D3 D4 D5 D6 |  |
+| 31 | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/) | Medium | 5/11 | D2 D3 D4 D5 D6 | ✅ `HashMap/src/DesignHitCounter.java` |
 | 32 | 208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | 5/11 | C1 C2 C4 D5 D6 |  |
 | 33 | 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Medium | 5/11 | C2 C5 D2 D4 D5 |  |
 | 34 | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | Medium | 5/11 | C4 D2 D4 D5 D6 | ✅ `Graphs/src/MaxAreaOfIsland.java` |
-| 35 | 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | 5/11 | C2 C5 D4 D5 D6 |  |
+| 35 | 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | 5/11 | C2 C5 D4 D5 D6 | ✅ `Backtracking/src/SudokuSolver.java` |
 | 36 | 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Medium | 5/11 | C5 D2 D4 D5 D6 | ✅ `FAQ/src/SwapPairs.java` |
-| 37 | 212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Hard | 5/11 | C1 C2 D2 D4 D5 |  |
+| 37 | 212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Hard | 5/11 | C1 C2 D2 D4 D5 | ✅ `Backtracking/src/WordSearch2.java` |
 | 38 | 735 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | Medium | 4/11 | C2 D1 D2 D3 |  |
 | 39 | 994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | 4/11 | C2 D1 D2 D3 | ✅ `Graphs/src/RottingOranges.java` |
-| 40 | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Medium | 4/11 | C2 D1 D2 D3 |  |
-| 41 | 131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | 4/11 | C1 C5 D1 D3 |  |
+| 40 | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Medium | 4/11 | C2 D1 D2 D3 | ✅ `TwoPointers/src/FourSum.java` |
+| 41 | 131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | 4/11 | C1 C5 D1 D3 | ✅ `Backtracking/src/PalindromePartitioning.java` |
 | 42 | 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 4/11 | C1 C4 D1 D3 | ✅ `LinkedList/src/ReorderList.java` |
 | 43 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy | 4/11 | C5 D1 D3 D4 |  |
 | 44 | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | Medium | 4/11 | C2 D2 D4 D5 |  |
@@ -259,9 +259,9 @@ Notes:
 | 49 | 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Medium | 4/11 | C1 D1 D2 D3 |  |
 | 50 | 1235 | [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) | Hard | 4/11 | C5 D1 D2 D3 |  |
 | 51 | 503 | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium | 4/11 | C2 C4 D1 D3 |  |
-| 52 | 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Medium | 4/11 | C1 C2 D2 D5 |  |
+| 52 | 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Medium | 4/11 | C1 C2 D2 D5 | ✅ `Backtracking/src/CombinationSum2.java` |
 | 53 | 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Medium | 4/11 | C2 D4 D5 D6 | ✅ `Math/src/CountPrimes.java` |
-| 54 | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | 4/11 | C5 D4 D5 D6 |  |
+| 54 | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | 4/11 | C5 D4 D5 D6 | ✅ `HashMap/src/DesignHashMap.java` |
 | 55 | 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium | 4/11 | D2 D3 D4 D6 | ✅ `Graphs/src/EvaluateDivision.java` |
 | 56 | 150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Medium | 4/11 | C1 C5 D4 D5 | ✅ `Stack/src/ReversePolishNotation.java` |
 | 57 | 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy | 4/11 | C2 C5 D5 D6 | ✅ `LinkedList/src/IntersectionOfTwoLinkedLists.java` |
@@ -318,8 +318,8 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 
 | Pattern | In repo |
 |---|---|
-| Arrays & Hashing | 15/20 |
-| Two Pointers | 7/12 |
+| Arrays & Hashing | 18/20 |
+| Two Pointers | 12/12 |
 | Sliding Window | 4/6 |
 | Stack | 1/7 |
 | Binary Search | 1/8 |
@@ -328,25 +328,25 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | Graphs (BFS / DFS / Union-Find / Topological Sort) | 4/7 |
 | Heap | 4/4 |
 | Intervals & Greedy | 5/5 |
-| Backtracking | 1/5 |
+| Backtracking | 5/5 |
 | Dynamic Programming | 6/9 |
-| Design (data structure design) | 1/3 |
+| Design (data structure design) | 3/3 |
 | Strings & Math | 6/6 |
 
-### Arrays & Hashing (15/20 in repo)
+### Arrays & Hashing (18/20 in repo)
 
 | Rank | Problem | Difficulty | Cos | Repo |
 |---|---|---|---|---|
 | 5 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | 10 | ✅ `ArraysAndStrings/src/MaxProfit.java` |
 | 6 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | 10 | ✅ `HashMap/src/GroupAnagrams.java` |
-| 11 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | 8 |  |
+| 11 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | 8 | ✅ `HashMap/src/SubarraySumEqualsK.java` |
 | 17 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | 7 | ✅ `HashMap/src/TwoSum.java` |
 | 24 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Medium | 7 | ✅ `ArraysAndStrings/src/MaxProfit2.java` |
 | 41 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | 6 | ✅ `HashMap/src/LongestConsecutive.java` |
 | 51 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium | 6 | ✅ `ArraysAndStrings/src/RotateArray.java`, `ArraysAndStrings/src/RotateArrayCyclic.java` |
 | 53 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Medium | 6 | ✅ `ArraysAndStrings/src/SpiralMatrix.java` |
-| 66 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | 6 |  |
-| 69 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 6 |  |
+| 66 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | 6 | ✅ `HashMap/src/FirstUniqueCharacter.java` |
+| 69 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 6 | ✅ `TwoPointers/src/FindDuplicateNumber.java` |
 | 73 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | 6 | ✅ `ArraysAndStrings/src/ValidSudoku.java` |
 | 78 | [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) | Easy | 6 |  |
 | 83 | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy | 5 | ✅ `ArraysAndStrings/src/MajorityElement.java` |
@@ -358,7 +358,7 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 96 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium | 5 | ✅ `ArraysAndStrings/src/ProductExceptSelf.java` |
 | 100 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Medium | 5 | ✅ `ArraysAndStrings/src/RotateImage.java` |
 
-### Two Pointers (7/12 in repo)
+### Two Pointers (12/12 in repo)
 
 | Rank | Problem | Difficulty | Cos | Repo |
 |---|---|---|---|---|
@@ -366,12 +366,12 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 18 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | 7 | ✅ `ArraysAndStrings/src/RainWater.java` |
 | 19 | [3Sum](https://leetcode.com/problems/3sum/) | Medium | 7 | ✅ `TwoPointers/src/ThreeSum.java`, `FAQ/src/ThreeSum.java` |
 | 20 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | 7 | ✅ `TwoPointers/src/MostWaterInContainer.java` |
-| 29 | [String Compression](https://leetcode.com/problems/string-compression/) | Medium | 7 |  |
-| 42 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | 6 |  |
+| 29 | [String Compression](https://leetcode.com/problems/string-compression/) | Medium | 7 | ✅ `TwoPointers/src/StringCompression.java` |
+| 42 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | 6 | ✅ `TwoPointers/src/MoveZeroes.java` |
 | 44 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | 6 | ✅ `TwoPointers/src/ValidPalindrome.java` |
-| 46 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | 6 |  |
-| 47 | [4Sum](https://leetcode.com/problems/4sum/) | Medium | 6 |  |
-| 52 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | 6 |  |
+| 46 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | 6 | ✅ `TwoPointers/src/SquaresOfSortedArray.java` |
+| 47 | [4Sum](https://leetcode.com/problems/4sum/) | Medium | 6 | ✅ `TwoPointers/src/FourSum.java` |
+| 52 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | 6 | ✅ `TwoPointers/src/SortColors.java` |
 | 81 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | 5 | ✅ `ArraysAndStrings/src/RemoveDuplicates.java` |
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | 5 | ✅ `ArraysAndStrings/src/Merge.java` |
 
@@ -460,15 +460,15 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 54 | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | 6 | ✅ `ArraysAndStrings/src/JumpGame.java` |
 | 82 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Medium | 5 | ✅ `Intervals/src/MeetingRoomsII.java` |
 
-### Backtracking (1/5 in repo)
+### Backtracking (5/5 in repo)
 
 | Rank | Problem | Difficulty | Cos | Repo |
 |---|---|---|---|---|
 | 22 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | 7 | ✅ `Backtracking/src/LetterCombinations.java` |
-| 67 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | 6 |  |
-| 70 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | 6 |  |
-| 93 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | 5 |  |
-| 97 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | 5 |  |
+| 67 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | 6 | ✅ `Backtracking/src/PalindromePartitioning.java` |
+| 70 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | 6 | ✅ `Backtracking/src/WordSearch.java` |
+| 93 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | 5 | ✅ `Backtracking/src/GenerateParentheses.java` |
+| 97 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | 5 | ✅ `Backtracking/src/Subsets.java` |
 
 ### Dynamic Programming (6/9 in repo)
 
@@ -484,13 +484,13 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 75 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | 6 | ✅ `DynamicProgramming/src/WordBreak.java` |
 | 76 | [Predict the Winner](https://leetcode.com/problems/predict-the-winner/) | Medium | 6 |  |
 
-### Design (data structure design) (1/3 in repo)
+### Design (data structure design) (3/3 in repo)
 
 | Rank | Problem | Difficulty | Cos | Repo |
 |---|---|---|---|---|
-| 4 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | 11 |  |
+| 4 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | 11 | ✅ `HashMap/src/LRUCache.java` |
 | 31 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium | 7 | ✅ `ArraysAndStrings/src/RandomizedSet.java` |
-| 63 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Medium | 6 |  |
+| 63 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Medium | 6 | ✅ `HashMap/src/TimeBasedKeyValueStore.java` |
 
 ### Strings & Math (6/6 in repo)
 
@@ -514,13 +514,13 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 3 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 9/23 | ✅ |
 | 4 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 8/23 | ✅ |
 | 5 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 8/23 | ✅ |
-| 6 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 8/23 |  |
+| 6 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 8/23 | ✅ |
 | 7 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 8/23 | ✅ |
 | 8 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 8/23 | ✅ |
 | 9 | [Two Sum](https://leetcode.com/problems/two-sum/) | 7/23 | ✅ |
 | 10 | [3Sum](https://leetcode.com/problems/3sum/) | 7/23 | ✅ |
 | 11 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 7/23 | ✅ |
-| 12 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | 7/23 |  |
+| 12 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | 7/23 | ✅ |
 | 13 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | 7/23 | ✅ |
 | 14 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | 7/23 | ✅ |
 | 15 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 7/23 | ✅ |
@@ -533,7 +533,7 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 2 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 3/11 | ✅ |
 | 3 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | 2/11 |  |
 | 4 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | 2/11 | ✅ |
-| 5 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 2/11 |  |
+| 5 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 2/11 | ✅ |
 | 6 | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | 2/11 |  |
 | 7 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | 2/11 | ✅ |
 | 8 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 2/11 | ✅ |
@@ -553,7 +553,7 @@ Their last-6-months lists are tiny (0–9 problems each), so this uses the all-t
 |---|---|---|---|---|
 | 1 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 8/17 | Flipkart, Media.net, Navi, Paytm, PhonePe, Sprinklr, Swiggy, Zeta | ✅ |
 | 2 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 7/17 | Dream11, Media.net, Myntra, Paytm, Swiggy, Zeta, Zomato | ✅ |
-| 3 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 7/17 | Flipkart, Paytm, PhonePe, Sprinklr, Swiggy, Zomato, razorpay |  |
+| 3 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 7/17 | Flipkart, Paytm, PhonePe, Sprinklr, Swiggy, Zomato, razorpay | ✅ |
 | 4 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 7/17 | Flipkart, Juspay, Sprinklr, Swiggy, Zeta, Zomato, razorpay | ✅ |
 | 5 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 6/17 | Flipkart, Groww, Media.net, Myntra, Paytm, Swiggy | ✅ |
 | 6 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | 6/17 | Dream11, Flipkart, Juspay, Meesho, PhonePe, Sprinklr |  |
@@ -619,19 +619,19 @@ Weighted by how many target companies asked each problem (top 300 problems).
 
 - Playlist: [DSA In 90 Days For Placements! Beginner, Medium & Advanced Level Playlist](https://www.youtube.com/playlist?list=PLVItHqpXY_DArKRcfmGWykqV3u4hDaJLo)
 - 337 videos, about 87.5 hours, 170 distinct LeetCode problems. About 60 videos are intros, theory, templates or channel updates.
-- 66 of the 170 problems are in this repo.
+- 74 of the 170 problems are in this repo.
 
 | Videos | Section | ✅ In repo | Missing |
 |---|---|---|---|
-| 3–16 | Array | 26, 121, 122, 189, 217, 136, 349, 350, 66, 1, 36, 48 | 283 |
-| 17–47 | Arrays (Theory + Code) | 88, 27, 26 | 485, 1295, 977, 1089, 1346, 941, 1299, 283, 905, 1051, 487, 414, 448 |
+| 3–16 | Array | 26, 121, 122, 189, 217, 136, 349, 350, 66, 1, 36, 48, 283 | none |
+| 17–47 | Arrays (Theory + Code) | 88, 27, 26, 977, 283 | 485, 1295, 1089, 1346, 941, 1299, 905, 1051, 487, 414, 448 |
 | 48–70, 79–90 | Array And String | 66, 167, 189, 209, 151, 14, 28, 118, 54 | 724, 747, 561, 119, 67, 498, 344, 186, 557 |
-| 71–78 | String | 242, 125, 28, 14, 8, 7 | 344, 387 |
+| 71–78 | String | 242, 125, 28, 14, 8, 7, 387 | 344 |
 | 91–97 | Linked List | 19, 21, 141, 206, 234 | 237 |
 | 98–130 | Linked List (Theory + Code) | 141, 142, 19, 21, 2, 61, 138, 160, 206, 234 | 707, 203, 328, 708, 430 |
-| 131–152 | Hash Table | 217, 136, 202, 205, 350, 219, 49, 380, 3, 347, 36 | 705, 706, 599, 387, 359, 249, 771, 454, 170, 288, 652 |
+| 131–152 | Hash Table | 217, 136, 202, 205, 350, 219, 49, 380, 3, 347, 36, 706, 387 | 705, 599, 359, 249, 771, 454, 170, 288, 652 |
 | 153–165 | Binary Search | 69, 33 | 704, 34, 374, 278, 153, 162, 658 |
-| 168–188 | Sorting | none | 75, 1051, 147, 1200, 164, 2343 |
+| 168–188 | Sorting | 75 | 1051, 147, 1200, 164, 2343 |
 | 189–195 | Math | 13, 204 | 412, 326, 1232, 2481, 836 |
 | 196–202 | Miscellaneous | 268, 118 | 191, 461, 190 |
 | 203–204 | Design | none | 384 |
@@ -640,7 +640,7 @@ Weighted by how many target companies asked each problem (top 300 problems).
 | 232–251 | Heap | 215, 347, 295 | 703, 1046, 1337, 378, 973, 1642 |
 | 253–267 | Binary Tree | 102, 104, 101 | 144, 94, 145, 112 |
 | 268–282 | Binary Search Tree | 98, 235 | 700, 701, 450, 285, 173, 703, 110, 108, 220 |
-| 285–322 | Recursion | 24, 50, 21, 77, 17, 46, 70, 98, 206 | 344, 700, 509, 119, 779, 240, 51, 52, 37, 100, 22 |
+| 285–322 | Recursion | 24, 50, 21, 77, 17, 46, 70, 98, 206, 51, 37, 22 | 344, 700, 509, 119, 779, 240, 52, 100 |
 | 325–335 | DP | 198 | 1137, 746, 740, 1770 |
 
 Some problems appear in more than one section, so the Missing column has repeats.
@@ -661,7 +661,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 9 | 349 | [Array-7 / 349. Intersection of Two Arrays / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=nDKnfQVKReE) | 12:13 | ✅ HashMap/src/IntersectionOfTwoArrays.java |
 | 10 | 350 | [Array-8 / 350. Intersection of Two Arrays II / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=uZUvzFpLp1I) | 23:47 | ✅ HashMap/src/IntersectionOfTwoArrays2.java, HashMap/src/IntersectionOfTwoArrays2Sorting.java |
 | 11 | 66 | [Array-9 / 66. Plus One / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=4fG-PBorGOY) | 7:30 | ✅ Math/src/PlusOne.java |
-| 12 | 283 | [Array-10 / 283. Move Zeroes / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=wwzGaII21rU) | 11:37 |  |
+| 12 | 283 | [Array-10 / 283. Move Zeroes / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=wwzGaII21rU) | 11:37 | ✅ TwoPointers/src/MoveZeroes.java |
 | 13 | 1 | [Array-11 / 1. Two Sum / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=XliE4F0h4wM) | 17:58 | ✅ HashMap/src/TwoSum.java |
 | 14 | 36 | [Array-12 / 36. Valid Sudoku / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=Y-zTQZLhQsc) | 19:54 | ✅ ArraysAndStrings/src/ValidSudoku.java |
 | 15 | 48 | [Array-13 / 48. Rotate Image / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=Th-4e85_cUg) | 17:23 | ✅ ArraysAndStrings/src/RotateImage.java |
@@ -670,8 +670,8 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 18 | 485 | [485.2 Max Consecutive Ones (Code) / #1 / Arrays Playlist / #leetcode #array #dsa #interview](https://www.youtube.com/watch?v=2hzERLjR2_k) | 2:06 |  |
 | 19 | 1295 | [1295.1 Find Number with Even Number of Digits(Theory) / #2 / Arrays Playlist / #leetcode #array](https://www.youtube.com/watch?v=c3XuLlIQ_fw) | 13:20 |  |
 | 20 | 1295 | [1295.2 Find Number with Even Number of Digits (Code) / #2 / Arrays Playlist / #leetcode #array #dsa](https://www.youtube.com/watch?v=fGowSrWq5QI) | 7:44 |  |
-| 21 | 977 | [977.1 Squares of a Sorted array (Theory) / #3 / Arrays Playlist / #leetcode #array #dsa #interview](https://www.youtube.com/watch?v=fV1q5N2YZX8) | 7:19 |  |
-| 22 | 977 | [977.2 Squares of a Sorted array (Code)  / #3 / Arrays Playlist / #leetcode #array #dsa #interview](https://www.youtube.com/watch?v=6b0EqlyOhLo) | 4:16 |  |
+| 21 | 977 | [977.1 Squares of a Sorted array (Theory) / #3 / Arrays Playlist / #leetcode #array #dsa #interview](https://www.youtube.com/watch?v=fV1q5N2YZX8) | 7:19 | ✅ TwoPointers/src/SquaresOfSortedArray.java |
+| 22 | 977 | [977.2 Squares of a Sorted array (Code)  / #3 / Arrays Playlist / #leetcode #array #dsa #interview](https://www.youtube.com/watch?v=6b0EqlyOhLo) | 4:16 | ✅ TwoPointers/src/SquaresOfSortedArray.java |
 | 23 | 1089 | [1089.1 Duplicate Zeros (Theory)  / #4 / Arrays Playlist / #leetcode #array #dsa #interview](https://www.youtube.com/watch?v=fs5Idcn-8b0) | 12:42 |  |
 | 24 | 1089 | [1089.2 Duplicate Zeros (Code)  / #4 / Arrays Playlist /  #leetcode #array #dsa #interview](https://www.youtube.com/watch?v=AAkM5vnn7sc) | 9:51 |  |
 | 25 | 88 | [88.1 Merge Sorted Array (Theory) /  #5 / Arrays Playlist /  #leetcode #array #dsa #interview](https://www.youtube.com/watch?v=AYkQki2k8wo) | 9:08 | ✅ ArraysAndStrings/src/Merge.java |
@@ -686,8 +686,8 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 34 | 941 | [941.2 Valid Mountain Array (Code) / #9 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=0pXZo21U0k8) | 3:36 |  |
 | 35 | 1299 | [1299.1 Replace Elements with Greatest Element on Right Side(Theory)/#10 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=4ATd6WWjoEk) | 7:07 |  |
 | 36 | 1299 | [1299.2 Replace Elements with Greatest Element on Right Side(Code) / #10 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=9LenWMiTfKo) | 3:11 |  |
-| 37 | 283 | [283.1 Move Zeroes (Theory) / #11 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=Re8iwp3czYs) | 11:32 |  |
-| 38 | 283 | [283.2 Move Zeroes (Code) / #11 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=xy8IV2FdeeU) | 6:35 |  |
+| 37 | 283 | [283.1 Move Zeroes (Theory) / #11 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=Re8iwp3czYs) | 11:32 | ✅ TwoPointers/src/MoveZeroes.java |
+| 38 | 283 | [283.2 Move Zeroes (Code) / #11 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=xy8IV2FdeeU) | 6:35 | ✅ TwoPointers/src/MoveZeroes.java |
 | 39 | 905 | [905.1 Sort Array By Parity (Theory) / #12 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=_DSyHqvqRFw) | 13:20 |  |
 | 40 | 905 | [905.2 Sort Array By Parity (Code) / #12 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=ZwzvV356TF4) | 10:35 |  |
 | 41 | 1051 | [1051. Height Checker (Theory + Code) / #13 / Arrays Playlist / Leetcode](https://www.youtube.com/watch?v=iGFGlr-DjXA) | 7:14 |  |
@@ -722,7 +722,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 70 | 498 | [498. Diagonal Traverse / #18 / Array And String Playlist](https://www.youtube.com/watch?v=jQ_-E1AwGrw) | 49:48 |  |
 | 71 | 344 | [String-1 / 344. Reverse String / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=IzAi-hsLVKE) | 4:45 |  |
 | 72 | 7 | [String-2 / 7. Reverse Integer / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=cV0yZcs8wCM) | 17:13 | ✅ Math/src/ReverseInteger.java |
-| 73 | 387 | [String-3 / 387. First Unique Character in a String / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=KSjBIiTlsko) | 6:28 |  |
+| 73 | 387 | [String-3 / 387. First Unique Character in a String / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=KSjBIiTlsko) | 6:28 | ✅ HashMap/src/FirstUniqueCharacter.java |
 | 74 | 242 | [String-4 / 242. Valid Anagram / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=L03Bua5Uiv8) | 13:44 | ✅ HashMap/src/ValidAnagram.java |
 | 75 | 125 | [String-5 / 125. Valid Palindrome / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=o7DPQX5t21k) | 13:07 | ✅ TwoPointers/src/ValidPalindrome.java |
 | 76 | 8 | [String-6 / 8. String to Integer (atoi) / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=c67bciCuQGQ) | 25:31 | ✅ ArraysAndStrings/src/StringToInteger.java |
@@ -781,13 +781,13 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 129 | 430 | [430.1 Flatten a Multilevel Doubly Linked List (Theory) / #16 / Linked List Playlist / #leetcode #dsa](https://www.youtube.com/watch?v=3yQ-aWV0wUE) | 22:19 |  |
 | 130 | 430 | [430.2 Flatten a Multilevel Doubly Linked List (Code) / #16 / Linked List Playlist / #leetcode #dsa](https://www.youtube.com/watch?v=A1r16TQgYvQ) | 9:22 |  |
 | 131 | 705 | [[MUST WATCH] 705. Design HashSet / #1 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=NfTyAM6T7to) | 25:57 |  |
-| 132 | 706 | [[MUST WATCH] 706. Design HashMap / #2 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=Q2dzzbFqKmo) | 20:54 |  |
+| 132 | 706 | [[MUST WATCH] 706. Design HashMap / #2 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=Q2dzzbFqKmo) | 20:54 | ✅ HashMap/src/DesignHashMap.java |
 | 133 | 217 | [217. Contains Duplicate / #3 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=5rs1YxOtqSA) | 9:16 | ✅ HashMap/src/ContainsDuplicate.java |
 | 134 | 136 | [136. Single Number / #4 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=hURay76Zie0) | 12:00 | ✅ Math/src/SingleNumber.java |
 | 135 | 202 | [202. Happy Number / #7 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=yx1swAFoxXY) | 22:58 | ✅ TwoPointers/src/IsHappy.java |
 | 136 | 205 | [205. Isomorphic Strings / #8 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=1R58ZyIH0EQ) | 25:59 | ✅ HashMap/src/IsomorphicStrings.java |
 | 137 | 599 | [599. Minimum Index Sum of Two Lists / #9 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=OU0voEih10g) | 15:27 |  |
-| 138 | 387 | [387. First Unique Character in a String / #10 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=khgf6B281tE) | 7:00 |  |
+| 138 | 387 | [387. First Unique Character in a String / #10 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=khgf6B281tE) | 7:00 | ✅ HashMap/src/FirstUniqueCharacter.java |
 | 139 | 350 | [350. Intersection of Two Arrays II / #11 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=mfHj38p4Kto) | 20:26 | ✅ HashMap/src/IntersectionOfTwoArrays2.java, HashMap/src/IntersectionOfTwoArrays2Sorting.java |
 | 140 | 219 | [219. Contains Duplicate II / #12 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=O2HRsifRfnc) | 9:55 | ✅ SlidingWindow/src/ContainsDuplicate.java |
 | 141 | 359 | [359. Logger Rate Limiter / #13 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=orr37fHDNnw) | 9:49 |  |
@@ -820,7 +820,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 168 |  | [Sorting-1 / Theory / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=xk7O7jflrMo) | 13:40 |  |
 | 169 |  | [Sorting-2 / Comparison-Based Sort / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=KRahIjlkQgI) | 6:48 |  |
 | 170 |  | [Sorting-3 / Selection Sort / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=_GI9CEhFTU4) | 3:10 |  |
-| 171 | 75 | [Sorting-4 / 75. Sort Colors (Selection Sort) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=v7mhlVhqa6A) | 7:18 |  |
+| 171 | 75 | [Sorting-4 / 75. Sort Colors (Selection Sort) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=v7mhlVhqa6A) | 7:18 | ✅ TwoPointers/src/SortColors.java |
 | 172 |  | [Sorting-5 / Bubble Sort / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=Aeemd_60Cx8) | 3:51 |  |
 | 173 | 1051 | [Sorting-6 / 1051. Height Checker (Bubble Sort) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=c23qI5VfnII) | 12:50 |  |
 | 174 |  | [Sorting-7 / Insertion Sort / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=d1KFOuiXiXc) | 5:19 |  |
@@ -829,7 +829,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 177 |  | [Sorting-10 / Count Sort (Theory) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=X2Vp-ITVE9E) | 14:57 |  |
 | 178 |  | [Sorting-11 / Count Sort (Template-1) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=psiOZVhIDCo) | 15:47 |  |
 | 179 |  | [Sorting-12 / Count Sort (Template-2) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=EFo-cdp0gtU) | 12:54 |  |
-| 180 | 75 | [Sorting-13 / 75. Sort Colors (Count Sort) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=_K4XjuEiceI) | 12:20 |  |
+| 180 | 75 | [Sorting-13 / 75. Sort Colors (Count Sort) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=_K4XjuEiceI) | 12:20 | ✅ TwoPointers/src/SortColors.java |
 | 181 | 1200 | [Sorting-14 / 1200. Minimum Absolute Difference (Sorting) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=IsLHaZ8fHFo) | 16:24 |  |
 | 182 | 1200 | [Sorting-15 / 1200. Minimum Absolute Difference (Count Sort) / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=I6JK2xU9Zw8) | 29:16 |  |
 | 183 |  | [Sorting-16 / Radix Sort (Theory) / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=-3W5ziLqFLE) | 15:49 |  |
@@ -962,14 +962,14 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 310 | 240 | [Recursion-25 / 240. Search a 2D Matrix II / 3 Approaches](https://www.youtube.com/watch?v=IglNjeKakSU) | 35:21 |  |
 | 311 |  | [Recursion-26 / Quick Sort / End + Random Pivot](https://www.youtube.com/watch?v=qDEVK_yzH80) | 26:22 |  |
 | 312 |  | [Recursion-27 / What is Backtracking???](https://www.youtube.com/watch?v=yUVWGoEuVlg) | 10:41 |  |
-| 313 | 51 | [Recursion-28 / 51. N-Queens (HARD) / Backtracking](https://www.youtube.com/watch?v=OVPv8kqeDeY) | 43:32 |  |
+| 313 | 51 | [Recursion-28 / 51. N-Queens (HARD) / Backtracking](https://www.youtube.com/watch?v=OVPv8kqeDeY) | 43:32 | ✅ Backtracking/src/NQueens.java |
 | 314 | 52 | [Recursion-29 / 52. N-Queens II (HARD) / Backtracking](https://www.youtube.com/watch?v=cbzQ0XPbnFw) | 5:55 |  |
 | 315 |  | [Recursion-30 / Master Backtracking: The Only Template You Need](https://www.youtube.com/watch?v=pY8QPVidu4M) | 7:21 |  |
 | 316 | 77 | [Recursion-31 / 77. Combinations](https://www.youtube.com/watch?v=MgACwMqHMHU) | 25:51 | ✅ Backtracking/src/Combinations.java |
-| 317 | 37 | [Recursion-32 / 37. Sudoku Solver](https://www.youtube.com/watch?v=SU-NcEECu5w) | 47:20 |  |
+| 317 | 37 | [Recursion-32 / 37. Sudoku Solver](https://www.youtube.com/watch?v=SU-NcEECu5w) | 47:20 | ✅ Backtracking/src/SudokuSolver.java |
 | 318 |  | [Recursion-33 / Recursive to Iterative Code (Template + Tips & Tricks)](https://www.youtube.com/watch?v=ogkjUU-ltcc) | 12:21 |  |
 | 319 | 100 | [Recursion-34 / 100. Same Tree](https://www.youtube.com/watch?v=eanCpzNHxRk) | 15:43 |  |
-| 320 | 22 | [Recursion-35 / 22. Generate Parentheses](https://www.youtube.com/watch?v=blre_iVh3VU) | 27:25 |  |
+| 320 | 22 | [Recursion-35 / 22. Generate Parentheses](https://www.youtube.com/watch?v=blre_iVh3VU) | 27:25 | ✅ Backtracking/src/GenerateParentheses.java |
 | 321 | 17 | [Recursion-36 / 17. Letter Combinations of a Phone Number](https://www.youtube.com/watch?v=r_iKOkl4fuM) | 20:21 | ✅ Backtracking/src/LetterCombinations.java |
 | 322 | 46 | [Recursion-37 / 46. Permutations](https://www.youtube.com/watch?v=6UmAY-rXVBc) | 13:42 | ✅ FAQ/src/PossiblePermutations.java, Backtracking/src/Permutations.java |
 | 323 |  | [Dynamic Programming Series / BIGGEST DP Playlist / Java / DSA / Placements / FAANG Interviews #dp](https://www.youtube.com/watch?v=A-sXJKi2kfg) | 4:26 |  |

@@ -69,7 +69,7 @@ import java.util.*;
  *   - Not sorting first: moving left/right only makes sense on a sorted array.
  *   - Stopping after the first match for an i: there can be more pairs. Move both pointers and keep going.
  *   - Duplicate triplets: [-1,0,1] is found for i = 1 and i = 2. Use a Set (as here) or skip equal
- *     neighbours for i, left and right (as in FAQ/ThreeSum).
+ *     neighbours for i, left and right (as in ThreeSumSkipDuplicates).
  *   - Trying all triples: O(n^3), too slow for 3000 numbers.
  *
  * COMPLEXITY
@@ -77,7 +77,7 @@ import java.util.*;
  *   Extra space: the Set of answers, plus the sort's own space. Note: nums is sorted in place.
  *
  * RELATED
- *   LeetCode 15 (ThreeSum, FAQ/): same problem, also in FAQ/; skips duplicate values instead of using a Set.
+ *   LeetCode 15 (ThreeSumSkipDuplicates, TwoPointers/): the same problem; skips equal neighbours instead of using a Set.
  *   LeetCode 16 (ThreeSumClosest, FAQ/): same loops, but tracks the sum closest to a target.
  *   LeetCode 167 (TwoSum, TwoPointers/): the inner left/right loop on its own.
  *   LeetCode 1 (TwoSum, HashMap/): unsorted Two Sum, solved with a hash map.

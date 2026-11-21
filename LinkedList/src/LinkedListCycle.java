@@ -64,7 +64,6 @@
  *   O(n) time (runner meets walker within one lap after walker enters the cycle), O(1) extra space.
  *
  * RELATED
- *   LeetCode 141 (LinkedListCycleDetector, FAQ/): the same problem, with the null-safe loop check.
  *   LeetCode 142 (StartOfCycle, FAQ/): also return the node where the cycle starts
  *     (after they meet, reset one pointer to head and move both 1 step at a time).
  *   LeetCode 202 (IsHappy, TwoPointers/): the same slow/fast cycle check on a number sequence.

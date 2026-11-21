@@ -76,7 +76,6 @@ import java.util.List;
  *   O(n) extra space for the recursion and temp, not counting the output.
  *
  * RELATED
- *   LeetCode 46 (PossiblePermutations, FAQ/): the same problem and the same contains() approach.
  *   LeetCode 47 (UniquePermutations, FAQ/): nums may have duplicates; uses a used[] array and
  *     a per-level seen set to skip repeats.
  *   LeetCode 77 (Combinations, Backtracking/): order doesn't matter, so each call starts after the last pick.

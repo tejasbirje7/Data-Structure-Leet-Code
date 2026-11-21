@@ -74,7 +74,6 @@ class ListNode2 {
  *
  * RELATED
  *   LeetCode 141 (LinkedListCycle, LinkedList/): only phase 1, return true/false.
- *   LeetCode 141 (LinkedListCycleDetector, FAQ/): the same detection problem in this folder.
  */
 public class StartOfCycle {
 

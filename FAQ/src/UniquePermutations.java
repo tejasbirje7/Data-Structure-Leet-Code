@@ -82,9 +82,8 @@ import java.util.*;
  *   O(n^2) extra space: recursion depth n, each level has its own seen set of up to n values.
  *
  * RELATED
- *   LeetCode 46 (PossiblePermutations, FAQ/): values are distinct, so "contains" on the path
+ *   LeetCode 46 (Permutations, Backtracking/): values are distinct, so "contains" on the path
  *     is enough and no seen set is needed.
- *   LeetCode 46 (Permutations, Backtracking/): the same distinct-values version.
  */
 class UniquePermutations {
 

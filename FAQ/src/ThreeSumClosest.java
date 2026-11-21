@@ -62,7 +62,7 @@ import java.util.*;
  *   apart from the sort.
  *
  * RELATED
- *   LeetCode 15 (ThreeSum, FAQ/): same sort + fix + two pointers, but collects every exact
+ *   LeetCode 15 (ThreeSumSkipDuplicates, TwoPointers/): same sort + fix + two pointers, but collects every exact
  *     zero-sum triplet and skips duplicates.
  *   LeetCode 15 (ThreeSum, TwoPointers/): the same 3Sum problem, using a HashSet for duplicates.
  *   LeetCode 167 (TwoSum, TwoPointers/): the inner two-pointer loop on its own.

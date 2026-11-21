@@ -61,7 +61,7 @@ import java.util.Map;
  * RELATED
  *   LeetCode 167 (TwoSum, TwoPointers/): variant with sorted input; two pointers, O(1) space,
  *     1-based indexes.
- *   LeetCode 15 (ThreeSum, TwoPointers/; also in FAQ/): fix one number, then find a pair for the rest.
+ *   LeetCode 15 (ThreeSum, TwoPointers/): fix one number, then find a pair for the rest.
  *   LeetCode 219 (ContainsDuplicate, SlidingWindow/): the same "have I seen this value?" lookup,
  *     limited to a window of k.
  */

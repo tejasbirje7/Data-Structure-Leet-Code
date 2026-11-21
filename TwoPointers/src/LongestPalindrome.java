@@ -79,7 +79,6 @@
  *   O(n) extra space for the substring copies.
  *
  * RELATED
- *   LeetCode 5 (LongestPalindromicSubString, FAQ/): same problem, also in FAQ/ (same expand-around-center approach).
  *   LeetCode 647 (PalindromicSubstringCount, FAQ/): same expand-around-center, but counts every
  *     palindrome instead of keeping the longest.
  *   LeetCode 125 (ValidPalindrome, TwoPointers/): checks one whole string, pointers move inwards

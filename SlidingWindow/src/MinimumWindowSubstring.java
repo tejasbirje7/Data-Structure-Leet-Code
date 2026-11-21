@@ -102,7 +102,6 @@ import java.util.Objects;
  *   O(k) extra space, k = number of distinct chars in s and t.
  *
  * RELATED
- *   LeetCode 76 (MinimumWindowSubstring, FAQ/): same problem, also in FAQ/.
  *   LeetCode 209 (MinimumSizeSubArray, SlidingWindow/): same "shrink while valid, record the shortest" loop,
  *     but valid means "sum >= target".
  *   LeetCode 3 (LongestSubstring, SlidingWindow/): looks for the longest valid window instead of the shortest.

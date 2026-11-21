@@ -66,7 +66,6 @@ import java.util.*;
  *   O(n) time, O(n) extra space for the result.
  *
  * RELATED
- *   LeetCode 57 (InsertIntervals, FAQ/): same problem, also in FAQ/.
  *   LeetCode 56 (MergeIntervals, Intervals/): unsorted intervals, sort first, then merge every overlap.
  */
 public class InsertInterval {

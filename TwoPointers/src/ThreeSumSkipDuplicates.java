@@ -71,13 +71,12 @@ import java.util.*;
  *   O(1) extra space apart from the sort and the output.
  *
  * RELATED
- *   LeetCode 15 (ThreeSum, TwoPointers/): same problem, also in TwoPointers/.
- *     That copy removes duplicates with a HashSet instead of skipping.
+ *   LeetCode 15 (ThreeSum, TwoPointers/): the same problem; removes duplicates with a HashSet instead of skipping.
  *   LeetCode 16 (ThreeSumClosest, FAQ/): same sort + fix + two pointers, but keeps the sum
  *     closest to a target instead of collecting exact matches.
  *   LeetCode 167 (TwoSum, TwoPointers/): the inner two-pointer loop on its own.
  */
-public class ThreeSum {
+public class ThreeSumSkipDuplicates {
 
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
@@ -113,7 +112,7 @@ public class ThreeSum {
     }
 
     public static void main(String[] args) {
-        ThreeSum solver = new ThreeSum();
+        ThreeSumSkipDuplicates solver = new ThreeSumSkipDuplicates();
 
         System.out.println(solver.threeSum(new int[]{-2,-1,-1,0,3,3})); // [[-2,-1,3]]
         System.out.println(solver.threeSum(new int[]{0,1,1}));          // []

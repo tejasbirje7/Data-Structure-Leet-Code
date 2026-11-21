@@ -66,7 +66,6 @@ import java.util.*;
  *   Note: the input array is sorted and its intervals are changed in place.
  *
  * RELATED
- *   LeetCode 56 (MergeIntervals, FAQ/): same problem, also in FAQ/.
  *   LeetCode 57 (InsertInterval, Intervals/): the list is already sorted; merge in only one new interval.
  *   LeetCode 452 (MinimumArrowsToBurst, Intervals/): sort by start too, but keep the smallest end
  *     (the shared part) instead of the largest.

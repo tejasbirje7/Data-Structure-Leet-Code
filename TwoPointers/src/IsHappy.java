@@ -74,7 +74,6 @@
  *
  * RELATED
  *   LeetCode 141 (LinkedListCycle, LinkedList/): the same slow/fast idea on linked list nodes.
- *   LeetCode 141 (LinkedListCycleDetector, FAQ/): the same linked list cycle problem, also in FAQ/.
  *   LeetCode 142 (StartOfCycle, FAQ/): after slow and fast meet, also find where the cycle starts.
  */
 public class IsHappy {

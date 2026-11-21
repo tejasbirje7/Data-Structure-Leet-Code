@@ -2,6 +2,8 @@
 
 LeetCode solutions in Java, grouped by topic. Each solution is written to double as revision notes, so a problem can be re-learned from its file alone without opening LeetCode.
 
+To work through every problem in order (Easy → Medium → Hard, most asked first), follow [STUDY-PLAN.md](STUDY-PLAN.md).
+
 ---
 
 ## 1. Repository layout
@@ -12,7 +14,7 @@ LeetCode solutions in Java, grouped by topic. Each solution is written to double
 | `Backtracking/` | Backtracking problems |
 | `BinarySearch/` | Binary search problems: on a sorted array, a matrix, or on the answer |
 | `DynamicProgramming/` | Dynamic programming problems |
-| `FAQ/` | Frequently asked interview problems from mixed topics (some also appear in a topic folder) |
+| `FAQ/` | Frequently asked interview problems from mixed topics |
 | `Graphs/` | Graph problems: grid flood-fill, BFS, topological sort |
 | `HashMap/` | Hash map and counting problems |
 | `Heap/` | Heap and priority queue problems |

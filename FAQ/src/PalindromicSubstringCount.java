@@ -60,7 +60,7 @@
  *   O(n^2) time (2n - 1 centers, each expands at most n/2 times), O(1) extra space.
  *
  * RELATED
- *   LeetCode 5 (LongestPalindromicSubString, FAQ/; LongestPalindrome, TwoPointers/): same expansion,
+ *   LeetCode 5 (LongestPalindrome, TwoPointers/): same expansion,
  *     but keep the longest palindrome instead of counting.
  *   LeetCode 125 (ValidPalindrome, TwoPointers/): two pointers moving inwards to check one string.
  */

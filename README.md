@@ -10,6 +10,7 @@ LeetCode solutions in Java, grouped by topic. Each solution is written to double
 |---|---|
 | `ArraysAndStrings/` | Array and string problems |
 | `Backtracking/` | Backtracking problems |
+| `DynamicProgramming/` | Dynamic programming problems |
 | `FAQ/` | Frequently asked interview problems from mixed topics (some also appear in a topic folder) |
 | `HashMap/` | Hash map and counting problems |
 | `Intervals/` | Interval merging and scheduling problems |

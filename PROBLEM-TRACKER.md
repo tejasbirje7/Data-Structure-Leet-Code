@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 57 / 161 done, 104 to do.**
+**Progress: 66 / 161 done, 95 to do.**
 
 ## How to work a batch
 
@@ -22,7 +22,7 @@ Legend:
 
 | Batch | Folder | Problems | Tier 1 | Status |
 |---|---|---|---|---|
-| [1](#batch-1) | DynamicProgramming (new) | 9 | 8 | ⬜ 0/9 |
+| [1](#batch-1) | DynamicProgramming (new) | 9 | 8 | ✅ 9/9 |
 | [2](#batch-2) | Heap (new) | 4 | 3 | ⬜ 0/4 |
 | [3](#batch-3) | Trees (new) | 9 | 5 | ⬜ 0/9 |
 | [4](#batch-4) | ArraysAndStrings | 8 | 3 | ⬜ 0/8 |
@@ -43,15 +43,15 @@ Folder: `DynamicProgramming/` **(new folder)**
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | 1 | 11/11 | `DynamicProgramming/src/MaximumSubarray.java` |
-| ⬜ | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 1 | 11/11 | `DynamicProgramming/src/LongestIncreasingSubsequence.java` |
-| ⬜ | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | 1 | 10/11 | `DynamicProgramming/src/ClimbingStairs.java` |
-| ⬜ | 198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | 1 | 10/11 | `DynamicProgramming/src/HouseRobber.java` |
-| ⬜ | 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium | 1 | 9/11 | `DynamicProgramming/src/UniquePaths.java` |
-| ⬜ | 139 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | 1 | 9/11 | `DynamicProgramming/src/WordBreak.java` |
-| ⬜ | 322 | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | 1 | 9/11 | `DynamicProgramming/src/CoinChange.java` |
-| ⬜ | 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Medium | 1 | 8/11 | `DynamicProgramming/src/MaximumProductSubarray.java` |
-| ⬜ | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | 2 | 7/11 | `DynamicProgramming/src/MinimumPathSum.java` |
+| ✅ | 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | 1 | 11/11 | `DynamicProgramming/src/MaximumSubarray.java` |
+| ✅ | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 1 | 11/11 | `DynamicProgramming/src/LongestIncreasingSubsequence.java` |
+| ✅ | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | 1 | 10/11 | `DynamicProgramming/src/ClimbingStairs.java` |
+| ✅ | 198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | 1 | 10/11 | `DynamicProgramming/src/HouseRobber.java` |
+| ✅ | 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium | 1 | 9/11 | `DynamicProgramming/src/UniquePaths.java` |
+| ✅ | 139 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | 1 | 9/11 | `DynamicProgramming/src/WordBreak.java` |
+| ✅ | 322 | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | 1 | 9/11 | `DynamicProgramming/src/CoinChange.java` |
+| ✅ | 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Medium | 1 | 8/11 | `DynamicProgramming/src/MaximumProductSubarray.java` |
+| ✅ | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | 2 | 7/11 | `DynamicProgramming/src/MinimumPathSum.java` |
 
 ### Batch 2
 

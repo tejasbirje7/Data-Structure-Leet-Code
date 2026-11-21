@@ -4,20 +4,25 @@ Research notes on which data structures and algorithms problems companies ask mo
 
 - Data snapshot: LeetCode company tags as of **20 Oct 2025** (dataset repo last pushed 20 Oct 2026).
 - Research done: **21 Nov 2026**.
-- ✅ = already solved in this repo (matched by the LeetCode link in each file's header). **33 of the top 100** are in the repo.
+- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **56** are in the repo.
+- **Top 100 from one dataset (section 4):** **33 of 100** are in the repo.
+- ✅ = already solved in this repo (matched by the LeetCode link in each file's header).
 
 ## Contents
 
 1. [How the ranking was built](#1-how-the-ranking-was-built)
 2. [Key findings](#2-key-findings)
-3. [Top 100, grouped by pattern](#3-top-100-grouped-by-pattern)
-4. [Most asked by company segment](#4-most-asked-by-company-segment)
-5. [Difficulty and topics](#5-difficulty-and-topics)
-6. [YouTube playlist: DSA In 90 Days (CTO Bhaiya)](#6-youtube-playlist-dsa-in-90-days-cto-bhaiya)
-7. [Resources](#7-resources)
-8. [Refreshing this file](#8-refreshing-this-file)
+3. [Cross-checked list](#3-cross-checked-list)
+4. [Top 100, grouped by pattern](#4-top-100-grouped-by-pattern)
+5. [Most asked by company segment](#5-most-asked-by-company-segment)
+6. [Difficulty and topics](#6-difficulty-and-topics)
+7. [YouTube playlist: DSA In 90 Days (CTO Bhaiya)](#7-youtube-playlist-dsa-in-90-days-cto-bhaiya)
+8. [Resources](#8-resources)
+9. [Refreshing this file](#9-refreshing-this-file)
 
 ## 1. How the ranking was built
+
+This describes the single-dataset ranking used in sections 4–6. Section 3 explains how the cross-check across 11 sources works.
 
 - **Source:** [liquidslr/interview-company-wise-problems](https://github.com/liquidslr/interview-company-wise-problems).
   - One folder per company (471 companies), built from LeetCode's company tags.
@@ -32,18 +37,282 @@ Research notes on which data structures and algorithms problems companies ask mo
 - **Excluded:** SQL (Database), Shell and Concurrency problems, since they are not data structures problems.
 - **Limits:**
   - LeetCode tags don't record the candidate's level, so this is what companies ask in general, not per level.
-  - India product companies have very few recent tags (0–9 problems each in 6 months), so their own list in section 4 uses all-time data.
+  - India product companies have very few recent tags (0–9 problems each in 6 months), so their own list in section 5 uses all-time data.
 
 ## 2. Key findings
 
+- **Cross-check:** 161 problems are in 4+ of 11 sources. The 56 in 8+ sources are the safest bets; 31 of those are still missing here.
+- **In all 11 sources:** Group Anagrams, Maximum Subarray, Longest Increasing Subsequence, Merge Two Sorted Lists, Reverse Linked List.
+- **Top 100 vs cross-check:** 86 of the single-dataset top 100 are also in 4+ sources; the rest (for example Fruit Into Baskets, Predict the Winner, Concatenation of Array) are only popular in recent tags.
 - **Asked almost everywhere:** Merge Intervals (16 of 51 companies), Longest Substring Without Repeating Characters, Number of Islands, LRU Cache, Best Time to Buy and Sell Stock, Group Anagrams.
 - **India product favourites (all time):** Trapping Rain Water (8 of 17), Longest Substring Without Repeating Characters, LRU Cache, Merge Intervals (7 each), Asteroid Collision, Maximum Subarray, Best Time to Buy and Sell Stock (6 each).
-- **Mostly Medium:** see section 5 for the split.
+- **Mostly Medium:** see section 6 for the split.
 - **Top topics:** Array, String, Hash Table, Dynamic Programming, Sorting, Two Pointers, then Binary Search, Stack, DFS/BFS.
 - **Data-structure design problems show up often:** LRU Cache, Insert Delete GetRandom O(1), Time Based Key-Value Store, Find Median from Data Stream, Serialize and Deserialize Binary Tree.
 - **Biggest gaps in this repo:** Stack (1/7), Binary Search (1/8), Trees (0/3), Graphs (BFS / DFS / Union-Find / Topological Sort) (0/7), Heap (0/4), Backtracking (1/5), Dynamic Programming (0/9).
 
-## 3. Top 100, grouped by pattern
+## 3. Cross-checked list
+
+**161 problems** that at least 4 of 11 sources agree on.
+
+Section 4's top 100 uses one dataset. This section checks every problem against all the sources that could be read, and keeps the ones that at least 4 of them agree on.
+
+### 3.1 Sources used
+
+| Code | Source | Type | Problems counted | How it was counted |
+|---|---|---|---|---|
+| D1 | [liquidslr (Oct 2025, 6 months)](https://github.com/liquidslr/interview-company-wise-problems) | Company tags | 150 | Top 150 by number of the 51 target companies, last 6 months (51 of the 51 target companies found) |
+| D2 | [rahulb99 (Jun 2025, 6 months)](https://github.com/rahulb99/leetcode) | Company tags | 150 | Top 150, same method; older snapshot that keeps each company's top 100 (51 of the 51 target companies found) |
+| D3 | [snehasishroy (Aug 2026, 6 months)](https://github.com/snehasishroy/leetcode-companywise-interview-questions) | Company tags | 150 | Top 150, same method (39 of the 51 target companies found) |
+| D4 | [krishnadey30 (2023, 6 months)](https://www.github.com/krishnadey30/LeetCode-Questions-CompanyWise) | Company tags | 150 | Top 150, same method (24 of the 51 target companies found) |
+| D5 | [crakcode-hub (Apr 2025, all time)](https://github.com/crakcode-hub/dsa-leetcode-questions) | Company tags | 150 | Top 150 by number of target companies in its Companies column (36 of the 51 target companies found) |
+| D6 | [MysteryVaibhav (Apr 2019, 1 year)](https://github.com/MysteryVaibhav/leetcode_company_wise_questions) | Company tags (PDF) | 150 | Top 150, same method, from the PDF text (29 of the 51 target companies found) |
+| C1 | [VikashPR MAANG 100](https://github.com/VikashPR/MAANG-Interview-Prep-100-DSA) | Curated list | 119 | Every LeetCode link in the list |
+| C2 | [DEV devcorner (product companies)](https://dev.to/devcorner/top-dsa-questions-asked-in-product-based-companies-2c2a) | Curated list | 128 | Every LeetCode link in the article |
+| C3 | [Preplaced 50](https://preplaced.in/blog/50-most-asked-dsa-interview-questions) | Curated list | 48 | Every LeetCode number in the list |
+| C4 | [GeeksforGeeks Top 100](https://www.geeksforgeeks.org/dsa/top-100-data-structure-and-algorithms-dsa-interview-questions-topic-wise/) | Curated list | 79 | Titles matched by hand to the LeetCode equivalent |
+| C5 | [Top 150 DSA (Avinash-singh11)](https://github.com/Avinash-singh11/top-150-DSA-questions-) | Curated list | 93 | Titles matched by hand to the LeetCode equivalent |
+
+A problem's score is the number of these 11 sources that include it.
+
+Sources that could not be used:
+
+- [LeetCode Discuss: Top 100 DSA Interview Questions (4258631)](https://leetcode.com/discuss/post/4258631/top-100-dsa-interview-questions-by-anony-jlgg/), [study guide 4255692](https://leetcode.com/discuss/study-guide/4255692/top-100-dsa-interview-questions) and [post 7417074](https://leetcode.com/discuss/post/7417074/): blocked by LeetCode's Cloudflare check (HTTP 403).
+- [singhsidhukuldeep: DSA interview questions](https://singhsidhukuldeep.github.io/Interview-Questions/data-structures-algorithms): page removed (HTTP 404; the site's repo no longer has it).
+- [devidnyk/leetcode-wrapper](https://github.com/devidnyk/leetcode-wrapper): an app with no data of its own; it pulls the snehasishroy dataset (D3), so counting it would count D3 twice.
+
+Notes:
+
+- All six datasets come from LeetCode's company tags, taken at different times (2019 to 2026), so they are not fully independent.
+- GeeksforGeeks: 21 of 100 items have no LeetCode equivalent (for example 0/1 Knapsack, Count Inversions, Topological Sorting) and are left out.
+- Top 150 DSA: 42 of 138 titles are classic algorithms with no single LeetCode problem (for example Dijkstra, Kruskal, Rat in a Maze) and are left out.
+- SQL, Shell and Concurrency problems are excluded, as in the rest of this file.
+
+### 3.2 Summary
+
+| Tier | Problems | In repo | Missing |
+|---|---|---|---|
+| Tier 1: 8–11 sources (must do) | 56 | 25 | 31 |
+| Tier 2: 6–7 sources | 39 | 14 | 25 |
+| Tier 3: 4–5 sources | 66 | 17 | 49 |
+| **Total** | **161** | **56** | **105** |
+
+### 3.3 Tier 1: 8–11 sources (must do)
+
+| # | LeetCode | Problem | Difficulty | Sources | Found in | Repo |
+|---|---|---|---|---|---|---|
+| 1 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `HashMap/src/GroupAnagrams.java` |
+| 2 | 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 |  |
+| 3 | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 |  |
+| 4 | 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `LinkedList/src/MergeTwoLinkedList.java` |
+| 5 | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 |  |
+| 6 | 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `SlidingWindow/src/LongestSubstring.java` |
+| 7 | 200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 |  |
+| 8 | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 |  |
+| 9 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 | ✅ `TwoPointers/src/LongestPalindrome.java`, `FAQ/src/LongestPalindromicSubString.java` |
+| 10 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `HashMap/src/TwoSum.java` |
+| 11 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 |  |
+| 12 | 198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D5 D6 |  |
+| 13 | 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `FAQ/src/SearchInRotatedDistinctArray.java` |
+| 14 | 79 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 |  |
+| 15 | 78 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | 10/11 | C1 C2 C3 C5 D1 D2 D3 D4 D5 D6 |  |
+| 16 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 | ✅ `FAQ/src/MergeIntervals.java`, `Intervals/src/MergeIntervals.java` |
+| 17 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/MaxProfit.java` |
+| 18 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | 9/11 | C2 C3 C4 C5 D1 D2 D3 D4 D5 |  |
+| 19 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | 9/11 | C1 C2 C4 D1 D2 D3 D4 D5 D6 |  |
+| 20 | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | 9/11 | C1 C2 C4 D1 D2 D3 D4 D5 D6 | ✅ `TwoPointers/src/MostWaterInContainer.java` |
+| 21 | 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Medium | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 |  |
+| 22 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | 9/11 | C1 C2 C4 C5 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/RainWater.java` |
+| 23 | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | 9/11 | C1 C2 C3 C4 C5 D1 D3 D5 D6 |  |
+| 24 | 297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | 9/11 | C1 C2 C3 C4 C5 D1 D2 D4 D5 |  |
+| 25 | 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Medium | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 |  |
+| 26 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | 9/11 | C1 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `TwoPointers/src/ValidPalindrome.java` |
+| 27 | 139 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | 9/11 | C1 C2 C4 C5 D1 D2 D3 D4 D5 |  |
+| 28 | 322 | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | 9/11 | C1 C2 C3 C5 D1 D2 D3 D4 D5 |  |
+| 29 | 39 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium | 9/11 | C1 C2 C3 C4 C5 D2 D4 D5 D6 | ✅ `Backtracking/src/CombinationsSum.java` |
+| 30 | 543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy | 9/11 | C1 C2 C3 C5 D1 D3 D4 D5 D6 | ✅ `FAQ/src/DiameterOfBinaryTree.java` |
+| 31 | 155 | [Min Stack](https://leetcode.com/problems/min-stack/) | Medium | 9/11 | C1 C2 C5 D1 D2 D3 D4 D5 D6 | ✅ `Stack/src/MinStack.java`, `Stack/src/StackUsingLinkedList.java` |
+| 32 | 46 | [Permutations](https://leetcode.com/problems/permutations/) | Medium | 9/11 | C1 C2 C3 C5 D1 D2 D3 D4 D5 | ✅ `FAQ/src/PossiblePermutations.java`, `Backtracking/src/Permutations.java` |
+| 33 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/ProductExceptSelf.java` |
+| 34 | 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium | 9/11 | C1 C3 C4 C5 D2 D3 D4 D5 D6 | ✅ `LinkedList/src/RemoveNthFromEnd.java` |
+| 35 | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Medium | 9/11 | C1 C2 C3 D1 D2 D3 D4 D5 D6 |  |
+| 36 | 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium | 9/11 | C1 C2 C5 D1 D2 D3 D4 D5 D6 |  |
+| 37 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | 9/11 | C1 C3 C5 D1 D2 D3 D4 D5 D6 | ✅ `HashMap/src/ValidAnagram.java` |
+| 38 | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard | 9/11 | C1 C2 C3 D1 D2 D3 D4 D5 D6 |  |
+| 39 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | 9/11 | C1 C2 C3 C4 C5 D2 D4 D5 D6 | ✅ `FAQ/src/LinkedListCycleDetector.java`, `LinkedList/src/LinkedListCycle.java` |
+| 40 | 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | 8/11 | C2 C3 C5 D1 D2 D3 D4 D5 |  |
+| 41 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 |  |
+| 42 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | 8/11 | C1 C2 C3 D1 D2 D3 D4 D5 | ✅ `Stack/src/ValidParentheses.java` |
+| 43 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 |  |
+| 44 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/JumpGame.java` |
+| 45 | 215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | 8/11 | C1 C2 C3 D1 D2 D3 D4 D5 |  |
+| 46 | 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | 8/11 | C2 C5 D1 D2 D3 D4 D5 D6 |  |
+| 47 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | 8/11 | C1 C4 D1 D2 D3 D4 D5 D6 |  |
+| 48 | 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | 8/11 | C2 C3 C5 D1 D2 D3 D4 D5 | ✅ `LinkedList/src/AddTwoNumbers.java` |
+| 49 | 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Medium | 8/11 | C1 C5 D1 D2 D3 D4 D5 D6 |  |
+| 50 | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `FAQ/src/MinimumWindowSubstring.java`, `SlidingWindow/src/MinimumWindowSubstring.java` |
+| 51 | 50 | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Medium | 8/11 | C1 C2 D1 D2 D3 D4 D5 D6 | ✅ `Math/src/Pow.java` |
+| 52 | 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | 8/11 | C1 C2 C3 D1 D2 D3 D4 D6 |  |
+| 53 | 98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | 8/11 | C1 C2 C4 C5 D1 D2 D4 D5 |  |
+| 54 | 102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | 8/11 | C1 C2 C4 C5 D2 D4 D5 D6 |  |
+| 55 | 647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Medium | 8/11 | C1 C2 C4 C5 D2 D3 D4 D5 | ✅ `FAQ/src/PalindromicSubstringCount.java` |
+| 56 | 133 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Medium | 8/11 | C1 C2 C3 C4 C5 D2 D4 D6 |  |
+
+### 3.4 Tier 2: 6–7 sources
+
+| # | LeetCode | Problem | Difficulty | Sources | Found in | Repo |
+|---|---|---|---|---|---|---|
+| 1 | 210 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | Medium | 7/11 | C1 C2 D1 D2 D3 D4 D5 |  |
+| 2 | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | 7/11 | C2 C5 D1 D2 D3 D4 D5 |  |
+| 3 | 15 | [3Sum](https://leetcode.com/problems/3sum/) | Medium | 7/11 | C1 C2 D1 D2 D3 D4 D5 | ✅ `TwoPointers/src/ThreeSum.java`, `FAQ/src/ThreeSum.java` |
+| 4 | 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Medium | 7/11 | C1 C2 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/JumpGame2.java` |
+| 5 | 17 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | 7/11 | C1 C2 D1 D2 D3 D4 D5 | ✅ `Backtracking/src/LetterCombinations.java` |
+| 6 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | 7/11 | C5 D1 D2 D3 D4 D5 D6 |  |
+| 7 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | 7/11 | C5 D1 D2 D3 D4 D5 D6 |  |
+| 8 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | 7/11 | C5 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/LongestPrefixString.java` |
+| 9 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | 7/11 | C2 C4 D1 D2 D3 D4 D5 | ✅ `HashMap/src/LongestConsecutive.java` |
+| 10 | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | 7/11 | C1 C2 D1 D2 D3 D4 D5 |  |
+| 11 | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | 7/11 | C2 C5 D1 D2 D4 D5 D6 |  |
+| 12 | 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | Medium | 7/11 | C5 D1 D2 D3 D4 D5 D6 |  |
+| 13 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium | 7/11 | C1 C2 C4 C5 D1 D4 D6 |  |
+| 14 | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | Medium | 7/11 | C1 C2 C5 D2 D3 D5 D6 |  |
+| 15 | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | 7/11 | C1 C2 C4 C5 D1 D2 D3 |  |
+| 16 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy | 7/11 | C3 C5 D1 D2 D3 D4 D6 | ✅ `ArraysAndStrings/src/MajorityElement.java` |
+| 17 | 253 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Medium | 7/11 | C1 C5 D1 D2 D3 D4 D5 |  |
+| 18 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | 7/11 | C4 C5 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/Merge.java` |
+| 19 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | 7/11 | C1 C2 C3 C5 D1 D2 D3 |  |
+| 20 | 31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Medium | 7/11 | C1 C5 D1 D2 D3 D4 D5 |  |
+| 21 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy | 7/11 | C2 C5 D1 D3 D4 D5 D6 |  |
+| 22 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | 7/11 | C2 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RemoveDuplicates.java` |
+| 23 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | 7/11 | C1 D1 D2 D3 D4 D5 D6 |  |
+| 24 | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | 7/11 | C1 C2 C5 D1 D2 D3 D6 |  |
+| 25 | 162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Medium | 6/11 | C4 C5 D1 D2 D3 D6 |  |
+| 26 | 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RandomizedSet.java` |
+| 27 | 739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | 6/11 | C1 C2 C5 D1 D3 D5 |  |
+| 28 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 6/11 | C1 C5 D1 D4 D5 D6 |  |
+| 29 | 32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | 6/11 | C4 D1 D2 D3 D4 D5 |  |
+| 30 | 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | 6/11 | C3 D1 D2 D3 D5 D6 |  |
+| 31 | 10 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | Hard | 6/11 | C1 C2 D2 D3 D4 D5 |  |
+| 32 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | Medium | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/ReverseWordsInString.java` |
+| 33 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RomanToInt.java` |
+| 34 | 136 | [Single Number](https://leetcode.com/problems/single-number/) | Easy | 6/11 | C2 D1 D2 D3 D4 D5 | ✅ `Math/src/SingleNumber.java` |
+| 35 | 138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Medium | 6/11 | C2 C4 D2 D3 D4 D5 | ✅ `LinkedList/src/CopyListWithRandomPointer.java` |
+| 36 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | 6/11 | C1 C2 C3 C4 D5 D6 |  |
+| 37 | 268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Easy | 6/11 | C1 C4 C5 D2 D5 D6 | ✅ `FAQ/src/MissingNumberFinder.java` |
+| 38 | 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | 6/11 | C1 D2 D3 D4 D5 D6 |  |
+| 39 | 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Medium | 6/11 | C1 C4 D2 D4 D5 D6 |  |
+
+### 3.5 Tier 3: 4–5 sources
+
+| # | LeetCode | Problem | Difficulty | Sources | Found in | Repo |
+|---|---|---|---|---|---|---|
+| 1 | 122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Medium | 5/11 | D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/MaxProfit2.java` |
+| 2 | 134 | [Gas Station](https://leetcode.com/problems/gas-station/) | Medium | 5/11 | C1 C2 D1 D2 D3 | ✅ `ArraysAndStrings/src/GasStation.java` |
+| 3 | 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | Medium | 5/11 | C1 C2 C4 C5 D1 |  |
+| 4 | 424 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Medium | 5/11 | C1 C2 C4 D1 D3 |  |
+| 5 | 443 | [String Compression](https://leetcode.com/problems/string-compression/) | Medium | 5/11 | D1 D2 D3 D4 D6 |  |
+| 6 | 496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | 5/11 | C2 C4 C5 D1 D3 |  |
+| 7 | 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium | 5/11 | C5 D1 D2 D3 D6 | ✅ `ArraysAndStrings/src/RotateArray.java`, `ArraysAndStrings/src/RotateArrayCyclic.java` |
+| 8 | 240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium | 5/11 | D1 D3 D4 D5 D6 |  |
+| 9 | 977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | 5/11 | D1 D3 D4 D5 D6 |  |
+| 10 | 621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | 5/11 | C1 D1 D2 D3 D5 |  |
+| 11 | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Medium | 5/11 | C1 D1 D3 D4 D5 |  |
+| 12 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | 5/11 | D1 D2 D3 D5 D6 |  |
+| 13 | 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | 5/11 | D1 D2 D3 D5 D6 |  |
+| 14 | 269 | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | Hard | 5/11 | C1 D1 D4 D5 D6 |  |
+| 15 | 227 | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | Medium | 5/11 | D2 D3 D4 D5 D6 |  |
+| 16 | 704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | 5/11 | C1 C2 C3 C5 D1 |  |
+| 17 | 394 | [Decode String](https://leetcode.com/problems/decode-string/) | Medium | 5/11 | D1 D2 D3 D4 D5 |  |
+| 18 | 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium | 5/11 | C1 C5 D4 D5 D6 |  |
+| 19 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | 5/11 | D1 D2 D3 D4 D5 |  |
+| 20 | 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | 5/11 | D1 D2 D4 D5 D6 | ✅ `ArraysAndStrings/src/IntToRoman.java` |
+| 21 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | Easy | 5/11 | C5 D1 D3 D5 D6 | ✅ `HashMap/src/IntersectionOfTwoArrays.java` |
+| 22 | 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | 5/11 | C1 C2 C4 D5 D6 |  |
+| 23 | 209 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium | 5/11 | C2 D1 D3 D4 D6 | ✅ `SlidingWindow/src/MinimumSizeSubArray.java` |
+| 24 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | 5/11 | D1 D2 D3 D5 D6 | ✅ `Math/src/Pallindrome.java` |
+| 25 | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Easy | 5/11 | D1 D2 D3 D5 D6 |  |
+| 26 | 66 | [Plus One](https://leetcode.com/problems/plus-one/) | Easy | 5/11 | D1 D2 D3 D4 D6 | ✅ `Math/src/PlusOne.java` |
+| 27 | 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard | 5/11 | C5 D1 D2 D4 D6 | ✅ `LinkedList/src/ReverseNodesKGroup.java` |
+| 28 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Easy | 5/11 | C5 D1 D2 D3 D6 | ✅ `Math/src/SqrRtx.java` |
+| 29 | 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy | 5/11 | C2 D3 D4 D5 D6 |  |
+| 30 | 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | Hard | 5/11 | D1 D2 D3 D5 D6 | ✅ `ArraysAndStrings/src/TextJustification.java` |
+| 31 | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/) | Medium | 5/11 | D2 D3 D4 D5 D6 |  |
+| 32 | 208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | 5/11 | C1 C2 C4 D5 D6 |  |
+| 33 | 236 | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Medium | 5/11 | C2 C5 D2 D4 D5 |  |
+| 34 | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | Medium | 5/11 | C4 D2 D4 D5 D6 |  |
+| 35 | 37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | 5/11 | C2 C5 D4 D5 D6 |  |
+| 36 | 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Medium | 5/11 | C5 D2 D4 D5 D6 | ✅ `FAQ/src/SwapPairs.java` |
+| 37 | 212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Hard | 5/11 | C1 C2 D2 D4 D5 |  |
+| 38 | 735 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | Medium | 4/11 | C2 D1 D2 D3 |  |
+| 39 | 994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | 4/11 | C2 D1 D2 D3 |  |
+| 40 | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Medium | 4/11 | C2 D1 D2 D3 |  |
+| 41 | 131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | 4/11 | C1 C5 D1 D3 |  |
+| 42 | 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 4/11 | C1 C4 D1 D3 |  |
+| 43 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy | 4/11 | C5 D1 D3 D4 |  |
+| 44 | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | Medium | 4/11 | C2 D2 D4 D5 |  |
+| 45 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | 4/11 | C1 D1 D2 D3 | ✅ `HashMap/src/ContainsDuplicate.java` |
+| 46 | 509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy | 4/11 | C2 C5 D1 D3 |  |
+| 47 | 202 | [Happy Number](https://leetcode.com/problems/happy-number/) | Easy | 4/11 | D1 D2 D5 D6 | ✅ `TwoPointers/src/IsHappy.java` |
+| 48 | 205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Easy | 4/11 | C2 D2 D4 D5 | ✅ `HashMap/src/IsomorphicStrings.java` |
+| 49 | 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Medium | 4/11 | C1 D1 D2 D3 |  |
+| 50 | 1235 | [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) | Hard | 4/11 | C5 D1 D2 D3 |  |
+| 51 | 503 | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium | 4/11 | C2 C4 D1 D3 |  |
+| 52 | 40 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Medium | 4/11 | C1 C2 D2 D5 |  |
+| 53 | 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Medium | 4/11 | C2 D4 D5 D6 |  |
+| 54 | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | 4/11 | C5 D4 D5 D6 |  |
+| 55 | 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium | 4/11 | D2 D3 D4 D6 |  |
+| 56 | 150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Medium | 4/11 | C1 C5 D4 D5 | ✅ `Stack/src/ReversePolishNotation.java` |
+| 57 | 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy | 4/11 | C2 C5 D5 D6 |  |
+| 58 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | 4/11 | C1 C3 C4 D6 |  |
+| 59 | 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | Medium | 4/11 | C1 C2 C3 C5 |  |
+| 60 | 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | 4/11 | C1 C3 D3 D6 |  |
+| 61 | 341 | [Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/) | Medium | 4/11 | D2 D4 D5 D6 |  |
+| 62 | 140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | Hard | 4/11 | D2 D4 D5 D6 |  |
+| 63 | 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium | 4/11 | C1 C4 D5 D6 | ✅ `FAQ/src/InsertIntervals.java`, `Intervals/src/InsertInterval.java` |
+| 64 | 417 | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | Medium | 4/11 | C1 C2 C3 C4 |  |
+| 65 | 173 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium | 4/11 | C2 D4 D5 D6 |  |
+| 66 | 28 | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | Easy | 4/11 | C3 D4 D5 D6 |  |
+
+<details>
+<summary>Also seen in exactly 3 sources (29 problems, 5 in repo)</summary>
+
+| # | LeetCode | Problem | Difficulty | Sources | Found in | Repo |
+|---|---|---|---|---|---|---|
+| 1 | 1004 | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | Medium | 3/11 | D1 D2 D3 |  |
+| 2 | 721 | [Accounts Merge](https://leetcode.com/problems/accounts-merge/) | Medium | 3/11 | D1 D3 D4 |  |
+| 3 | 16 | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | Medium | 3/11 | D1 D2 D5 | ✅ `FAQ/src/ThreeSumClosest.java` |
+| 4 | 67 | [Add Binary](https://leetcode.com/problems/add-binary/) | Easy | 3/11 | D1 D3 D6 |  |
+| 5 | 224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | Hard | 3/11 | D2 D5 D6 | ✅ `Stack/src/BasicCalculator.java` |
+| 6 |  | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | 3/11 | D1 D2 D3 | ✅ `ArraysAndStrings/src/FirstOccurrenceOfString.java` |
+| 7 | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium | 3/11 | C1 C2 D3 |  |
+| 8 | 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | 3/11 | D1 D2 D3 | ✅ `ArraysAndStrings/src/RemoveElement.java` |
+| 9 | 344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy | 3/11 | D1 D5 D6 |  |
+| 10 | 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | 3/11 | D1 D2 D3 |  |
+| 11 | 540 | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | Medium | 3/11 | D1 D3 D4 |  |
+| 12 | 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | 3/11 | C4 D1 D3 |  |
+| 13 | 713 | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | Medium | 3/11 | D1 D2 D3 | ✅ `FAQ/src/SubarrayProductLessThanK.java` |
+| 14 | 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Hard | 3/11 | D2 D4 D5 |  |
+| 15 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | 3/11 | C2 C5 D6 |  |
+| 16 | 528 | [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/) | Medium | 3/11 | D4 D5 D6 |  |
+| 17 | 759 | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | Hard | 3/11 | D4 D5 D6 |  |
+| 18 | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | Easy | 3/11 | D3 D5 D6 |  |
+| 19 | 114 | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | Medium | 3/11 | C5 D4 D5 |  |
+| 20 | 572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Easy | 3/11 | C1 C4 D6 |  |
+| 21 | 338 | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy | 3/11 | C1 C2 C4 |  |
+| 22 | 450 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Medium | 3/11 | C2 D5 D6 |  |
+| 23 | 191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy | 3/11 | C1 C2 D6 |  |
+| 24 | 332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Hard | 3/11 | D2 D4 D6 |  |
+| 25 | 692 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | Medium | 3/11 | C2 D4 D5 |  |
+| 26 | 116 | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) | Medium | 3/11 | D4 D5 D6 |  |
+| 27 | 218 | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | Hard | 3/11 | D4 D5 D6 |  |
+| 28 | 348 | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/) | Medium | 3/11 | D4 D5 D6 |  |
+| 29 | 323 | [Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | Medium | 3/11 | C1 C2 C5 |  |
+
+</details>
+
+## 4. Top 100, grouped by pattern
+
+From one dataset only (liquidslr, last 6 months, 51 companies). See section 3 for the cross-checked list.
 
 Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51 that asked it in the last 6 months.
 
@@ -234,7 +503,7 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 84 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | 5 |  |
 | 99 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | 5 | ✅ `ArraysAndStrings/src/FirstOccurrenceOfString.java` |
 
-## 4. Most asked by company segment
+## 5. Most asked by company segment
 
 ### Big Tech (23 companies, last 6 months)
 
@@ -313,7 +582,7 @@ Their last-6-months lists are tiny (0–9 problems each), so this uses the all-t
 | 29 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 3/17 | Flipkart, Paytm, PhonePe |  |
 | 30 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 3/17 | Flipkart, Sprinklr, Zeta |  |
 
-## 5. Difficulty and topics
+## 6. Difficulty and topics
 
 Weighted by how many target companies asked each problem (top 300 problems).
 
@@ -346,7 +615,7 @@ Weighted by how many target companies asked each problem (top 300 problems).
 | Heap (Priority Queue) | 87 |
 | Design | 78 |
 
-## 6. YouTube playlist: DSA In 90 Days (CTO Bhaiya)
+## 7. YouTube playlist: DSA In 90 Days (CTO Bhaiya)
 
 - Playlist: [DSA In 90 Days For Placements! Beginner, Medium & Advanced Level Playlist](https://www.youtube.com/playlist?list=PLVItHqpXY_DArKRcfmGWykqV3u4hDaJLo)
 - 337 videos, about 87.5 hours, 170 distinct LeetCode problems. About 60 videos are intros, theory, templates or channel updates.
@@ -721,37 +990,40 @@ Some problems appear in more than one section, so the Missing column has repeats
 
 </details>
 
-## 7. Resources
+## 8. Resources
+
+Status: **used** = counted in section 3; the codes match the table in 3.1.
 
 ### Company-wise question datasets (GitHub)
 
-- [liquidslr/interview-company-wise-problems](https://github.com/liquidslr/interview-company-wise-problems): **used for this file.** 471 companies, CSV per time window, with frequency and topics. Updated 20 Oct 2025.
-- [krishnadey30/LeetCode-Questions-CompanyWise](https://www.github.com/krishnadey30/LeetCode-Questions-CompanyWise): company-wise lists sorted by frequency and all time.
-- [snehasishroy/leetcode-companywise-interview-questions](https://github.com/snehasishroy/leetcode-companywise-interview-questions): company-wise lists sorted by recency.
-- [rahulb99/leetcode](https://github.com/rahulb99/leetcode): one CSV per company, with 30/60/90-day and all-time folders.
-- [devidnyk/leetcode-wrapper](https://github.com/devidnyk/leetcode-wrapper): snapshot as of July 2025 with a frequency % column.
-- [MysteryVaibhav/leetcode_company_wise_questions](https://github.com/MysteryVaibhav/leetcode_company_wise_questions): older company-wise lists.
-- [crakcode-hub/dsa-leetcode-questions](https://github.com/crakcode-hub/dsa-leetcode-questions): DSA question collection.
+- [liquidslr/interview-company-wise-problems](https://github.com/liquidslr/interview-company-wise-problems): **used (D1)**, also the only source for sections 4–6. 471 companies, CSV per time window, with frequency and topics. Updated 20 Oct 2025.
+- [krishnadey30/LeetCode-Questions-CompanyWise](https://www.github.com/krishnadey30/LeetCode-Questions-CompanyWise): company-wise lists sorted by frequency and all time. **Used (D4)**; last updated 2023.
+- [snehasishroy/leetcode-companywise-interview-questions](https://github.com/snehasishroy/leetcode-companywise-interview-questions): company-wise lists sorted by recency. **Used (D3)**; last updated Aug 2026.
+- [rahulb99/leetcode](https://github.com/rahulb99/leetcode): one CSV per company, same format as D1 but each list capped at 100. **Used (D2)**; snapshot Jun 2025.
+- [devidnyk/leetcode-wrapper](https://github.com/devidnyk/leetcode-wrapper): an app that pulls the snehasishroy data. **Not used**: no data of its own.
+- [MysteryVaibhav/leetcode_company_wise_questions](https://github.com/MysteryVaibhav/leetcode_company_wise_questions): company pages saved as PDFs in April 2019. **Used (D6)**, from the PDF text.
+- [crakcode-hub/dsa-leetcode-questions](https://github.com/crakcode-hub/dsa-leetcode-questions): one CSV of about 1,450 problems with the companies that asked each. **Used (D5)**.
 
 ### Curated "top N" DSA lists
 
-- [LeetCode Discuss: Top 100 DSA Interview Questions (post 4258631)](https://leetcode.com/discuss/post/4258631/top-100-dsa-interview-questions-by-anony-jlgg/): could not be fetched automatically (LeetCode's Cloudflare check). Compare it with section 3 by hand.
-- [LeetCode Discuss: Top 100 DSA interview questions (study guide 4255692)](https://leetcode.com/discuss/study-guide/4255692/top-100-dsa-interview-questions)
-- [LeetCode Discuss: Wrapping up 2025 with the most asked interview questions](https://leetcode.com/discuss/post/7417074/)
-- [VikashPR/MAANG-Interview-Prep-100-DSA](https://github.com/VikashPR/MAANG-Interview-Prep-100-DSA): built from LeetCode Top Interview Questions, Blind 75 and NeetCode 150.
-- [GeeksforGeeks: Top 100 DSA Interview Questions Topic-wise](https://www.geeksforgeeks.org/dsa/top-100-data-structure-and-algorithms-dsa-interview-questions-topic-wise/)
-- [Preplaced: 50 Most Asked DSA Interview Questions (2025)](https://preplaced.in/blog/50-most-asked-dsa-interview-questions): each problem tagged with companies.
-- [Top 150 DSA Questions for Interview](https://ab9106.github.io/top-150-DSA-questions-)
-- [DEV: Top DSA questions asked in product-based companies](https://dev.to/devcorner/top-dsa-questions-asked-in-product-based-companies-2c2a)
-- [singhsidhukuldeep: Data Structures and Algorithms interview questions](https://singhsidhukuldeep.github.io/Interview-Questions/data-structures-algorithms)
+- [LeetCode Discuss: Top 100 DSA Interview Questions (post 4258631)](https://leetcode.com/discuss/post/4258631/top-100-dsa-interview-questions-by-anony-jlgg/): **not used**: blocked by LeetCode's Cloudflare check. Compare it with sections 3 and 4 by hand.
+- [LeetCode Discuss: Top 100 DSA interview questions (study guide 4255692)](https://leetcode.com/discuss/study-guide/4255692/top-100-dsa-interview-questions): **not used**, blocked by Cloudflare.
+- [LeetCode Discuss: Wrapping up 2025 with the most asked interview questions](https://leetcode.com/discuss/post/7417074/): **not used**, blocked by Cloudflare.
+- [VikashPR/MAANG-Interview-Prep-100-DSA](https://github.com/VikashPR/MAANG-Interview-Prep-100-DSA): built from LeetCode Top Interview Questions, Blind 75 and NeetCode 150. **Used (C1)**.
+- [GeeksforGeeks: Top 100 DSA Interview Questions Topic-wise](https://www.geeksforgeeks.org/dsa/top-100-data-structure-and-algorithms-dsa-interview-questions-topic-wise/): **used (C4)**, titles matched by hand.
+- [Preplaced: 50 Most Asked DSA Interview Questions (2025)](https://preplaced.in/blog/50-most-asked-dsa-interview-questions): each problem tagged with companies. **Used (C3)**.
+- [Top 150 DSA Questions for Interview](https://github.com/Avinash-singh11/top-150-DSA-questions-): **used (C5)**, titles matched by hand. (The search result pointed to ab9106.github.io, which now returns 404; this is the source repo.)
+- [DEV: Top DSA questions asked in product-based companies](https://dev.to/devcorner/top-dsa-questions-asked-in-product-based-companies-2c2a): **used (C2)**.
+- [singhsidhukuldeep: Data Structures and Algorithms interview questions](https://singhsidhukuldeep.github.io/Interview-Questions/data-structures-algorithms): **not used**, page removed (404).
 
 ### Video
 
-- [DSA In 90 Days For Placements (CTO Bhaiya)](https://www.youtube.com/playlist?list=PLVItHqpXY_DArKRcfmGWykqV3u4hDaJLo): see section 6.
+- [DSA In 90 Days For Placements (CTO Bhaiya)](https://www.youtube.com/playlist?list=PLVItHqpXY_DArKRcfmGWykqV3u4hDaJLo): see section 7.
 
-## 8. Refreshing this file
+## 9. Refreshing this file
 
 1. Clone the dataset outside this repo: `git clone --depth 1 https://github.com/liquidslr/interview-company-wise-problems.git`.
 2. For each target company, read `<Company>/3. Six Months.csv` (or `5. All.csv` for small lists).
 3. Count, per problem link, how many target companies list it; skip rows whose Topics include Database, Shell or Concurrency.
-4. Mark ✅ by matching each problem's `https://leetcode.com/problems/<slug>/` link against the second header line of the files in this repo.
+4. Cross-check (section 3): take each dataset's top 150 the same way, add every problem from the curated lists, and count how many sources include each problem.
+5. Mark ✅ by matching each problem's `https://leetcode.com/problems/<slug>/` link against the second header line of the files in this repo.

@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 136 / 161 done, 25 to do.**
+**Progress: 145 / 161 done, 16 to do.**
 
 ## How to work a batch
 
@@ -33,7 +33,7 @@ Legend:
 | [9](#batch-9) | TwoPointers | 6 | 2 | ✅ 6/6 |
 | [10](#batch-10) | HashMap | 7 | 1 | ✅ 7/7 |
 | [11](#batch-11) | BinarySearch (new) | 8 | 0 | ✅ 8/8 |
-| [12](#batch-12) | Stack | 9 | 0 | ⬜ 0/9 |
+| [12](#batch-12) | Stack | 9 | 0 | ✅ 9/9 |
 | [13](#batch-13) | DynamicProgramming | 8 | 0 | ⬜ 0/8 |
 | [14](#batch-14) | Trees | 8 | 0 | ⬜ 0/8 |
 
@@ -199,15 +199,15 @@ Folder: `Stack/`
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | 2 | 7/11 | `Stack/src/LargestRectangleInHistogram.java` |
-| ⬜ | 32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | 2 | 6/11 | `Stack/src/LongestValidParentheses.java` |
-| ⬜ | 739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | 2 | 6/11 | `Stack/src/DailyTemperatures.java` |
-| ⬜ | 227 | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | Medium | 3 | 5/11 | `Stack/src/BasicCalculator2.java` |
-| ⬜ | 394 | [Decode String](https://leetcode.com/problems/decode-string/) | Medium | 3 | 5/11 | `Stack/src/DecodeString.java` |
-| ⬜ | 496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | 3 | 5/11 | `Stack/src/NextGreaterElement.java` |
-| ⬜ | 341 | [Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/) | Medium | 3 | 4/11 | `Stack/src/FlattenNestedListIterator.java` |
-| ⬜ | 503 | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium | 3 | 4/11 | `Stack/src/NextGreaterElement2.java` |
-| ⬜ | 735 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | Medium | 3 | 4/11 | `Stack/src/AsteroidCollision.java` |
+| ✅ | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | 2 | 7/11 | `Stack/src/LargestRectangleInHistogram.java` |
+| ✅ | 32 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | 2 | 6/11 | `Stack/src/LongestValidParentheses.java` |
+| ✅ | 739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | 2 | 6/11 | `Stack/src/DailyTemperatures.java` |
+| ✅ | 227 | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | Medium | 3 | 5/11 | `Stack/src/BasicCalculator2.java` |
+| ✅ | 394 | [Decode String](https://leetcode.com/problems/decode-string/) | Medium | 3 | 5/11 | `Stack/src/DecodeString.java` |
+| ✅ | 496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | 3 | 5/11 | `Stack/src/NextGreaterElement.java` |
+| ✅ | 341 | [Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/) | Medium | 3 | 4/11 | `Stack/src/FlattenNestedListIterator.java` |
+| ✅ | 503 | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium | 3 | 4/11 | `Stack/src/NextGreaterElement2.java` |
+| ✅ | 735 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | Medium | 3 | 4/11 | `Stack/src/AsteroidCollision.java` |
 
 ### Batch 13
 

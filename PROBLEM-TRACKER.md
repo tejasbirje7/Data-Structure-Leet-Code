@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 128 / 161 done, 33 to do.**
+**Progress: 136 / 161 done, 25 to do.**
 
 ## How to work a batch
 
@@ -32,7 +32,7 @@ Legend:
 | [8](#batch-8) | Backtracking | 8 | 2 | ✅ 8/8 |
 | [9](#batch-9) | TwoPointers | 6 | 2 | ✅ 6/6 |
 | [10](#batch-10) | HashMap | 7 | 1 | ✅ 7/7 |
-| [11](#batch-11) | BinarySearch (new) | 8 | 0 | ⬜ 0/8 |
+| [11](#batch-11) | BinarySearch (new) | 8 | 0 | ✅ 8/8 |
 | [12](#batch-12) | Stack | 9 | 0 | ⬜ 0/9 |
 | [13](#batch-13) | DynamicProgramming | 8 | 0 | ⬜ 0/8 |
 | [14](#batch-14) | Trees | 8 | 0 | ⬜ 0/8 |
@@ -184,14 +184,14 @@ Folder: `BinarySearch/` **(new folder)**
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | 2 | 7/11 | `BinarySearch/src/MedianOfTwoSortedArrays.java` |
-| ⬜ | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | 2 | 7/11 | `BinarySearch/src/FirstAndLastPosition.java` |
-| ⬜ | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | 2 | 7/11 | `BinarySearch/src/Search2DMatrix.java` |
-| ⬜ | 162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Medium | 2 | 6/11 | `BinarySearch/src/FindPeakElement.java` |
-| ⬜ | 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium | 3 | 5/11 | `BinarySearch/src/MinInRotatedSortedArray.java` |
-| ⬜ | 240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium | 3 | 5/11 | `BinarySearch/src/Search2DMatrix2.java` |
-| ⬜ | 704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | 3 | 5/11 | `BinarySearch/src/BinarySearch.java` |
-| ⬜ | 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Medium | 3 | 4/11 | `BinarySearch/src/KokoEatingBananas.java` |
+| ✅ | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | 2 | 7/11 | `BinarySearch/src/MedianOfTwoSortedArrays.java` |
+| ✅ | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | 2 | 7/11 | `BinarySearch/src/FirstAndLastPosition.java` |
+| ✅ | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | 2 | 7/11 | `BinarySearch/src/Search2DMatrix.java` |
+| ✅ | 162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) | Medium | 2 | 6/11 | `BinarySearch/src/FindPeakElement.java` |
+| ✅ | 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium | 3 | 5/11 | `BinarySearch/src/MinInRotatedSortedArray.java` |
+| ✅ | 240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium | 3 | 5/11 | `BinarySearch/src/Search2DMatrix2.java` |
+| ✅ | 704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | 3 | 5/11 | `BinarySearch/src/BinarySearch.java` |
+| ✅ | 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Medium | 3 | 4/11 | `BinarySearch/src/KokoEatingBananas.java` |
 
 ### Batch 12
 

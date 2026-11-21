@@ -76,7 +76,7 @@ import java.util.Map;
  *   set: O(1) amortised. get: O(log m), m = versions of that key. O(total sets) extra space.
  *
  * RELATED
- *   LeetCode 704 (Binary Search): the plain search this builds on; here it looks for the last time <= t.
+ *   LeetCode 704 (BinarySearch, BinarySearch/): the plain search this builds on; here it looks for the last time <= t.
  *   LeetCode 362 (DesignHitCounter, HashMap/): another design with non-decreasing timestamps.
  *   LeetCode 146 (LRUCache, HashMap/): a map whose values are list nodes.
  */

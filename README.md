@@ -10,6 +10,7 @@ LeetCode solutions in Java, grouped by topic. Each solution is written to double
 |---|---|
 | `ArraysAndStrings/` | Array and string problems |
 | `Backtracking/` | Backtracking problems |
+| `BinarySearch/` | Binary search problems: on a sorted array, a matrix, or on the answer |
 | `DynamicProgramming/` | Dynamic programming problems |
 | `FAQ/` | Frequently asked interview problems from mixed topics (some also appear in a topic folder) |
 | `Graphs/` | Graph problems: grid flood-fill, BFS, topological sort |

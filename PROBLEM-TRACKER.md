@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 66 / 161 done, 95 to do.**
+**Progress: 79 / 161 done, 82 to do.**
 
 ## How to work a batch
 
@@ -23,8 +23,8 @@ Legend:
 | Batch | Folder | Problems | Tier 1 | Status |
 |---|---|---|---|---|
 | [1](#batch-1) | DynamicProgramming (new) | 9 | 8 | ✅ 9/9 |
-| [2](#batch-2) | Heap (new) | 4 | 3 | ⬜ 0/4 |
-| [3](#batch-3) | Trees (new) | 9 | 5 | ⬜ 0/9 |
+| [2](#batch-2) | Heap (new) | 4 | 3 | ✅ 4/4 |
+| [3](#batch-3) | Trees (new) | 9 | 5 | ✅ 9/9 |
 | [4](#batch-4) | ArraysAndStrings | 8 | 3 | ⬜ 0/8 |
 | [5](#batch-5) | LinkedList | 5 | 2 | ⬜ 0/5 |
 | [6](#batch-6) | Graphs (new) | 10 | 4 | ⬜ 0/10 |
@@ -59,10 +59,10 @@ Folder: `Heap/` **(new folder)**
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | 1 | 10/11 | `Heap/src/MedianFromDataStream.java` |
-| ⬜ | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | 1 | 9/11 | `Heap/src/TopKFrequentElements.java` |
-| ⬜ | 215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | 1 | 8/11 | `Heap/src/KthLargestElement.java` |
-| ⬜ | 621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | 3 | 5/11 | `Heap/src/TaskScheduler.java` |
+| ✅ | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | 1 | 10/11 | `Heap/src/MedianFromDataStream.java` |
+| ✅ | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | 1 | 9/11 | `Heap/src/TopKFrequentElements.java` |
+| ✅ | 215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | 1 | 8/11 | `Heap/src/KthLargestElement.java` |
+| ✅ | 621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | 3 | 5/11 | `Heap/src/TaskScheduler.java` |
 
 ### Batch 3
 
@@ -70,15 +70,15 @@ Folder: `Trees/` **(new folder)**
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | 1 | 9/11 | `Trees/src/MaximumDepthOfBinaryTree.java` |
-| ⬜ | 297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | 1 | 9/11 | `Trees/src/SerializeDeserializeTree.java` |
-| ⬜ | 98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | 1 | 8/11 | `Trees/src/ValidateBinarySearchTree.java` |
-| ⬜ | 102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | 1 | 8/11 | `Trees/src/LevelOrderTraversal.java` |
-| ⬜ | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | 1 | 8/11 | `Trees/src/TreeMaxPathSum.java` |
-| ⬜ | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium | 2 | 7/11 | `Trees/src/ConstructTreeFromPreorderInorder.java` |
-| ⬜ | 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | 2 | 6/11 | `Trees/src/RightSideView.java` |
-| ⬜ | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | 2 | 6/11 | `Trees/src/LowestCommonAncestorBST.java` |
-| ⬜ | 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy | 3 | 5/11 | `Trees/src/SymmetricTree.java` |
+| ✅ | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | 1 | 9/11 | `Trees/src/MaximumDepthOfBinaryTree.java` |
+| ✅ | 297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | 1 | 9/11 | `Trees/src/SerializeDeserializeTree.java` |
+| ✅ | 98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | 1 | 8/11 | `Trees/src/ValidateBinarySearchTree.java` |
+| ✅ | 102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | 1 | 8/11 | `Trees/src/LevelOrderTraversal.java` |
+| ✅ | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | 1 | 8/11 | `Trees/src/TreeMaxPathSum.java` |
+| ✅ | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium | 2 | 7/11 | `Trees/src/ConstructTreeFromPreorderInorder.java` |
+| ✅ | 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | 2 | 6/11 | `Trees/src/RightSideView.java` |
+| ✅ | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | 2 | 6/11 | `Trees/src/LowestCommonAncestorBST.java` |
+| ✅ | 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy | 3 | 5/11 | `Trees/src/SymmetricTree.java` |
 
 ### Batch 4
 

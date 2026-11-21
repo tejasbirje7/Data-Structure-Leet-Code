@@ -4,8 +4,8 @@ Research notes on which data structures and algorithms problems companies ask mo
 
 - Data snapshot: LeetCode company tags as of **20 Oct 2025** (dataset repo last pushed 20 Oct 2026).
 - Research done: **21 Nov 2026**.
-- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **57** are in the repo.
-- **Top 100 from one dataset (section 4):** **33 of 100** are in the repo.
+- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **79** are in the repo.
+- **Top 100 from one dataset (section 4):** **46 of 100** are in the repo.
 - ✅ = already solved in this repo (matched by the LeetCode link in each file's header).
 - **Working list:** [PROBLEM-TRACKER.md](PROBLEM-TRACKER.md) splits the missing problems from section 3 into batches.
 
@@ -42,7 +42,7 @@ This describes the single-dataset ranking used in sections 4–6. Section 3 expl
 
 ## 2. Key findings
 
-- **Cross-check:** 161 problems are in 4+ of 11 sources. The 56 in 8+ sources are the safest bets; 31 of those are still missing here.
+- **Cross-check:** 161 problems are in 4+ of 11 sources. The 56 in 8+ sources are the safest bets; 15 of those are still missing here.
 - **In all 11 sources:** Group Anagrams, Maximum Subarray, Longest Increasing Subsequence, Merge Two Sorted Lists, Reverse Linked List.
 - **Top 100 vs cross-check:** 86 of the single-dataset top 100 are also in 4+ sources; the rest (for example Fruit Into Baskets, Predict the Winner, Concatenation of Array) are only popular in recent tags.
 - **Asked almost everywhere:** Merge Intervals (16 of 51 companies), Longest Substring Without Repeating Characters, Number of Islands, LRU Cache, Best Time to Buy and Sell Stock, Group Anagrams.
@@ -50,7 +50,7 @@ This describes the single-dataset ranking used in sections 4–6. Section 3 expl
 - **Mostly Medium:** see section 6 for the split.
 - **Top topics:** Array, String, Hash Table, Dynamic Programming, Sorting, Two Pointers, then Binary Search, Stack, DFS/BFS.
 - **Data-structure design problems show up often:** LRU Cache, Insert Delete GetRandom O(1), Time Based Key-Value Store, Find Median from Data Stream, Serialize and Deserialize Binary Tree.
-- **Biggest gaps in this repo:** Stack (1/7), Binary Search (1/8), Trees (0/3), Graphs (BFS / DFS / Union-Find / Topological Sort) (0/7), Heap (0/4), Backtracking (1/5), Dynamic Programming (0/9).
+- **Biggest gaps in this repo:** Stack (1/7), Binary Search (1/8), Graphs (BFS / DFS / Union-Find / Topological Sort) (0/7), Backtracking (1/5).
 
 ## 3. Cross-checked list
 
@@ -93,43 +93,43 @@ Notes:
 
 | Tier | Problems | In repo | Missing |
 |---|---|---|---|
-| Tier 1: 8–11 sources (must do) | 56 | 25 | 31 |
-| Tier 2: 6–7 sources | 40 | 15 | 25 |
-| Tier 3: 4–5 sources | 65 | 17 | 48 |
-| **Total** | **161** | **57** | **104** |
+| Tier 1: 8–11 sources (must do) | 56 | 41 | 15 |
+| Tier 2: 6–7 sources | 40 | 19 | 21 |
+| Tier 3: 4–5 sources | 65 | 19 | 46 |
+| **Total** | **161** | **79** | **82** |
 
 ### 3.3 Tier 1: 8–11 sources (must do)
 
 | # | LeetCode | Problem | Difficulty | Sources | Found in | Repo |
 |---|---|---|---|---|---|---|
 | 1 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `HashMap/src/GroupAnagrams.java` |
-| 2 | 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 |  |
-| 3 | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 |  |
+| 2 | 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `DynamicProgramming/src/MaximumSubarray.java` |
+| 3 | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `DynamicProgramming/src/LongestIncreasingSubsequence.java` |
 | 4 | 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `LinkedList/src/MergeTwoLinkedList.java` |
 | 5 | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 |  |
 | 6 | 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `SlidingWindow/src/LongestSubstring.java` |
 | 7 | 200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 |  |
-| 8 | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 |  |
+| 8 | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 | ✅ `Heap/src/MedianFromDataStream.java` |
 | 9 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 | ✅ `TwoPointers/src/LongestPalindrome.java`, `FAQ/src/LongestPalindromicSubString.java` |
 | 10 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `HashMap/src/TwoSum.java` |
-| 11 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 |  |
-| 12 | 198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D5 D6 |  |
+| 11 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 | ✅ `DynamicProgramming/src/ClimbingStairs.java` |
+| 12 | 198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D5 D6 | ✅ `DynamicProgramming/src/HouseRobber.java` |
 | 13 | 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `FAQ/src/SearchInRotatedDistinctArray.java` |
 | 14 | 79 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 |  |
 | 15 | 78 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | 10/11 | C1 C2 C3 C5 D1 D2 D3 D4 D5 D6 |  |
 | 16 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 | ✅ `FAQ/src/MergeIntervals.java`, `Intervals/src/MergeIntervals.java` |
 | 17 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/MaxProfit.java` |
 | 18 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | 9/11 | C2 C3 C4 C5 D1 D2 D3 D4 D5 |  |
-| 19 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | 9/11 | C1 C2 C4 D1 D2 D3 D4 D5 D6 |  |
+| 19 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | 9/11 | C1 C2 C4 D1 D2 D3 D4 D5 D6 | ✅ `Heap/src/TopKFrequentElements.java` |
 | 20 | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | 9/11 | C1 C2 C4 D1 D2 D3 D4 D5 D6 | ✅ `TwoPointers/src/MostWaterInContainer.java` |
 | 21 | 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Medium | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 |  |
 | 22 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | 9/11 | C1 C2 C4 C5 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/RainWater.java` |
-| 23 | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | 9/11 | C1 C2 C3 C4 C5 D1 D3 D5 D6 |  |
-| 24 | 297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | 9/11 | C1 C2 C3 C4 C5 D1 D2 D4 D5 |  |
+| 23 | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | 9/11 | C1 C2 C3 C4 C5 D1 D3 D5 D6 | ✅ `Trees/src/MaximumDepthOfBinaryTree.java` |
+| 24 | 297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | 9/11 | C1 C2 C3 C4 C5 D1 D2 D4 D5 | ✅ `Trees/src/SerializeDeserializeTree.java` |
 | 25 | 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Medium | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 |  |
 | 26 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | 9/11 | C1 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `TwoPointers/src/ValidPalindrome.java` |
-| 27 | 139 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | 9/11 | C1 C2 C4 C5 D1 D2 D3 D4 D5 |  |
-| 28 | 322 | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | 9/11 | C1 C2 C3 C5 D1 D2 D3 D4 D5 |  |
+| 27 | 139 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | 9/11 | C1 C2 C4 C5 D1 D2 D3 D4 D5 | ✅ `DynamicProgramming/src/WordBreak.java` |
+| 28 | 322 | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | 9/11 | C1 C2 C3 C5 D1 D2 D3 D4 D5 | ✅ `DynamicProgramming/src/CoinChange.java` |
 | 29 | 39 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium | 9/11 | C1 C2 C3 C4 C5 D2 D4 D5 D6 | ✅ `Backtracking/src/CombinationsSum.java` |
 | 30 | 543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy | 9/11 | C1 C2 C3 C5 D1 D3 D4 D5 D6 | ✅ `FAQ/src/DiameterOfBinaryTree.java` |
 | 31 | 155 | [Min Stack](https://leetcode.com/problems/min-stack/) | Medium | 9/11 | C1 C2 C5 D1 D2 D3 D4 D5 D6 | ✅ `Stack/src/MinStack.java`, `Stack/src/StackUsingLinkedList.java` |
@@ -137,25 +137,25 @@ Notes:
 | 33 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium | 9/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/ProductExceptSelf.java` |
 | 34 | 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium | 9/11 | C1 C3 C4 C5 D2 D3 D4 D5 D6 | ✅ `LinkedList/src/RemoveNthFromEnd.java` |
 | 35 | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Medium | 9/11 | C1 C2 C3 D1 D2 D3 D4 D5 D6 |  |
-| 36 | 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium | 9/11 | C1 C2 C5 D1 D2 D3 D4 D5 D6 |  |
+| 36 | 62 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium | 9/11 | C1 C2 C5 D1 D2 D3 D4 D5 D6 | ✅ `DynamicProgramming/src/UniquePaths.java` |
 | 37 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | 9/11 | C1 C3 C5 D1 D2 D3 D4 D5 D6 | ✅ `HashMap/src/ValidAnagram.java` |
 | 38 | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard | 9/11 | C1 C2 C3 D1 D2 D3 D4 D5 D6 |  |
 | 39 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | 9/11 | C1 C2 C3 C4 C5 D2 D4 D5 D6 | ✅ `FAQ/src/LinkedListCycleDetector.java`, `LinkedList/src/LinkedListCycle.java` |
 | 40 | 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | 8/11 | C2 C3 C5 D1 D2 D3 D4 D5 |  |
 | 41 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 |  |
 | 42 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | 8/11 | C1 C2 C3 D1 D2 D3 D4 D5 | ✅ `Stack/src/ValidParentheses.java` |
-| 43 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 |  |
+| 43 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `Trees/src/TreeMaxPathSum.java` |
 | 44 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/JumpGame.java` |
-| 45 | 215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | 8/11 | C1 C2 C3 D1 D2 D3 D4 D5 |  |
+| 45 | 215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | 8/11 | C1 C2 C3 D1 D2 D3 D4 D5 | ✅ `Heap/src/KthLargestElement.java` |
 | 46 | 283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | 8/11 | C2 C5 D1 D2 D3 D4 D5 D6 |  |
 | 47 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | 8/11 | C1 C4 D1 D2 D3 D4 D5 D6 |  |
 | 48 | 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | 8/11 | C2 C3 C5 D1 D2 D3 D4 D5 | ✅ `LinkedList/src/AddTwoNumbers.java` |
-| 49 | 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Medium | 8/11 | C1 C5 D1 D2 D3 D4 D5 D6 |  |
+| 49 | 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Medium | 8/11 | C1 C5 D1 D2 D3 D4 D5 D6 | ✅ `DynamicProgramming/src/MaximumProductSubarray.java` |
 | 50 | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `FAQ/src/MinimumWindowSubstring.java`, `SlidingWindow/src/MinimumWindowSubstring.java` |
 | 51 | 50 | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Medium | 8/11 | C1 C2 D1 D2 D3 D4 D5 D6 | ✅ `Math/src/Pow.java` |
 | 52 | 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | 8/11 | C1 C2 C3 D1 D2 D3 D4 D6 |  |
-| 53 | 98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | 8/11 | C1 C2 C4 C5 D1 D2 D4 D5 |  |
-| 54 | 102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | 8/11 | C1 C2 C4 C5 D2 D4 D5 D6 |  |
+| 53 | 98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | 8/11 | C1 C2 C4 C5 D1 D2 D4 D5 | ✅ `Trees/src/ValidateBinarySearchTree.java` |
+| 54 | 102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | 8/11 | C1 C2 C4 C5 D2 D4 D5 D6 | ✅ `Trees/src/LevelOrderTraversal.java` |
 | 55 | 647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Medium | 8/11 | C1 C2 C4 C5 D2 D3 D4 D5 | ✅ `FAQ/src/PalindromicSubstringCount.java` |
 | 56 | 133 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Medium | 8/11 | C1 C2 C3 C4 C5 D2 D4 D6 |  |
 
@@ -173,9 +173,9 @@ Notes:
 | 8 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | 7/11 | C5 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/LongestPrefixString.java` |
 | 9 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | 7/11 | C2 C4 D1 D2 D3 D4 D5 | ✅ `HashMap/src/LongestConsecutive.java` |
 | 10 | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | 7/11 | C1 C2 D1 D2 D3 D4 D5 |  |
-| 11 | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | 7/11 | C2 C5 D1 D2 D4 D5 D6 |  |
+| 11 | 64 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | 7/11 | C2 C5 D1 D2 D4 D5 D6 | ✅ `DynamicProgramming/src/MinimumPathSum.java` |
 | 12 | 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | Medium | 7/11 | C5 D1 D2 D3 D4 D5 D6 |  |
-| 13 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium | 7/11 | C1 C2 C4 C5 D1 D4 D6 |  |
+| 13 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium | 7/11 | C1 C2 C4 C5 D1 D4 D6 | ✅ `Trees/src/ConstructTreeFromPreorderInorder.java` |
 | 14 | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | Medium | 7/11 | C1 C2 C5 D2 D3 D5 D6 |  |
 | 15 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | 7/11 | C3 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/FirstOccurrenceOfString.java` |
 | 16 | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | 7/11 | C1 C2 C4 C5 D1 D2 D3 |  |
@@ -199,9 +199,9 @@ Notes:
 | 34 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | 6/11 | D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RomanToInt.java` |
 | 35 | 136 | [Single Number](https://leetcode.com/problems/single-number/) | Easy | 6/11 | C2 D1 D2 D3 D4 D5 | ✅ `Math/src/SingleNumber.java` |
 | 36 | 138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Medium | 6/11 | C2 C4 D2 D3 D4 D5 | ✅ `LinkedList/src/CopyListWithRandomPointer.java` |
-| 37 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | 6/11 | C1 C2 C3 C4 D5 D6 |  |
+| 37 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | 6/11 | C1 C2 C3 C4 D5 D6 | ✅ `Trees/src/LowestCommonAncestorBST.java` |
 | 38 | 268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Easy | 6/11 | C1 C4 C5 D2 D5 D6 | ✅ `FAQ/src/MissingNumberFinder.java` |
-| 39 | 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | 6/11 | C1 D2 D3 D4 D5 D6 |  |
+| 39 | 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | 6/11 | C1 D2 D3 D4 D5 D6 | ✅ `Trees/src/RightSideView.java` |
 | 40 | 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Medium | 6/11 | C1 C4 D2 D4 D5 D6 |  |
 
 ### 3.5 Tier 3: 4–5 sources
@@ -217,7 +217,7 @@ Notes:
 | 7 | 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium | 5/11 | C5 D1 D2 D3 D6 | ✅ `ArraysAndStrings/src/RotateArray.java`, `ArraysAndStrings/src/RotateArrayCyclic.java` |
 | 8 | 240 | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | Medium | 5/11 | D1 D3 D4 D5 D6 |  |
 | 9 | 977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | 5/11 | D1 D3 D4 D5 D6 |  |
-| 10 | 621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | 5/11 | C1 D1 D2 D3 D5 |  |
+| 10 | 621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | 5/11 | C1 D1 D2 D3 D5 | ✅ `Heap/src/TaskScheduler.java` |
 | 11 | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Medium | 5/11 | C1 D1 D3 D4 D5 |  |
 | 12 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | 5/11 | D1 D2 D3 D5 D6 |  |
 | 13 | 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | 5/11 | D1 D2 D3 D5 D6 |  |
@@ -236,7 +236,7 @@ Notes:
 | 26 | 66 | [Plus One](https://leetcode.com/problems/plus-one/) | Easy | 5/11 | D1 D2 D3 D4 D6 | ✅ `Math/src/PlusOne.java` |
 | 27 | 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard | 5/11 | C5 D1 D2 D4 D6 | ✅ `LinkedList/src/ReverseNodesKGroup.java` |
 | 28 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Easy | 5/11 | C5 D1 D2 D3 D6 | ✅ `Math/src/SqrRtx.java` |
-| 29 | 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy | 5/11 | C2 D3 D4 D5 D6 |  |
+| 29 | 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy | 5/11 | C2 D3 D4 D5 D6 | ✅ `Trees/src/SymmetricTree.java` |
 | 30 | 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | Hard | 5/11 | D1 D2 D3 D5 D6 | ✅ `ArraysAndStrings/src/TextJustification.java` |
 | 31 | 362 | [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/) | Medium | 5/11 | D2 D3 D4 D5 D6 |  |
 | 32 | 208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | 5/11 | C1 C2 C4 D5 D6 |  |
@@ -324,12 +324,12 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | Stack | 1/7 |
 | Binary Search | 1/8 |
 | Linked List | 2/5 |
-| Trees | 0/3 |
+| Trees | 3/3 |
 | Graphs (BFS / DFS / Union-Find / Topological Sort) | 0/7 |
-| Heap | 0/4 |
+| Heap | 4/4 |
 | Intervals & Greedy | 4/5 |
 | Backtracking | 1/5 |
-| Dynamic Programming | 0/9 |
+| Dynamic Programming | 6/9 |
 | Design (data structure design) | 1/3 |
 | Strings & Math | 3/6 |
 
@@ -421,13 +421,13 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 62 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 6 |  |
 | 79 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | 5 | ✅ `LinkedList/src/AddTwoNumbers.java` |
 
-### Trees (0/3 in repo)
+### Trees (3/3 in repo)
 
 | Rank | Problem | Difficulty | Cos | Repo |
 |---|---|---|---|---|
-| 64 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | 6 |  |
-| 65 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | 6 |  |
-| 77 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | 6 |  |
+| 64 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | 6 | ✅ `Trees/src/MaximumDepthOfBinaryTree.java` |
+| 65 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | 6 | ✅ `Trees/src/TreeMaxPathSum.java` |
+| 77 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | 6 | ✅ `Trees/src/SerializeDeserializeTree.java` |
 
 ### Graphs (BFS / DFS / Union-Find / Topological Sort) (0/7 in repo)
 
@@ -441,14 +441,14 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 60 | [Make Lexicographically Smallest Array by Swapping Elements](https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements/) | Medium | 6 |  |
 | 61 | [Accounts Merge](https://leetcode.com/problems/accounts-merge/) | Medium | 6 |  |
 
-### Heap (0/4 in repo)
+### Heap (4/4 in repo)
 
 | Rank | Problem | Difficulty | Cos | Repo |
 |---|---|---|---|---|
-| 12 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | 8 |  |
-| 13 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | 8 |  |
-| 49 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | 6 |  |
-| 68 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | 6 |  |
+| 12 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | 8 | ✅ `Heap/src/TopKFrequentElements.java` |
+| 13 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | 8 | ✅ `Heap/src/MedianFromDataStream.java` |
+| 49 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | 6 | ✅ `Heap/src/KthLargestElement.java` |
+| 68 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | 6 | ✅ `Heap/src/TaskScheduler.java` |
 
 ### Intervals & Greedy (4/5 in repo)
 
@@ -470,18 +470,18 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 93 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | 5 |  |
 | 97 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | 5 |  |
 
-### Dynamic Programming (0/9 in repo)
+### Dynamic Programming (6/9 in repo)
 
 | Rank | Problem | Difficulty | Cos | Repo |
 |---|---|---|---|---|
-| 21 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | 7 |  |
+| 21 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | 7 | ✅ `DynamicProgramming/src/MaximumSubarray.java` |
 | 34 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | Medium | 7 |  |
-| 39 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | 6 |  |
-| 43 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | 6 |  |
+| 39 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | 6 | ✅ `DynamicProgramming/src/ClimbingStairs.java` |
+| 43 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | 6 | ✅ `DynamicProgramming/src/HouseRobber.java` |
 | 55 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | Hard | 6 |  |
-| 59 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 6 |  |
-| 74 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | 6 |  |
-| 75 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | 6 |  |
+| 59 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 6 | ✅ `DynamicProgramming/src/LongestIncreasingSubsequence.java` |
+| 74 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | 6 | ✅ `DynamicProgramming/src/MinimumPathSum.java` |
+| 75 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | 6 | ✅ `DynamicProgramming/src/WordBreak.java` |
 | 76 | [Predict the Winner](https://leetcode.com/problems/predict-the-winner/) | Medium | 6 |  |
 
 ### Design (data structure design) (1/3 in repo)
@@ -519,11 +519,11 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 8 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 8/23 |  |
 | 9 | [Two Sum](https://leetcode.com/problems/two-sum/) | 7/23 | ✅ |
 | 10 | [3Sum](https://leetcode.com/problems/3sum/) | 7/23 | ✅ |
-| 11 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 7/23 |  |
+| 11 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 7/23 | ✅ |
 | 12 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | 7/23 |  |
 | 13 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | 7/23 |  |
 | 14 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | 7/23 | ✅ |
-| 15 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 7/23 |  |
+| 15 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 7/23 | ✅ |
 
 ### Banks & fintech (11 companies, last 6 months)
 
@@ -557,7 +557,7 @@ Their last-6-months lists are tiny (0–9 problems each), so this uses the all-t
 | 4 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 7/17 | Flipkart, Juspay, Sprinklr, Swiggy, Zeta, Zomato, razorpay | ✅ |
 | 5 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 6/17 | Flipkart, Groww, Media.net, Myntra, Paytm, Swiggy | ✅ |
 | 6 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | 6/17 | Dream11, Flipkart, Juspay, Meesho, PhonePe, Sprinklr |  |
-| 7 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 6/17 | Media.net, Meesho, PhonePe, Swiggy, Zeta, Zomato |  |
+| 7 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 6/17 | Media.net, Meesho, PhonePe, Swiggy, Zeta, Zomato | ✅ |
 | 8 | [Gas Station](https://leetcode.com/problems/gas-station/) | 5/17 | Dream11, Flipkart, Juspay, PhonePe, Sprinklr | ✅ |
 | 9 | [3Sum](https://leetcode.com/problems/3sum/) | 5/17 | Dream11, Flipkart, Meesho, Myntra, PhonePe | ✅ |
 | 10 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | 5/17 | Flipkart, Juspay, Meesho, PhonePe, Zomato |  |
@@ -619,7 +619,7 @@ Weighted by how many target companies asked each problem (top 300 problems).
 
 - Playlist: [DSA In 90 Days For Placements! Beginner, Medium & Advanced Level Playlist](https://www.youtube.com/playlist?list=PLVItHqpXY_DArKRcfmGWykqV3u4hDaJLo)
 - 337 videos, about 87.5 hours, 170 distinct LeetCode problems. About 60 videos are intros, theory, templates or channel updates.
-- 45 of the 170 problems are in this repo.
+- 55 of the 170 problems are in this repo.
 
 | Videos | Section | ✅ In repo | Missing |
 |---|---|---|---|
@@ -629,7 +629,7 @@ Weighted by how many target companies asked each problem (top 300 problems).
 | 71–78 | String | 242, 125, 28, 14 | 344, 7, 387, 8 |
 | 91–97 | Linked List | 19, 21, 141 | 237, 206, 234 |
 | 98–130 | Linked List (Theory + Code) | 141, 142, 19, 21, 2, 61, 138 | 707, 160, 206, 203, 328, 234, 708, 430 |
-| 131–152 | Hash Table | 217, 136, 202, 205, 350, 219, 49, 380, 3 | 705, 706, 599, 387, 359, 249, 36, 771, 454, 170, 347, 288, 652 |
+| 131–152 | Hash Table | 217, 136, 202, 205, 350, 219, 49, 380, 3, 347 | 705, 706, 599, 387, 359, 249, 36, 771, 454, 170, 288, 652 |
 | 153–165 | Binary Search | 69, 33 | 704, 34, 374, 278, 153, 162, 658 |
 | 168–188 | Sorting | none | 75, 1051, 147, 1200, 164, 2343 |
 | 189–195 | Math | 13 | 412, 326, 204, 1232, 2481, 836 |
@@ -637,11 +637,11 @@ Weighted by how many target companies asked each problem (top 300 problems).
 | 203–204 | Design | none | 384 |
 | 206–224 | Stack | 155, 20, 150, 42 | 739, 496, 503, 84, 85, 232, 394, 907, 735, 2104, 402, 901 |
 | 225–230 | Queue | none | 622, 346, 200 |
-| 232–251 | Heap | none | 215, 347, 703, 1046, 1337, 378, 973, 295, 1642 |
-| 253–267 | Binary Tree | none | 144, 94, 102, 145, 104, 112, 101 |
-| 268–282 | Binary Search Tree | none | 700, 701, 450, 98, 285, 173, 703, 235, 110, 108, 220 |
-| 285–322 | Recursion | 24, 50, 21, 77, 17, 46 | 344, 206, 700, 509, 70, 119, 779, 98, 240, 51, 52, 37, 100, 22 |
-| 325–335 | DP | none | 198, 1137, 746, 740, 1770 |
+| 232–251 | Heap | 215, 347, 295 | 703, 1046, 1337, 378, 973, 1642 |
+| 253–267 | Binary Tree | 102, 104, 101 | 144, 94, 145, 112 |
+| 268–282 | Binary Search Tree | 98, 235 | 700, 701, 450, 285, 173, 703, 110, 108, 220 |
+| 285–322 | Recursion | 24, 50, 21, 77, 17, 46, 70, 98 | 344, 206, 700, 509, 119, 779, 240, 51, 52, 37, 100, 22 |
+| 325–335 | DP | 198 | 1137, 746, 740, 1770 |
 
 Some problems appear in more than one section, so the Missing column has repeats.
 
@@ -797,7 +797,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 145 | 771 | [771. Jewels and Stones / #17 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=N3XlTweXqmc) | 8:29 |  |
 | 146 | 454 | [454. 4Sum II / #18 / Hash Table Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=GWYPi8cuc5w) | 16:51 |  |
 | 147 | 170 | [170. Two Sum III - Data structure design / #19 / HashTable Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=3uWGK3PtA_E) | 36:20 |  |
-| 148 | 347 | [347. Top K Frequent Elements / #20 / HashTable Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=OY4_PcEvZvY) | 36:15 |  |
+| 148 | 347 | [347. Top K Frequent Elements / #20 / HashTable Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=OY4_PcEvZvY) | 36:15 | ✅ Heap/src/TopKFrequentElements.java |
 | 149 | 288 | [288. Unique Word Abbreviation / #21 / HashTable Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=chhSAtdwN9o) | 25:57 |  |
 | 150 | 380 | [380. Insert Delete GetRandom O(1) / #22 / HashTable Playlist #hashtable #leetcode #algorithms](https://www.youtube.com/watch?v=DhWkpltokYM) | 33:46 | ✅ ArraysAndStrings/src/RandomizedSet.java |
 | 151 | 3 | [3. Longest Substring Without Repeating Characters / #23 / HashTable Playlist #hashtable #leetcode](https://www.youtube.com/watch?v=Rs9jrYjVQEk) | 31:36 | ✅ SlidingWindow/src/LongestSubstring.java |
@@ -891,43 +891,43 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 239 |  | [Heap-8 / Heap Sort / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=0QGoUaYMNHY) | 29:19 |  |
 | 240 |  | [Heap-9 / The Top-K Problem (Theory) / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=nZXGStW0b-I) | 23:33 |  |
 | 241 |  | [Heap-10 / The K-th Element (Theory) / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=ATiBFQWyPqQ) | 11:59 |  |
-| 242 | 215 | [Heap-11 / 215. Kth Largest Element in an Array / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=nQQGT53HgbE) | 13:45 |  |
-| 243 | 347 | [Heap-12 / 347. Top K Frequent Elements / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=E5aUnVMdj10) | 18:18 |  |
+| 242 | 215 | [Heap-11 / 215. Kth Largest Element in an Array / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=nQQGT53HgbE) | 13:45 | ✅ Heap/src/KthLargestElement.java |
+| 243 | 347 | [Heap-12 / 347. Top K Frequent Elements / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=E5aUnVMdj10) | 18:18 | ✅ Heap/src/TopKFrequentElements.java |
 | 244 | 703 | [Heap-13 / 703. Kth Largest Element in a Stream / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=9jrTMj6DxMw) | 14:14 |  |
 | 245 | 1046 | [Heap-14 / 1046. Last Stone Weight / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=zARkzNx9gHA) | 15:47 |  |
 | 246 |  | [Heap-15 / Custom Sorting for Heaps and Lists / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=_41BeE8UNbM) | 18:13 |  |
 | 247 | 1337 | [Heap-16 / 1337. The K Weakest Rows in a Matrix / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=OUI5Lcs6Y7o) | 35:39 |  |
 | 248 | 378 | [Heap-17 / 378. Kth Smallest Element in a Sorted Matrix / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=InqHjb2kaNE) | 26:15 |  |
 | 249 | 973 | [Heap-18 / 973. K Closest Points to Origin / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=5OyPhsOKS6c) | 15:03 |  |
-| 250 | 295 | [Heap-19 / 295. Find Median from Data Stream / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=YmfWZFUbEsI) | 36:07 |  |
+| 250 | 295 | [Heap-19 / 295. Find Median from Data Stream / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=YmfWZFUbEsI) | 36:07 | ✅ Heap/src/MedianFromDataStream.java |
 | 251 | 1642 | [Heap-20 / 1642. Furthest Building You Can Reach / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=yn24b0HDkDg) | 29:54 |  |
 | 252 |  | [🚀 Master Heaps in DSA — 20+ Lectures from Scratch + LeetCode Practice](https://www.youtube.com/watch?v=hifJr04rbyM) | 7:22 |  |
 | 253 |  | [Binary Tree-1 / Theory / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=KejwzBy5hkg) | 10:48 |  |
 | 254 | 144 | [Binary Tree-2 / 144. Binary Tree Preorder Traversal / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=-K8hwyHidSg) | 27:59 |  |
 | 255 | 94 | [Binary Tree-3 / 94. Binary Tree Inorder Traversal / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=zatMy62PlK0) | 26:45 |  |
-| 256 | 102 | [Binary Tree-4 / 102. Binary Tree Level Order Traversal / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=nK1uE8eJnTs) | 13:17 |  |
+| 256 | 102 | [Binary Tree-4 / 102. Binary Tree Level Order Traversal / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=nK1uE8eJnTs) | 13:17 | ✅ Trees/src/LevelOrderTraversal.java |
 | 257 |  | [Binary Tree-5 / Top Down Recursion / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=POqFMgBLBJY) | 17:55 |  |
 | 258 |  | [Binary Tree-6 / Bottom Up Approach / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=QW0rO5CH33s) | 12:00 |  |
 | 259 | 144 | [Binary Tree-7 / 144. Binary Tree Preorder Traversal (Recursive) / 🔥 Beginner Medium, Advanced Level!](https://www.youtube.com/watch?v=h8cwmSQoRms) | 11:30 |  |
 | 260 | 94 | [Binary Tree-8 / 94. Binary Tree Inorder Traversal (Recursive) / 🔥 Beginner, Medium, Advanced Level!](https://www.youtube.com/watch?v=w-UKr-3wEx4) | 10:19 |  |
 | 261 | 145 | [Binary Tree-9 / 145. Binary Tree Postorder Traversal (Recursive) / 🔥 Beginner Medium Advanced Level!](https://www.youtube.com/watch?v=HU2xPg5lbs8) | 10:00 |  |
-| 262 | 104 | [Binary Tree-10 / 104. Maximum Depth of Binary Tree (Top Down) / 🔥 Beginner, Medium & Advanced Level!](https://www.youtube.com/watch?v=YuYb__JupBE) | 14:27 |  |
-| 263 | 104 | [Binary Tree-11 / 104. Maximum Depth of Binary Tree (Bottom Up) / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=_-gzD2gCj6M) | 12:26 |  |
+| 262 | 104 | [Binary Tree-10 / 104. Maximum Depth of Binary Tree (Top Down) / 🔥 Beginner, Medium & Advanced Level!](https://www.youtube.com/watch?v=YuYb__JupBE) | 14:27 | ✅ Trees/src/MaximumDepthOfBinaryTree.java |
+| 263 | 104 | [Binary Tree-11 / 104. Maximum Depth of Binary Tree (Bottom Up) / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=_-gzD2gCj6M) | 12:26 | ✅ Trees/src/MaximumDepthOfBinaryTree.java |
 | 264 | 112 | [Binary Tree-12 / 112. Path Sum (Recursive) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=2PmdWpXv3Y4) | 19:45 |  |
 | 265 | 112 | [Binary Tree-13 / 112. Path Sum (Iterative) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=Mn4_IMDJGMY) | 18:04 |  |
-| 266 | 101 | [Binary Tree-14 / 101. Symmetric Tree (Recursive) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=a02KSDfLdMY) | 19:36 |  |
-| 267 | 101 | [Binary Tree-15 / 101. Symmetric Tree (Iterative) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=PcH6O5b4Cgw) | 12:58 |  |
+| 266 | 101 | [Binary Tree-14 / 101. Symmetric Tree (Recursive) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=a02KSDfLdMY) | 19:36 | ✅ Trees/src/SymmetricTree.java |
+| 267 | 101 | [Binary Tree-15 / 101. Symmetric Tree (Iterative) / 🔥 Beginner, Medium & Advanced Level #dsa](https://www.youtube.com/watch?v=PcH6O5b4Cgw) | 12:58 | ✅ Trees/src/SymmetricTree.java |
 | 268 |  | [Binary Search Tree - 1 / Introduction / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=1lMmEPJBvsI) | 9:12 |  |
 | 269 | 700 | [Binary Search Tree - 2 / 700. Search in a Binary Search Tree / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=2udPES1G1KM) | 10:13 |  |
 | 270 | 701 | [Binary Search Tree - 3 / 701. Insert into a Binary Search Tree / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=rMe1ArwYRqA) | 19:23 |  |
 | 271 | 450 | [Binary Search Tree - 4 / 450. Delete Node in a BST / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=lwX4JDLSQ1M) | 38:42 |  |
-| 272 | 98 | [Binary Search Tree - 5 / 98. Validate Binary Search Tree / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=145Teiix5Ug) | 31:57 |  |
+| 272 | 98 | [Binary Search Tree - 5 / 98. Validate Binary Search Tree / 🔥 Beginner, Medium & Advanced Level](https://www.youtube.com/watch?v=145Teiix5Ug) | 31:57 | ✅ Trees/src/ValidateBinarySearchTree.java |
 | 273 | 285 | [Binary Search Tree - 6 / 285. Inorder Successor in BST (Recursive)](https://www.youtube.com/watch?v=mpqHAtFe4dQ) | 27:06 |  |
 | 274 | 285 | [Binary Search Tree - 7 / 285. Inorder Successor in BST (Iterative)](https://www.youtube.com/watch?v=Y0eXQH77Tfw) | 17:17 |  |
 | 275 | 173 | [Binary Search Tree - 8 / 173. Binary Search Tree Iterator (Recursive)](https://www.youtube.com/watch?v=wcBLMpzLH0A) | 16:04 |  |
 | 276 | 173 | [Binary Search Tree - 9 / 173. Binary Search Tree Iterator (Iterative)](https://www.youtube.com/watch?v=0OBo07wkCNg) | 22:46 |  |
 | 277 | 703 | [Binary Search Tree - 10 / 703. Kth Largest Element in a Stream (BST Approach)](https://www.youtube.com/watch?v=94DbUctQqJY) | 33:12 |  |
-| 278 | 235 | [Binary Search Tree - 11 / 235. Lowest Common Ancestor of a Binary Search Tree](https://www.youtube.com/watch?v=cfbtJ_0HN7k) | 10:27 |  |
+| 278 | 235 | [Binary Search Tree - 11 / 235. Lowest Common Ancestor of a Binary Search Tree](https://www.youtube.com/watch?v=cfbtJ_0HN7k) | 10:27 | ✅ Trees/src/LowestCommonAncestorBST.java |
 | 279 |  | [Binary Search Tree - 12 / Height-Balanced BST (Theory)](https://www.youtube.com/watch?v=5ZHHKVgBN3Q) | 13:43 |  |
 | 280 | 110 | [Binary Search Tree - 13 / 110. Balanced Binary Tree](https://www.youtube.com/watch?v=rhcR-iKJ0QA) | 17:18 |  |
 | 281 | 108 | [Binary Search Tree - 14 / 108. Convert Sorted Array to Binary Search Tree](https://www.youtube.com/watch?v=DS5GQQzxwJY) | 17:58 |  |
@@ -943,7 +943,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 291 | 700 | [Recursion-7 / 700. Search in a Binary Search Tree](https://www.youtube.com/watch?v=wEgYvLYlNJw) | 13:29 |  |
 | 292 |  | [Recursion-8 / Memoization + Template](https://www.youtube.com/watch?v=IFFW_A2GhZs) | 11:42 |  |
 | 293 | 509 | [Recursion-9 / 509. Fibonacci Number](https://www.youtube.com/watch?v=fRmIbPACioI) | 9:12 |  |
-| 294 | 70 | [Recursion-10 / 70. Climbing Stairs - Recursion + Memoization](https://www.youtube.com/watch?v=718n6F2IuWA) | 17:35 |  |
+| 294 | 70 | [Recursion-10 / 70. Climbing Stairs - Recursion + Memoization](https://www.youtube.com/watch?v=718n6F2IuWA) | 17:35 | ✅ DynamicProgramming/src/ClimbingStairs.java |
 | 295 | 119 | [Recursion-11 / 119. Pascal's Triangle II - Recursion + Memoization](https://www.youtube.com/watch?v=SmL9tYZujFQ) | 18:05 |  |
 | 296 |  | [Recursion-12 / Time Complexity (Theory)](https://www.youtube.com/watch?v=SiB55-dhk_U) | 8:35 |  |
 | 297 |  | [Recursion-13 / Space Complexity (Theory)](https://www.youtube.com/watch?v=wcwFFvbNBBk) | 10:45 |  |
@@ -958,7 +958,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 306 |  | [Recursion-21 / Divide & Conquer (Template)](https://www.youtube.com/watch?v=4gqgzCReQ6M) | 6:38 |  |
 | 307 |  | [Recursion-22 / Master Theorem (Akra–Bazzi method)](https://www.youtube.com/watch?v=elkuy6bSVFM) | 32:01 |  |
 | 308 |  | [Recursion-23 / Master Theorem (Akra–Bazzi method) (Practice)](https://www.youtube.com/watch?v=VDlEI_M2XOU) | 8:38 |  |
-| 309 | 98 | [Recursion-24 / 98. Validate Binary Search Tree](https://www.youtube.com/watch?v=N8H85H1J4CQ) | 21:23 |  |
+| 309 | 98 | [Recursion-24 / 98. Validate Binary Search Tree](https://www.youtube.com/watch?v=N8H85H1J4CQ) | 21:23 | ✅ Trees/src/ValidateBinarySearchTree.java |
 | 310 | 240 | [Recursion-25 / 240. Search a 2D Matrix II / 3 Approaches](https://www.youtube.com/watch?v=IglNjeKakSU) | 35:21 |  |
 | 311 |  | [Recursion-26 / Quick Sort / End + Random Pivot](https://www.youtube.com/watch?v=qDEVK_yzH80) | 26:22 |  |
 | 312 |  | [Recursion-27 / What is Backtracking???](https://www.youtube.com/watch?v=yUVWGoEuVlg) | 10:41 |  |
@@ -978,7 +978,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 326 |  | [DP-1 / 💡 Top-Down vs Bottom-Up in Dynamic Programming (DP) / #1 / DP Playlist #dp #dsa](https://www.youtube.com/watch?v=425rDIfst8E) | 9:54 |  |
 | 327 |  | [DP-2 / Identify DP Problems / #2 / DP Playlist #dp #dsa](https://www.youtube.com/watch?v=7-H4ij0MWTM) | 7:50 |  |
 | 328 |  | [DP-3 / DP Framework / #3 / DP Playlist #dp #dsa](https://www.youtube.com/watch?v=An3sZBKeesw) | 16:31 |  |
-| 329 | 198 | [DP-4 / 198. House Robber / #4 / DP Playlist #dp #dsa](https://www.youtube.com/watch?v=X5Z8UTWhsX8) | 27:54 |  |
+| 329 | 198 | [DP-4 / 198. House Robber / #4 / DP Playlist #dp #dsa](https://www.youtube.com/watch?v=X5Z8UTWhsX8) | 27:54 | ✅ DynamicProgramming/src/HouseRobber.java |
 | 330 | 1137 | [DP-5 / 1137. N-th Tribonacci Number / #5 / DP Playlist #dp #dsa](https://www.youtube.com/watch?v=Z-FLkOvGOw8) | 14:31 |  |
 | 331 | 746 | [DP-6 / 746. Min Cost Climbing Stairs / #6 / DP Playlist #dp #dsa](https://www.youtube.com/watch?v=sBgsdeKxy2c) | 26:45 |  |
 | 332 | 740 | [DP-7 / 740. Delete and Earn / #7 / DP Playlist #dp #dsa](https://www.youtube.com/watch?v=VdtYikfV28I) | 37:32 |  |

@@ -3,7 +3,7 @@
 All **193** problems in this repo in one order: **Easy → Medium → Hard**, and inside each level, the most-asked first.
 
 - Easy: **47**, Medium: **120**, Hard: **26**.
-- "Most asked" = how many of the 11 sources in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) list the problem (the `Src` column).
+- "Most asked" = how many of 11 sources list the problem (the `Src` column): 6 datasets of LeetCode company tags (2019–2026) and 5 curated "top N interview questions" lists.
 - Problems with the same `Src` are grouped by pattern, so similar problems sit next to each other.
 - The `File` column gives the solution to open. Problems solved with two approaches list both files.
 

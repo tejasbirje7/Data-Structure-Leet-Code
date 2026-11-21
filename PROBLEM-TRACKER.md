@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 102 / 161 done, 59 to do.**
+**Progress: 107 / 161 done, 54 to do.**
 
 ## How to work a batch
 
@@ -28,7 +28,7 @@ Legend:
 | [4](#batch-4) | ArraysAndStrings | 8 | 3 | ✅ 8/8 |
 | [5](#batch-5) | LinkedList | 5 | 2 | ✅ 5/5 |
 | [6](#batch-6) | Graphs (new) | 10 | 4 | ✅ 10/10 |
-| [7](#batch-7) | SlidingWindow, Math, Intervals | 5 | 1 | ⬜ 0/5 |
+| [7](#batch-7) | SlidingWindow, Math, Intervals | 5 | 1 | ✅ 5/5 |
 | [8](#batch-8) | Backtracking | 8 | 2 | ⬜ 0/8 |
 | [9](#batch-9) | TwoPointers | 6 | 2 | ⬜ 0/6 |
 | [10](#batch-10) | HashMap | 7 | 1 | ⬜ 0/7 |
@@ -130,11 +130,11 @@ Folder: `SlidingWindow/`, `Math/`, `Intervals/`
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | 1 | 9/11 | `SlidingWindow/src/SlidingWindowMaximum.java` |
-| ⬜ | 424 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Medium | 3 | 5/11 | `SlidingWindow/src/LongestRepeatingCharReplacement.java` |
-| ⬜ | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | 2 | 7/11 | `Math/src/ReverseInteger.java` |
-| ⬜ | 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Medium | 3 | 4/11 | `Math/src/CountPrimes.java` |
-| ⬜ | 253 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) 🔒 | Medium | 2 | 7/11 | `Intervals/src/MeetingRoomsII.java` |
+| ✅ | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | 1 | 9/11 | `SlidingWindow/src/SlidingWindowMaximum.java` |
+| ✅ | 424 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Medium | 3 | 5/11 | `SlidingWindow/src/LongestRepeatingCharReplacement.java` |
+| ✅ | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | 2 | 7/11 | `Math/src/ReverseInteger.java` |
+| ✅ | 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Medium | 3 | 4/11 | `Math/src/CountPrimes.java` |
+| ✅ | 253 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) 🔒 | Medium | 2 | 7/11 | `Intervals/src/MeetingRoomsII.java` |
 
 ### Batch 8
 

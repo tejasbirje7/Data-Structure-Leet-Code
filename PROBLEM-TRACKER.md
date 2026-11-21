@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 92 / 161 done, 69 to do.**
+**Progress: 102 / 161 done, 59 to do.**
 
 ## How to work a batch
 
@@ -27,7 +27,7 @@ Legend:
 | [3](#batch-3) | Trees (new) | 9 | 5 | ✅ 9/9 |
 | [4](#batch-4) | ArraysAndStrings | 8 | 3 | ✅ 8/8 |
 | [5](#batch-5) | LinkedList | 5 | 2 | ✅ 5/5 |
-| [6](#batch-6) | Graphs (new) | 10 | 4 | ⬜ 0/10 |
+| [6](#batch-6) | Graphs (new) | 10 | 4 | ✅ 10/10 |
 | [7](#batch-7) | SlidingWindow, Math, Intervals | 5 | 1 | ⬜ 0/5 |
 | [8](#batch-8) | Backtracking | 8 | 2 | ⬜ 0/8 |
 | [9](#batch-9) | TwoPointers | 6 | 2 | ⬜ 0/6 |
@@ -113,16 +113,16 @@ Folder: `Graphs/` **(new folder)**
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | 1 | 10/11 | `Graphs/src/NumberOfIslands.java` |
-| ⬜ | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard | 1 | 9/11 | `Graphs/src/WordLadder.java` |
-| ⬜ | 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Medium | 1 | 9/11 | `Graphs/src/CourseSchedule.java` |
-| ⬜ | 133 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Medium | 1 | 8/11 | `Graphs/src/CloneGraph.java` |
-| ⬜ | 210 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | Medium | 2 | 7/11 | `Graphs/src/CourseSchedule2.java` |
-| ⬜ | 269 | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) 🔒 | Hard | 3 | 5/11 | `Graphs/src/AlienDictionary.java` |
-| ⬜ | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | Medium | 3 | 5/11 | `Graphs/src/MaxAreaOfIsland.java` |
-| ⬜ | 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium | 3 | 4/11 | `Graphs/src/EvaluateDivision.java` |
-| ⬜ | 417 | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | Medium | 3 | 4/11 | `Graphs/src/PacificAtlanticWaterFlow.java` |
-| ⬜ | 994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | 3 | 4/11 | `Graphs/src/RottingOranges.java` |
+| ✅ | 200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | 1 | 10/11 | `Graphs/src/NumberOfIslands.java` |
+| ✅ | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard | 1 | 9/11 | `Graphs/src/WordLadder.java` |
+| ✅ | 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Medium | 1 | 9/11 | `Graphs/src/CourseSchedule.java` |
+| ✅ | 133 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Medium | 1 | 8/11 | `Graphs/src/CloneGraph.java` |
+| ✅ | 210 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | Medium | 2 | 7/11 | `Graphs/src/CourseSchedule2.java` |
+| ✅ | 269 | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) 🔒 | Hard | 3 | 5/11 | `Graphs/src/AlienDictionary.java` |
+| ✅ | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | Medium | 3 | 5/11 | `Graphs/src/MaxAreaOfIsland.java` |
+| ✅ | 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium | 3 | 4/11 | `Graphs/src/EvaluateDivision.java` |
+| ✅ | 417 | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | Medium | 3 | 4/11 | `Graphs/src/PacificAtlanticWaterFlow.java` |
+| ✅ | 994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | 3 | 4/11 | `Graphs/src/RottingOranges.java` |
 
 ### Batch 7
 

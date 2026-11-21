@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 79 / 161 done, 82 to do.**
+**Progress: 87 / 161 done, 74 to do.**
 
 ## How to work a batch
 
@@ -25,7 +25,7 @@ Legend:
 | [1](#batch-1) | DynamicProgramming (new) | 9 | 8 | ✅ 9/9 |
 | [2](#batch-2) | Heap (new) | 4 | 3 | ✅ 4/4 |
 | [3](#batch-3) | Trees (new) | 9 | 5 | ✅ 9/9 |
-| [4](#batch-4) | ArraysAndStrings | 8 | 3 | ⬜ 0/8 |
+| [4](#batch-4) | ArraysAndStrings | 8 | 3 | ✅ 8/8 |
 | [5](#batch-5) | LinkedList | 5 | 2 | ⬜ 0/5 |
 | [6](#batch-6) | Graphs (new) | 10 | 4 | ⬜ 0/10 |
 | [7](#batch-7) | SlidingWindow, Math, Intervals | 5 | 1 | ⬜ 0/5 |
@@ -86,14 +86,14 @@ Folder: `ArraysAndStrings/`
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Medium | 1 | 9/11 | `ArraysAndStrings/src/RotateImage.java` |
-| ⬜ | 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Medium | 1 | 9/11 | `ArraysAndStrings/src/SpiralMatrix.java` |
-| ⬜ | 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | 1 | 8/11 | `ArraysAndStrings/src/SetMatrixZeroes.java` |
-| ⬜ | 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | Medium | 2 | 7/11 | `ArraysAndStrings/src/StringToInteger.java` |
-| ⬜ | 31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Medium | 2 | 7/11 | `ArraysAndStrings/src/NextPermutation.java` |
-| ⬜ | 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | 3 | 5/11 | `ArraysAndStrings/src/ZigzagConversion.java` |
-| ⬜ | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | 3 | 5/11 | `ArraysAndStrings/src/ValidSudoku.java` |
-| ⬜ | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Easy | 3 | 5/11 | `ArraysAndStrings/src/PascalsTriangle.java` |
+| ✅ | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Medium | 1 | 9/11 | `ArraysAndStrings/src/RotateImage.java` |
+| ✅ | 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Medium | 1 | 9/11 | `ArraysAndStrings/src/SpiralMatrix.java` |
+| ✅ | 73 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | 1 | 8/11 | `ArraysAndStrings/src/SetMatrixZeroes.java` |
+| ✅ | 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | Medium | 2 | 7/11 | `ArraysAndStrings/src/StringToInteger.java` |
+| ✅ | 31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Medium | 2 | 7/11 | `ArraysAndStrings/src/NextPermutation.java` |
+| ✅ | 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | 3 | 5/11 | `ArraysAndStrings/src/ZigzagConversion.java` |
+| ✅ | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | 3 | 5/11 | `ArraysAndStrings/src/ValidSudoku.java` |
+| ✅ | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Easy | 3 | 5/11 | `ArraysAndStrings/src/PascalsTriangle.java` |
 
 ### Batch 5
 

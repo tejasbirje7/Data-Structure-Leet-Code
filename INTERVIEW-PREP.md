@@ -4,8 +4,8 @@ Research notes on which data structures and algorithms problems companies ask mo
 
 - Data snapshot: LeetCode company tags as of **20 Oct 2025** (dataset repo last pushed 20 Oct 2026).
 - Research done: **21 Nov 2026**.
-- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **87** are in the repo.
-- **Top 100 from one dataset (section 4):** **52 of 100** are in the repo.
+- **Cross-checked list (section 3):** 161 problems found in 4+ of 11 sources; **92** are in the repo.
+- **Top 100 from one dataset (section 4):** **55 of 100** are in the repo.
 - ✅ = already solved in this repo (matched by the LeetCode link in each file's header).
 - **Working list:** [PROBLEM-TRACKER.md](PROBLEM-TRACKER.md) splits the missing problems from section 3 into batches.
 
@@ -42,7 +42,7 @@ This describes the single-dataset ranking used in sections 4–6. Section 3 expl
 
 ## 2. Key findings
 
-- **Cross-check:** 161 problems are in 4+ of 11 sources. The 56 in 8+ sources are the safest bets; 12 of those are still missing here.
+- **Cross-check:** 161 problems are in 4+ of 11 sources. The 56 in 8+ sources are the safest bets; 10 of those are still missing here.
 - **In all 11 sources:** Group Anagrams, Maximum Subarray, Longest Increasing Subsequence, Merge Two Sorted Lists, Reverse Linked List.
 - **Top 100 vs cross-check:** 86 of the single-dataset top 100 are also in 4+ sources; the rest (for example Fruit Into Baskets, Predict the Winner, Concatenation of Array) are only popular in recent tags.
 - **Asked almost everywhere:** Merge Intervals (16 of 51 companies), Longest Substring Without Repeating Characters, Number of Islands, LRU Cache, Best Time to Buy and Sell Stock, Group Anagrams.
@@ -93,10 +93,10 @@ Notes:
 
 | Tier | Problems | In repo | Missing |
 |---|---|---|---|
-| Tier 1: 8–11 sources (must do) | 56 | 44 | 12 |
-| Tier 2: 6–7 sources | 40 | 21 | 19 |
-| Tier 3: 4–5 sources | 65 | 22 | 43 |
-| **Total** | **161** | **87** | **74** |
+| Tier 1: 8–11 sources (must do) | 56 | 46 | 10 |
+| Tier 2: 6–7 sources | 40 | 22 | 18 |
+| Tier 3: 4–5 sources | 65 | 24 | 41 |
+| **Total** | **161** | **92** | **69** |
 
 ### 3.3 Tier 1: 8–11 sources (must do)
 
@@ -106,7 +106,7 @@ Notes:
 | 2 | 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `DynamicProgramming/src/MaximumSubarray.java` |
 | 3 | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `DynamicProgramming/src/LongestIncreasingSubsequence.java` |
 | 4 | 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `LinkedList/src/MergeTwoLinkedList.java` |
-| 5 | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 |  |
+| 5 | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | 11/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 D6 | ✅ `LinkedList/src/ReverseList.java` |
 | 6 | 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 | ✅ `SlidingWindow/src/LongestSubstring.java` |
 | 7 | 200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | 10/11 | C1 C2 C3 C4 C5 D1 D2 D3 D4 D5 |  |
 | 8 | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | 10/11 | C1 C2 C3 C4 D1 D2 D3 D4 D5 D6 | ✅ `Heap/src/MedianFromDataStream.java` |
@@ -142,7 +142,7 @@ Notes:
 | 38 | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard | 9/11 | C1 C2 C3 D1 D2 D3 D4 D5 D6 |  |
 | 39 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | 9/11 | C1 C2 C3 C4 C5 D2 D4 D5 D6 | ✅ `FAQ/src/LinkedListCycleDetector.java`, `LinkedList/src/LinkedListCycle.java` |
 | 40 | 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | 8/11 | C2 C3 C5 D1 D2 D3 D4 D5 |  |
-| 41 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 |  |
+| 41 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `LinkedList/src/MergeKSortedLists.java` |
 | 42 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | 8/11 | C1 C2 C3 D1 D2 D3 D4 D5 | ✅ `Stack/src/ValidParentheses.java` |
 | 43 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `Trees/src/TreeMaxPathSum.java` |
 | 44 | 55 | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | 8/11 | C1 C2 C4 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/JumpGame.java` |
@@ -184,7 +184,7 @@ Notes:
 | 19 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy | 7/11 | C4 C5 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/Merge.java` |
 | 20 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | 7/11 | C1 C2 C3 C5 D1 D2 D3 |  |
 | 21 | 31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Medium | 7/11 | C1 C5 D1 D2 D3 D4 D5 | ✅ `ArraysAndStrings/src/NextPermutation.java` |
-| 22 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy | 7/11 | C2 C5 D1 D3 D4 D5 D6 |  |
+| 22 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy | 7/11 | C2 C5 D1 D3 D4 D5 D6 | ✅ `LinkedList/src/PalindromeLinkedList.java` |
 | 23 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | 7/11 | C2 D1 D2 D3 D4 D5 D6 | ✅ `ArraysAndStrings/src/RemoveDuplicates.java` |
 | 24 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | 7/11 | C1 D1 D2 D3 D4 D5 D6 |  |
 | 25 | 74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | 7/11 | C1 C2 C5 D1 D2 D3 D6 |  |
@@ -249,7 +249,7 @@ Notes:
 | 39 | 994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | 4/11 | C2 D1 D2 D3 |  |
 | 40 | 18 | [4Sum](https://leetcode.com/problems/4sum/) | Medium | 4/11 | C2 D1 D2 D3 |  |
 | 41 | 131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | 4/11 | C1 C5 D1 D3 |  |
-| 42 | 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 4/11 | C1 C4 D1 D3 |  |
+| 42 | 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 4/11 | C1 C4 D1 D3 | ✅ `LinkedList/src/ReorderList.java` |
 | 43 | 110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy | 4/11 | C5 D1 D3 D4 |  |
 | 44 | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | Medium | 4/11 | C2 D2 D4 D5 |  |
 | 45 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | 4/11 | C1 D1 D2 D3 | ✅ `HashMap/src/ContainsDuplicate.java` |
@@ -264,7 +264,7 @@ Notes:
 | 54 | 706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | 4/11 | C5 D4 D5 D6 |  |
 | 55 | 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium | 4/11 | D2 D3 D4 D6 |  |
 | 56 | 150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Medium | 4/11 | C1 C5 D4 D5 | ✅ `Stack/src/ReversePolishNotation.java` |
-| 57 | 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy | 4/11 | C2 C5 D5 D6 |  |
+| 57 | 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy | 4/11 | C2 C5 D5 D6 | ✅ `LinkedList/src/IntersectionOfTwoLinkedLists.java` |
 | 58 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | 4/11 | C1 C3 C4 D6 |  |
 | 59 | 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | Medium | 4/11 | C1 C2 C3 C5 |  |
 | 60 | 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | 4/11 | C1 C3 D3 D6 |  |
@@ -323,7 +323,7 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | Sliding Window | 2/6 |
 | Stack | 1/7 |
 | Binary Search | 1/8 |
-| Linked List | 2/5 |
+| Linked List | 5/5 |
 | Trees | 3/3 |
 | Graphs (BFS / DFS / Union-Find / Topological Sort) | 0/7 |
 | Heap | 4/4 |
@@ -411,14 +411,14 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 95 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | 5 |  |
 | 98 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | 5 |  |
 
-### Linked List (2/5 in repo)
+### Linked List (5/5 in repo)
 
 | Rank | Problem | Difficulty | Cos | Repo |
 |---|---|---|---|---|
-| 16 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | 8 |  |
+| 16 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | 8 | ✅ `LinkedList/src/MergeKSortedLists.java` |
 | 40 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | 6 | ✅ `LinkedList/src/MergeTwoLinkedList.java` |
-| 57 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | 6 |  |
-| 62 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 6 |  |
+| 57 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | 6 | ✅ `LinkedList/src/ReverseList.java` |
+| 62 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 6 | ✅ `LinkedList/src/ReorderList.java` |
 | 79 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | 5 | ✅ `LinkedList/src/AddTwoNumbers.java` |
 
 ### Trees (3/3 in repo)
@@ -516,7 +516,7 @@ Rank = overall rank (1 = asked by the most companies). Cos = companies out of 51
 | 5 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 8/23 | ✅ |
 | 6 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | 8/23 |  |
 | 7 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 8/23 | ✅ |
-| 8 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 8/23 |  |
+| 8 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 8/23 | ✅ |
 | 9 | [Two Sum](https://leetcode.com/problems/two-sum/) | 7/23 | ✅ |
 | 10 | [3Sum](https://leetcode.com/problems/3sum/) | 7/23 | ✅ |
 | 11 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 7/23 | ✅ |
@@ -619,7 +619,7 @@ Weighted by how many target companies asked each problem (top 300 problems).
 
 - Playlist: [DSA In 90 Days For Placements! Beginner, Medium & Advanced Level Playlist](https://www.youtube.com/playlist?list=PLVItHqpXY_DArKRcfmGWykqV3u4hDaJLo)
 - 337 videos, about 87.5 hours, 170 distinct LeetCode problems. About 60 videos are intros, theory, templates or channel updates.
-- 60 of the 170 problems are in this repo.
+- 63 of the 170 problems are in this repo.
 
 | Videos | Section | ✅ In repo | Missing |
 |---|---|---|---|
@@ -627,8 +627,8 @@ Weighted by how many target companies asked each problem (top 300 problems).
 | 17–47 | Arrays (Theory + Code) | 88, 27, 26 | 485, 1295, 977, 1089, 1346, 941, 1299, 283, 905, 1051, 487, 414, 448 |
 | 48–70, 79–90 | Array And String | 66, 167, 189, 209, 151, 14, 28, 118, 54 | 724, 747, 561, 119, 67, 498, 344, 186, 557 |
 | 71–78 | String | 242, 125, 28, 14, 8 | 344, 7, 387 |
-| 91–97 | Linked List | 19, 21, 141 | 237, 206, 234 |
-| 98–130 | Linked List (Theory + Code) | 141, 142, 19, 21, 2, 61, 138 | 707, 160, 206, 203, 328, 234, 708, 430 |
+| 91–97 | Linked List | 19, 21, 141, 206, 234 | 237 |
+| 98–130 | Linked List (Theory + Code) | 141, 142, 19, 21, 2, 61, 138, 160, 206, 234 | 707, 203, 328, 708, 430 |
 | 131–152 | Hash Table | 217, 136, 202, 205, 350, 219, 49, 380, 3, 347, 36 | 705, 706, 599, 387, 359, 249, 771, 454, 170, 288, 652 |
 | 153–165 | Binary Search | 69, 33 | 704, 34, 374, 278, 153, 162, 658 |
 | 168–188 | Sorting | none | 75, 1051, 147, 1200, 164, 2343 |
@@ -640,7 +640,7 @@ Weighted by how many target companies asked each problem (top 300 problems).
 | 232–251 | Heap | 215, 347, 295 | 703, 1046, 1337, 378, 973, 1642 |
 | 253–267 | Binary Tree | 102, 104, 101 | 144, 94, 145, 112 |
 | 268–282 | Binary Search Tree | 98, 235 | 700, 701, 450, 285, 173, 703, 110, 108, 220 |
-| 285–322 | Recursion | 24, 50, 21, 77, 17, 46, 70, 98 | 344, 206, 700, 509, 119, 779, 240, 51, 52, 37, 100, 22 |
+| 285–322 | Recursion | 24, 50, 21, 77, 17, 46, 70, 98, 206 | 344, 700, 509, 119, 779, 240, 51, 52, 37, 100, 22 |
 | 325–335 | DP | 198 | 1137, 746, 740, 1770 |
 
 Some problems appear in more than one section, so the Missing column has repeats.
@@ -742,9 +742,9 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 90 | 28 | [28.2 Find the Index of the First Occurrence in a String (Code) / #17 / Array And String Playlist](https://www.youtube.com/watch?v=dgpGAwhwbwU) | 7:09 | ✅ ArraysAndStrings/src/FirstOccurrenceOfString.java |
 | 91 | 237 | [Linked List-1 / 237. Delete Node in a Linked List / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=FjUAwp4NgwY) | 6:07 |  |
 | 92 | 19 | [Linked List-2 / 19. Remove Nth Node From End of List / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=pNA5tpTZUMo) | 17:39 | ✅ LinkedList/src/RemoveNthFromEnd.java |
-| 93 | 206 | [Linked List-3 / 206. Reverse Linked List / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=CERsn72qJdM) | 7:56 |  |
+| 93 | 206 | [Linked List-3 / 206. Reverse Linked List / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=CERsn72qJdM) | 7:56 | ✅ LinkedList/src/ReverseList.java |
 | 94 | 21 | [Linked List-4 / 21. Merge Two Sorted Lists / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=WebKaAgoUUw) | 16:39 | ✅ LinkedList/src/MergeTwoLinkedList.java |
-| 95 | 234 | [Linked List-5 / 234. Palindrome Linked List / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=nkSwIS4SFbQ) | 27:43 |  |
+| 95 | 234 | [Linked List-5 / 234. Palindrome Linked List / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=nkSwIS4SFbQ) | 27:43 | ✅ LinkedList/src/PalindromeLinkedList.java |
 | 96 | 141 | [Linked List-6 / 141. Linked List Cycle / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=zc4VGYgUang) | 19:18 | ✅ FAQ/src/LinkedListCycleDetector.java, LinkedList/src/LinkedListCycle.java |
 | 97 |  | [Linked List-7 / Tips & Tricks / 🔥 Beginner, Medium & Advanced Level! #easy](https://www.youtube.com/watch?v=uwSdPzyqnzM) | 2:51 |  |
 | 98 |  | [0. Linked List Introduction / #0 / Linked List Playlist / #dsa #leetcode #interview](https://www.youtube.com/watch?v=tbrVeBu0_NY) | 10:28 |  |
@@ -754,18 +754,18 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 102 | 141 | [141.2 Linked List Cycle (Code) / #2 / Linked List Playlist / #leetcode #linkedlist  #interview](https://www.youtube.com/watch?v=p-R9H1Rovr4) | 5:54 | ✅ FAQ/src/LinkedListCycleDetector.java, LinkedList/src/LinkedListCycle.java |
 | 103 | 142 | [142.1 Linked List Cycle II (Theory) / #3 / Linked List Playlist / #leetcode #linkedlist  #interview](https://www.youtube.com/watch?v=dGKTMrVarWU) | 14:54 | ✅ FAQ/src/StartOfCycle.java |
 | 104 | 142 | [142.2 Linked List Cycle II (Code) / #3 / Linked List Playlist / #leetcode #linkedlist  #interview](https://www.youtube.com/watch?v=AvR27PAVNbE) | 6:20 | ✅ FAQ/src/StartOfCycle.java |
-| 105 | 160 | [160.1 Intersection of Two Linked Lists (Theory) / #4 / Linked List Playlist / #leetcode #linkedlist](https://www.youtube.com/watch?v=mbsZp5p4geQ) | 18:08 |  |
-| 106 | 160 | [160.2 Intersection of Two Linked Lists (Code) / #4 / Linked List Playlist / #leetcode #linkedlist](https://www.youtube.com/watch?v=t2_Jl0gsTJ8) | 14:36 |  |
+| 105 | 160 | [160.1 Intersection of Two Linked Lists (Theory) / #4 / Linked List Playlist / #leetcode #linkedlist](https://www.youtube.com/watch?v=mbsZp5p4geQ) | 18:08 | ✅ LinkedList/src/IntersectionOfTwoLinkedLists.java |
+| 106 | 160 | [160.2 Intersection of Two Linked Lists (Code) / #4 / Linked List Playlist / #leetcode #linkedlist](https://www.youtube.com/watch?v=t2_Jl0gsTJ8) | 14:36 | ✅ LinkedList/src/IntersectionOfTwoLinkedLists.java |
 | 107 | 19 | [19.1 Remove Nth Node From End of List  (Theory) / #5 / Linked List Playlist / #leetcode #linkedlist](https://www.youtube.com/watch?v=NFlOHaHMDyY) | 11:32 | ✅ LinkedList/src/RemoveNthFromEnd.java |
 | 108 | 19 | [19.2 Remove Nth Node From End of List  (Code) / #5 / Linked List Playlist / #leetcode #linkedlist](https://www.youtube.com/watch?v=7UjMYFmwia0) | 9:31 | ✅ LinkedList/src/RemoveNthFromEnd.java |
-| 109 | 206 | [206.1 Reverse Linked List (Theory) / #6 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=aYVBELkN1_E) | 7:56 |  |
-| 110 | 206 | [206.2 Reverse Linked List (Code) / #6 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=91dRxmwkrVs) | 3:05 |  |
+| 109 | 206 | [206.1 Reverse Linked List (Theory) / #6 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=aYVBELkN1_E) | 7:56 | ✅ LinkedList/src/ReverseList.java |
+| 110 | 206 | [206.2 Reverse Linked List (Code) / #6 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=91dRxmwkrVs) | 3:05 | ✅ LinkedList/src/ReverseList.java |
 | 111 | 203 | [203.1 Remove Linked List Elements (Theory) / #7 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=zhXbxVlvrwY) | 11:09 |  |
 | 112 | 203 | [203.2 Remove Linked List Elements (Code) / #7 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=dDVGcQaDbBk) | 3:53 |  |
 | 113 | 328 | [328.1 Odd Even Linked List (Theory) / #8 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=xA54G94KzXk) | 10:11 |  |
 | 114 | 328 | [328.2 Odd Even Linked List (Code) / #8 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=dH_c2zvgCpM) | 5:24 |  |
-| 115 | 234 | [234.1 Palindrome Linked List (Theory) / #9 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=H67DEuigPMg) | 18:37 |  |
-| 116 | 234 | [234.2 Palindrome Linked List (Code) / #9 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=meSGPFFCvys) | 15:53 |  |
+| 115 | 234 | [234.1 Palindrome Linked List (Theory) / #9 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=H67DEuigPMg) | 18:37 | ✅ LinkedList/src/PalindromeLinkedList.java |
+| 116 | 234 | [234.2 Palindrome Linked List (Code) / #9 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=meSGPFFCvys) | 15:53 | ✅ LinkedList/src/PalindromeLinkedList.java |
 | 117 | 21 | [21.1 Merge Two Sorted Lists (Theory) / #10 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=oCa17xTnB6Y) | 8:45 | ✅ LinkedList/src/MergeTwoLinkedList.java |
 | 118 | 21 | [21.2 Merge Two Sorted Lists (Code) / #10 / Linked List Playlist / #leetcode #linkedlist #dsa](https://www.youtube.com/watch?v=12IMetiucE4) | 5:11 | ✅ LinkedList/src/MergeTwoLinkedList.java |
 | 119 | 2 | [2.1 Add Two Numbers (Theory) / #11 / Linked List Playlist / #leetcode #linkedlist  #dsa #interview](https://www.youtube.com/watch?v=z475sv2V99k) | 14:48 | ✅ LinkedList/src/AddTwoNumbers.java |
@@ -939,7 +939,7 @@ Some problems appear in more than one section, so the Missing column has repeats
 | 287 |  | [Recursion-3 / 1 Recursion Template to solve all problems](https://www.youtube.com/watch?v=N6DRtWQUin8) | 17:25 |  |
 | 288 | 24 | [Recursion-4 / 24. Swap Nodes in Pairs](https://www.youtube.com/watch?v=Nb-lNhA5mg8) | 27:50 | ✅ FAQ/src/SwapPairs.java |
 | 289 |  | [Recursion-5 / Recurrence Relation (Theory)](https://www.youtube.com/watch?v=-7aG0pppkyE) | 8:58 |  |
-| 290 | 206 | [Recursion-6 / 206. Reverse Linked List](https://www.youtube.com/watch?v=8UVn6LgD2po) | 19:56 |  |
+| 290 | 206 | [Recursion-6 / 206. Reverse Linked List](https://www.youtube.com/watch?v=8UVn6LgD2po) | 19:56 | ✅ LinkedList/src/ReverseList.java |
 | 291 | 700 | [Recursion-7 / 700. Search in a Binary Search Tree](https://www.youtube.com/watch?v=wEgYvLYlNJw) | 13:29 |  |
 | 292 |  | [Recursion-8 / Memoization + Template](https://www.youtube.com/watch?v=IFFW_A2GhZs) | 11:42 |  |
 | 293 | 509 | [Recursion-9 / 509. Fibonacci Number](https://www.youtube.com/watch?v=fRmIbPACioI) | 9:12 |  |

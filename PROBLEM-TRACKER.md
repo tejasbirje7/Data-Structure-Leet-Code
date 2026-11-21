@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 87 / 161 done, 74 to do.**
+**Progress: 92 / 161 done, 69 to do.**
 
 ## How to work a batch
 
@@ -26,7 +26,7 @@ Legend:
 | [2](#batch-2) | Heap (new) | 4 | 3 | ✅ 4/4 |
 | [3](#batch-3) | Trees (new) | 9 | 5 | ✅ 9/9 |
 | [4](#batch-4) | ArraysAndStrings | 8 | 3 | ✅ 8/8 |
-| [5](#batch-5) | LinkedList | 5 | 2 | ⬜ 0/5 |
+| [5](#batch-5) | LinkedList | 5 | 2 | ✅ 5/5 |
 | [6](#batch-6) | Graphs (new) | 10 | 4 | ⬜ 0/10 |
 | [7](#batch-7) | SlidingWindow, Math, Intervals | 5 | 1 | ⬜ 0/5 |
 | [8](#batch-8) | Backtracking | 8 | 2 | ⬜ 0/8 |
@@ -101,11 +101,11 @@ Folder: `LinkedList/`
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | 1 | 11/11 | `LinkedList/src/ReverseList.java` |
-| ⬜ | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | 1 | 8/11 | `LinkedList/src/MergeKSortedLists.java` |
-| ⬜ | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy | 2 | 7/11 | `LinkedList/src/PalindromeLinkedList.java` |
-| ⬜ | 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 3 | 4/11 | `LinkedList/src/ReorderList.java` |
-| ⬜ | 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy | 3 | 4/11 | `LinkedList/src/IntersectionOfTwoLinkedLists.java` |
+| ✅ | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | 1 | 11/11 | `LinkedList/src/ReverseList.java` |
+| ✅ | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | 1 | 8/11 | `LinkedList/src/MergeKSortedLists.java` |
+| ✅ | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy | 2 | 7/11 | `LinkedList/src/PalindromeLinkedList.java` |
+| ✅ | 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | 3 | 4/11 | `LinkedList/src/ReorderList.java` |
+| ✅ | 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy | 3 | 4/11 | `LinkedList/src/IntersectionOfTwoLinkedLists.java` |
 
 ### Batch 6
 

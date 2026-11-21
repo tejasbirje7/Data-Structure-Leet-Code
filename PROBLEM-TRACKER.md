@@ -2,7 +2,7 @@
 
 The 161 problems from the cross-checked list in [INTERVIEW-PREP.md](INTERVIEW-PREP.md#3-cross-checked-list) (found in 4+ of 11 sources), split into batches to solve and push one at a time.
 
-**Progress: 145 / 161 done, 16 to do.**
+**Progress: 153 / 161 done, 8 to do.**
 
 ## How to work a batch
 
@@ -34,7 +34,7 @@ Legend:
 | [10](#batch-10) | HashMap | 7 | 1 | ✅ 7/7 |
 | [11](#batch-11) | BinarySearch (new) | 8 | 0 | ✅ 8/8 |
 | [12](#batch-12) | Stack | 9 | 0 | ✅ 9/9 |
-| [13](#batch-13) | DynamicProgramming | 8 | 0 | ⬜ 0/8 |
+| [13](#batch-13) | DynamicProgramming | 8 | 0 | ✅ 8/8 |
 | [14](#batch-14) | Trees | 8 | 0 | ⬜ 0/8 |
 
 ### Batch 1
@@ -215,14 +215,14 @@ Folder: `DynamicProgramming/`
 
 | Status | # | Problem | Difficulty | Tier | Sources | File |
 |---|---|---|---|---|---|---|
-| ⬜ | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | Medium | 2 | 7/11 | `DynamicProgramming/src/EditDistance.java` |
-| ⬜ | 10 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | Hard | 2 | 6/11 | `DynamicProgramming/src/RegularExpressionMatching.java` |
-| ⬜ | 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Medium | 2 | 6/11 | `DynamicProgramming/src/DecodeWays.java` |
-| ⬜ | 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | Medium | 3 | 5/11 | `DynamicProgramming/src/LongestCommonSubsequence.java` |
-| ⬜ | 140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | Hard | 3 | 4/11 | `DynamicProgramming/src/WordBreak2.java` |
-| ⬜ | 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | Medium | 3 | 4/11 | `DynamicProgramming/src/PartitionEqualSubsetSum.java` |
-| ⬜ | 509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy | 3 | 4/11 | `DynamicProgramming/src/FibonacciNumber.java` |
-| ⬜ | 1235 | [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) | Hard | 3 | 4/11 | `DynamicProgramming/src/MaxProfitJobScheduling.java` |
+| ✅ | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | Medium | 2 | 7/11 | `DynamicProgramming/src/EditDistance.java` |
+| ✅ | 10 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | Hard | 2 | 6/11 | `DynamicProgramming/src/RegularExpressionMatching.java` |
+| ✅ | 91 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | Medium | 2 | 6/11 | `DynamicProgramming/src/DecodeWays.java` |
+| ✅ | 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | Medium | 3 | 5/11 | `DynamicProgramming/src/LongestCommonSubsequence.java` |
+| ✅ | 140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | Hard | 3 | 4/11 | `DynamicProgramming/src/WordBreak2.java` |
+| ✅ | 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | Medium | 3 | 4/11 | `DynamicProgramming/src/PartitionEqualSubsetSum.java` |
+| ✅ | 509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy | 3 | 4/11 | `DynamicProgramming/src/FibonacciNumber.java` |
+| ✅ | 1235 | [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) | Hard | 3 | 4/11 | `DynamicProgramming/src/MaxProfitJobScheduling.java` |
 
 ### Batch 14
 
